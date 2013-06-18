@@ -14,8 +14,12 @@ gem 'twitter-typeahead-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
-gem 'newrelic_rpm'
 
 group :development do
   gem 'letter_opener'
+end
+
+group :production do
+  gem 'newrelic_rpm'
+  gem 'uglifier'
 end
