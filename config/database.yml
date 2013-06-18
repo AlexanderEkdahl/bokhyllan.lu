@@ -1,0 +1,15 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: alexanderekdahl
+  password:
+
+
+development:
+  <<: *common
+  database: bookmarket_development
+
+test:
+  <<: *common
+  database: bookmarket_test

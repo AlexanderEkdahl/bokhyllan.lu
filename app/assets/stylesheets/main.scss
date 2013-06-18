@@ -1,0 +1,128 @@
+nav {
+  text-align: right;
+  margin: 0.8em;
+}
+
+.flash {
+  @include fill-parent;
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+
+  .notice, .alert, .success {
+    padding: em(14, 24);
+    display: inline-block;
+    @include user-select(none);
+    @include animation(fade-in-then-out 3.5s);
+    opacity: 0;
+    cursor: default;
+  }
+
+  .notice {
+    background-color: rgba(180, 215, 255, 0.8);
+  }
+
+  .alert {
+    background-color: rgba(255, 180, 180, 0.8);
+  }
+
+  .success {
+    background-color: rgba(192, 255, 181, 0.8);
+  }
+}
+
+@include keyframes(fade-in-then-out) {
+  0% {
+    @include transform(scale(0.5));
+    opacity: 0;
+  }
+  12% {
+    @include transform(rotateX(0) scale(1));
+    opacity: 1;
+  }
+  85% {
+    @include transform(rotateX(0) scale(1));
+    opacity: 1;
+  }
+  100% {
+    @include transform(scale(0.5));
+    opacity: 0;
+  }
+}
+
+.main {
+  margin-top: em(70, 24);
+  @include outer-container;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+.sign_in, .sign_in_info {
+  @include span-columns(1 of 2);
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.price, .properties, .orders, .new-order {
+  margin-top: 60px;
+}
+
+.price {
+  @include span-columns(1 of 3);
+  font-size: 4.4em;
+  line-height: 0.8;
+  @include media($mobile) {
+    @include span-columns(12);
+  }
+
+  span {
+    font-size: 0.4em;
+  }
+}
+
+.properties {
+  @include span-columns(2 of 3);
+  @include omega();
+
+  td:first-of-type {
+    text-align: right;
+    font-size: 0.8em;
+    padding-right: em(10, 24);
+  }
+}
+
+.orders, .new-order {
+  @include span-columns(1 of 2);
+}
+
+.orders table {
+  width: 100%;
+
+  tr {
+    @include transition(400ms background-color);
+
+    td {
+      padding: 8px;
+    }
+
+    .button {
+      opacity: 0;
+      font-size: 0.8em;
+      padding: em(5, 24);
+      @include transition(400ms opacity)
+    }
+
+    &:hover {
+      background-color: rgb(245, 245, 245);
+
+      .button {
+        opacity: 1;
+      }
+    }
+  }
+}

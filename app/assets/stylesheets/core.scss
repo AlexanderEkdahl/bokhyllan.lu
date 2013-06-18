@@ -1,0 +1,51 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.5em;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+
+  &:visited {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+input, body, h1, h2, h3 {
+  font-weight: 100;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+label {
+  font-size: 0.9em;
+  display: block;
+}
+
+input[type="submit"], .button {
+  cursor: pointer;
+  // color: blue;
+  // background-color: transparent;
+  background-color: silver;
+  padding: em(8, 24);
+  font-size: 0.9em;
+}
+
+input {
+  @include fill-parent;
+  outline: none;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1.2em;
+  padding: em(4, 24);
+  margin-bottom: 32px;
+  box-shadow: none;
+
+  &[type="submit"] {
+    margin-top: em(26, 24);
+  }
+}

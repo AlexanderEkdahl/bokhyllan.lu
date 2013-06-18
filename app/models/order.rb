@@ -1,0 +1,12 @@
+class Order < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :item
+  belongs_to :buyer
+
+  validates :price, numericality: { only_integer: true, greater_than: 50, less_than: 1000 }
+  validates :user_id, presence: true
+  validates :buyer_id, uniqueness: { scope: :item_id }, allow_nil: true
+  # validate { errors.add(:buyer_id, "You cannot buy from yourself") if user_id == buyer_id }
+
+  default_scope { order(:price) }
+end

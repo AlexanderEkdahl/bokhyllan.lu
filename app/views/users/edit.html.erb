@@ -1,0 +1,12 @@
+<h1>Settings</h1>
+
+<%= form_for(current_user) do |f| %>
+  <h2>Contact information</h2>
+
+  <% User.properties_keys.each do |key| %>
+    <%= f.label key %>
+    <%= f.text_field key %>
+  <% end %>
+
+  <%= f.submit 'Save' %>
+<% end %>

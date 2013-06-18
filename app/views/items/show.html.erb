@@ -1,0 +1,53 @@
+<%= render 'search' %>
+
+<div class="clearfix">
+  <div class="price">
+    <% unless @item.orders.empty? %>
+      <%= @item.cheapest %><span>kr</span>
+    <% end %>
+  </div>
+
+  <div class="properties">
+    <table>
+      <tbody>
+        <% properties(@item) do |key, value| %>
+          <tr>
+            <td><%= key %>:</td>
+            <td><%= value %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="clearfix">
+  <div class="orders">
+    <% if @item.orders.empty? %>
+      No one is selling this item.
+    <% else %>
+      <table>
+        <tbody>
+          <% @item.orders.each do |order| %>
+            <tr>
+              <td><%= order.price %>:-</td>
+              <td><%= link_to 'Buy', buy_item_order_path(@item, order), class: 'button small' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+
+  <div class="new-order">
+    <% if signed_in? %>
+      <%= form_for([@item, @order]) do |f| %>
+        <%= f.label :price %>
+        <%= telephone_field(:order, :price) %>
+        <%= f.submit %>
+      <% end %>
+    <% else %>
+      <%= link_to 'Sign in to create a sellorder', sign_in_user_path %>
+    <% end %>
+  </div>
+</div>
