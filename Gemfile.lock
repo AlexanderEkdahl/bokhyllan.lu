@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/iain/http_accept_language.git
+  revision: 7738e45ba154015597fca749b7d0257861c14a02
+  specs:
+    http_accept_language (2.0.0.pre)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -134,6 +140,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   bourbon
   foreman
+  http_accept_language!
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks

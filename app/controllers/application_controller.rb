@@ -1,5 +1,8 @@
+require 'http_accept_language'
+
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :set_locale
 
   def render(*args)
     if signed_in? and !current_user.verified
@@ -10,6 +13,14 @@ class ApplicationController < ActionController::Base
   end
 
   private
+
+    def set_locale
+      I18n.locale = extract_locale || I18n.default_locale
+    end
+
+    def extract_locale
+      http_accept_language.language_region_compatible_from(I18n::available_locales.map(&:to_s))
+    end
 
     def authenticate
       head :forbidden unless signed_in?

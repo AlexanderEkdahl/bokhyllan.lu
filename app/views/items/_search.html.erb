@@ -1,5 +1,5 @@
 <input type="text"
        id="search"
-       placeholder="Search title, author, course, etc."
+       placeholder="<%= t(:search_placeholder) %>"
        value="<%= @item.name if @item %>"
        data-prefetch="<%= typeahead_items_path(format: :json) %>">

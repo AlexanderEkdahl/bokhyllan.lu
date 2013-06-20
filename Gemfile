@@ -15,12 +15,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'newrelic_rpm'
+gem 'http_accept_language', github: 'iain/http_accept_language'
 
 group :development do
   gem 'letter_opener'
 end
 
 group :production do
-  gem 'newrelic_rpm'
   gem 'rails_12factor'
 end
