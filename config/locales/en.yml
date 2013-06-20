@@ -1,2 +1,4 @@
 en:
-  search_placeholder: "Search title, author, course, etc."
+  search_placeholder: Search title, author, course, etc.
+  sign_in: Sign in
+  sign_out: Sign out

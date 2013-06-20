@@ -1,2 +1,13 @@
 sv:
   search_placeholder: "Sök titel, författare, kurs, osv."
+  sign_in: Logga in
+  sign_out: Logga ut
+  settings: Inställningar
+  contact_information: Kontaktinformation
+  home: Hem
+
+  activerecord:
+    attributes:
+      user:
+        name: Namn
+        phone: Telefonnummer

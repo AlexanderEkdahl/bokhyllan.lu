@@ -1,0 +1,8 @@
+Välkommen till example.com, <%= @user %>
+===============================================
+
+Klicka på nedanstående länk för att verifiera ditt konto:
+
+<%= verify_user_url(key: @user.verification_key) %>
+
+Tack för att du valde oss och ha en bra dag!
