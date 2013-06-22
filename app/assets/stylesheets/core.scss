@@ -26,15 +26,6 @@ label {
   display: block;
 }
 
-input[type="submit"], .button {
-  cursor: pointer;
-  // color: blue;
-  // background-color: transparent;
-  background-color: silver;
-  padding: em(8, 24);
-  font-size: 0.9em;
-}
-
 input {
   @include fill-parent;
   outline: none;
@@ -48,4 +39,18 @@ input {
   &[type="submit"] {
     margin-top: em(26, 24);
   }
+}
+
+input[type="submit"], .button {
+  cursor: pointer;
+  // color: blue;
+  // background-color: transparent;
+  background-color: silver;
+  padding: em(8, 24);
+  font-size: 0.9em;
+}
+
+input[disabled] {
+  cursor: not-allowed;
+  color: #888;
 }

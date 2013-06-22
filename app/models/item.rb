@@ -1,4 +1,6 @@
 class Item < ActiveRecord::Base
+  validates :name, presence: true
+
   has_many :orders, -> { where(buyer_id: nil) }
 
   def cheapest

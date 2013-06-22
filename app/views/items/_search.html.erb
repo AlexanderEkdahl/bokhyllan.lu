@@ -2,4 +2,5 @@
        id="search"
        placeholder="<%= t(:search_placeholder) %>"
        value="<%= @item.name if @item %>"
-       data-prefetch="<%= typeahead_items_path(format: :json) %>">
+       data-prefetch="<%= typeahead_items_path(format: :json) %>"
+       autofocus>

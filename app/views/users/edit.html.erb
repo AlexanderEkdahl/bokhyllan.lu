@@ -1,6 +1,13 @@
 <h1><%= t(:settings) %></h1>
 
 <%= form_for(current_user) do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email, disabled: true %>
+
+  <%#= f.label :password %>
+  <%#= f.password_field :password %>
+  <%#= f.label :password %>
+  <%#= f.password_field :password %>
   <h2><%= t(:contact_information) %></h2>
 
   <% User.properties_keys.each do |key| %>

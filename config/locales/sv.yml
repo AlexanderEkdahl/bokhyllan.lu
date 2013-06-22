@@ -6,8 +6,15 @@ sv:
   contact_information: Kontaktinformation
   home: Hem
 
+  author: Författare
+  authors: Författare
+  course: Kurs
+  courses: Kurser
+
   activerecord:
     attributes:
       user:
         name: Namn
         phone: Telefonnummer
+      order:
+        price: Pris
