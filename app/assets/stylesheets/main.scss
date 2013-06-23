@@ -74,14 +74,19 @@ nav {
 
 .price {
   @include span-columns(1 of 3);
-  font-size: 4.4em;
-  line-height: 0.8;
+  // font-size: em(106, 24);
   @include media($mobile) {
     @include span-columns(12);
   }
 
   span {
-    font-size: 0.4em;
+    font-size: em(106, 24);
+    line-height: 0.8;
+  }
+
+  span:not(:empty):after {
+    content: "kr";
+    font-size: em(8, 24);
   }
 }
 

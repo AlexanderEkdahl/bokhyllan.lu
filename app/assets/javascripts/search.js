@@ -6,7 +6,7 @@ $(function() {
       name: 'items',
       prefetch: {
         url: $typeahead.data('prefetch'),
-        ttl: 10
+        ttl: 500
       }
     });
 

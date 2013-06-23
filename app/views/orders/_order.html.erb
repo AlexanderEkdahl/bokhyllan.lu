@@ -1,0 +1,6 @@
+<% cache order do %>
+  <tr>
+    <td><%= order.price %>:-</td>
+    <td><%= link_to 'Buy', buy_item_order_path(@item, order), class: 'button' %></td>
+  </tr>
+<% end %>

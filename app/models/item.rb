@@ -4,7 +4,7 @@ class Item < ActiveRecord::Base
   has_many :orders, -> { where(buyer_id: nil) }
 
   def cheapest
-    orders.first.price unless orders.empty?
+    orders.first.try(:price)
   end
 
   def tokens

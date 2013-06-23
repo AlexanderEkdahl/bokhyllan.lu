@@ -1,6 +1,6 @@
 class Order < ActiveRecord::Base
   belongs_to :user
-  belongs_to :item
+  belongs_to :item, :touch => true
   belongs_to :buyer
 
   validates :price, numericality: { only_integer: true, greater_than: 50, less_than: 1000 }

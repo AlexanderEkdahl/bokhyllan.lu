@@ -2,9 +2,7 @@
 
 <div class="clearfix">
   <div class="price">
-    <% unless @item.orders.empty? %>
-      <%= @item.cheapest %><span>kr</span>
-    <% end %>
+    <span><%= @item.cheapest %></span>
   </div>
 
   <div class="properties">
@@ -28,12 +26,7 @@
     <% else %>
       <table>
         <tbody>
-          <% @item.orders.each do |order| %>
-            <tr>
-              <td><%= order.price %>:-</td>
-              <td><%= link_to 'Buy', buy_item_order_path(@item, order), class: 'button small' %></td>
-            </tr>
-          <% end %>
+          <%= render @item.orders %>
         </tbody>
       </table>
     <% end %>
