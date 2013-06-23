@@ -25,6 +25,12 @@ sv:
       order:
         price: Pris
 
+  support:
+    array:
+      last_word_connector: ' och '
+      two_words_connector: ' och '
+      words_connector: ', '
+
   helpers:
     submit:
       create: Skapa
