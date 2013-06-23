@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
 
   def typeahead
     @items = Item.all
-    expires_in 3.hours, :public => true
+    expires_in(3.hours, :public => true)
+    fresh_when(@items, :public => true)
   end
 end

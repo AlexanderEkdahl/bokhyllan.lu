@@ -1,16 +1,17 @@
 class UsersController < ApplicationController
-  before_action :authenticate, except: [:sign_in, :sign_out, :create]
+  before_action :authenticate, only: [:sign_out, :edit, :update]
 
   def sign_in
     @user = User.new
   end
 
   def create
-    user = User.authenticate(params[:user].symbolize_keys)
-    if user
-      session[:user_id] = user.id
+    @user = User.authenticate(params[:user].symbolize_keys)
+    if @user
+      session[:user_id] = @user.id
       redirect_to root_path, notice: 'Successfully signed in.'
     else
+      @user = User.new
       flash.now[:alert] = 'Incorrect sign in credentials.'
       render 'sign_in'
     end

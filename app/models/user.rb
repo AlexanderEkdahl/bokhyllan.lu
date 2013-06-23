@@ -1,13 +1,16 @@
-require 'bcrypt'
-
 class User < ActiveRecord::Base
   attr_accessor :password
 
   validates :login, presence: true, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 3 }, if: :password_required?
 
-  before_save { login.downcase! }
+  before_validation :normalize_login
   before_save :encrypt_password
+
+  def normalize_login
+    login.downcase!
+    login.gsub!(/@.*/, '')
+  end
 
   attr_accessor :current_password
   validate :validate_current_password, :on => :update, if: :password_required?
