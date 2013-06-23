@@ -2,4 +2,3 @@
 * Remind buyer that seller might be sleeping
 * Sitemap generation
 * Print QR in book to ease later sale?
-* Show name if present otherwise login

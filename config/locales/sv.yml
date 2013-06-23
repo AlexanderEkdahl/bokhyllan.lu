@@ -8,6 +8,11 @@ sv:
   change_password: Ändra lösenord
   update_contact_information: Uppdatera kontaktinformation
   first_time_login_info: Vid första inloggning kommer ett mail att skickas till din STIL-mail(@student.lu.se) för att verifiera ditt konto.
+  sign_in_success: Inloggning lyckades.
+  sign_in_unsuccessfull: Inloggningsuppgifter matchar ej.
+  sign_out_success: Du är nu utloggad.
+  settings_updated_successful: Inställningarna sparades.
+  user_verified: '%{email} verifierat.'
 
   author: Författare
   authors: Författare

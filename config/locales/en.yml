@@ -5,6 +5,11 @@ en:
   change_password: Change password
   update_contact_information: Update contact information
   first_time_login_info: If this is your first time signing in an email will be sent to your STIL-email verifiying your account.
+  sign_in_success: Successfully signed in.
+  sign_in_unsuccessfull: Incorrect sign in credentials.
+  sign_out_success: Successfully signed out.
+  settings_updated_successful: Settings was successfully updated.
+  user_verified: '%{email} verified.'
 
   activerecord:
     attributes:
