@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  require 'bcrypt'
+
   attr_accessor :password
 
   validates :login, presence: true, uniqueness: { case_sensitive: false }
