@@ -50,6 +50,10 @@ input[type="submit"], .button {
   font-size: 0.9em;
 }
 
+.field_with_errors input {
+  background-color: rgba(255, 180, 180, 0.8);
+}
+
 input[disabled] {
   cursor: not-allowed;
   color: #888;

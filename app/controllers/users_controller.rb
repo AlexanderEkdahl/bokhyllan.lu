@@ -2,10 +2,11 @@ class UsersController < ApplicationController
   before_action :authenticate, except: [:sign_in, :sign_out, :create]
 
   def sign_in
+    @user = User.new
   end
 
   def create
-    user = User.authenticate(params[:session].symbolize_keys)
+    user = User.authenticate(params[:user].symbolize_keys)
     if user
       session[:user_id] = user.id
       redirect_to root_path, notice: 'Successfully signed in.'
@@ -41,6 +42,6 @@ class UsersController < ApplicationController
 
   private
     def user_params
-      params.require(:user).permit(User.properties_keys)
+      params.require(:user).permit(User.properties_keys, :password, :current_password)
     end
 end

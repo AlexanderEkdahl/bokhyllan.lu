@@ -1,12 +1,24 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
-  attr_reader :password
+  attr_accessor :password
 
   validates :login, presence: true, uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 3 }, on: :create
+  validates :password, presence: true, length: { minimum: 3 }, if: :password_required?
 
   before_save { login.downcase! }
+  before_save :encrypt_password
+
+  attr_accessor :current_password
+  validate :validate_current_password, :on => :update, if: :password_required?
+
+  def password_required?
+    new_record? || !password.blank?
+  end
+
+  def validate_current_password
+    errors.add(:current_password) unless authenticate(current_password)
+  end
 
   has_many :orders
   has_many :buying_orders, class_name: 'Order', foreign_key: 'buyer_id'
@@ -37,11 +49,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def password=(unencrypted_password)
-    @password = unencrypted_password
-    unless unencrypted_password.blank?
-      self.password_digest = BCrypt::Password.create(unencrypted_password)
-    end
+  def encrypt_password
+    self.password_digest = BCrypt::Password.create(@password) unless @password.blank?
   end
 
   def authenticate(unencrypted_password)

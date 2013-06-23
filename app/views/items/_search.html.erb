@@ -1,6 +1,6 @@
 <input type="text"
        id="search"
        placeholder="<%= t(:search_placeholder) %>"
-       value="<%= @item.name if @item %>"
+       value="<%= @item.try(:name) %>"
        data-prefetch="<%= typeahead_items_path(format: :json) %>"
        autofocus>

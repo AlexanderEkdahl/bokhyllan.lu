@@ -6,7 +6,6 @@ gem 'sass-rails', '4.0.0.rc2'
 gem 'bourbon'
 gem 'neat'
 gem 'pg'
-gem 'foreman'
 gem 'puma'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
@@ -18,6 +17,7 @@ gem 'newrelic_rpm'
 gem 'http_accept_language', github: 'iain/http_accept_language'
 
 group :development do
+  gem 'quiet_assets'
   gem 'letter_opener'
 end
 

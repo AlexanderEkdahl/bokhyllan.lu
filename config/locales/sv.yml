@@ -5,6 +5,9 @@ sv:
   settings: Inställningar
   contact_information: Kontaktinformation
   home: Hem
+  change_password: Ändra lösenord
+  update_contact_information: Uppdatera kontaktinformation
+  first_time_login_info: Vid första inloggning kommer ett mail att skickas till din STIL-mail(@student.lu.se) för att verifiera ditt konto.
 
   author: Författare
   authors: Författare
@@ -16,5 +19,14 @@ sv:
       user:
         name: Namn
         phone: Telefonnummer
+        current_password: Nuvarande lösenord
+        password: Lösenord
+        login: 'STIL-id'
       order:
         price: Pris
+
+  helpers:
+    submit:
+      create: Skapa
+      submit: Fortsätt
+      update: Spara

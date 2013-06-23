@@ -2,3 +2,17 @@ en:
   search_placeholder: Search title, author, course, etc.
   sign_in: Sign in
   sign_out: Sign out
+  change_password: Change password
+  update_contact_information: Update contact information
+  first_time_login_info: If this is your first time signing in an email will be sent to your STIL-email verifiying your account.
+
+  activerecord:
+    attributes:
+      user:
+        login: 'STIL-id'
+
+  helpers:
+    submit:
+      create: Create
+      submit: Proceed
+      update: Save
