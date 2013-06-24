@@ -35,9 +35,25 @@
   <div class="new-order">
     <% if signed_in? %>
       <%= form_for([@item, @order]) do |f| %>
-        <%= f.label :price %>
-        <%= telephone_field(:order, :price) %>
-        <%= f.submit %>
+        <fieldset>
+          <legend>New sellorder</legend>
+          <%= f.label :price %>
+          <%= telephone_field(:order, :price) %>
+          <%= f.label :quality %>
+          <div class="quality">
+            <%= f.radio_button(:quality, "5") %>
+            <%= f.label(:quality_5, "&#9733;".html_safe) %>
+            <%= f.radio_button(:quality, "4") %>
+            <%= f.label(:quality_4, "&#9733;".html_safe) %>
+            <%= f.radio_button(:quality, "3", checked: true) %>
+            <%= f.label(:quality_3, "&#9733;".html_safe) %>
+            <%= f.radio_button(:quality, "2") %>
+            <%= f.label(:quality_2, "&#9733;".html_safe) %>
+            <%= f.radio_button(:quality, "1") %>
+            <%= f.label(:quality_1, "&#9733;".html_safe) %>
+          </div>
+          <%= f.submit %>
+        </fieldset>
       <% end %>
     <% else %>
       <%= link_to 'Sign in to create a sellorder', sign_in_user_path %>

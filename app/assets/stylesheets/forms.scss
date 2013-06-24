@@ -1,0 +1,71 @@
+label {
+  font-size: 0.9em;
+  display: block;
+}
+
+input {
+  @include fill-parent;
+  outline: none;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 1.2em;
+  padding: em(4, 24);
+  margin-bottom: 32px;
+  box-shadow: none;
+
+  &[type="submit"] {
+    margin-top: em(26, 24);
+  }
+}
+
+input[type="submit"], .button {
+  cursor: pointer;
+  // color: blue;
+  // background-color: transparent;
+  background-color: silver;
+  padding: em(8, 24);
+  font-size: 0.9em;
+}
+
+.field_with_errors input {
+  background-color: rgba(255, 180, 180, 0.8);
+}
+
+input[disabled] {
+  cursor: not-allowed;
+  color: #888;
+}
+
+form .quality {
+  margin: auto;
+  width: 8em;
+}
+
+form .quality:not(:checked) > input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0,0,0,0);
+}
+
+form .quality:not(:checked) > label {
+    float: right;
+    width: 1em;
+    padding-left: 0.05em;
+    padding-right: 0.05em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 1.5em;
+    line-height: 1.2;
+    color: #ddd;
+}
+
+form .quality > input:checked ~ label {
+    color: gray;
+}
+
+form .quality > label:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}

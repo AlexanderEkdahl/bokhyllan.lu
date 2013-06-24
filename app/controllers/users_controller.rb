@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate, only: [:sign_out, :show, :edit, :update]
+  before_action :authenticate, only: [:show, :edit, :update]
 
   def sign_in
     @user = User.new

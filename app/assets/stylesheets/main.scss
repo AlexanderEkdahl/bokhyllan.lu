@@ -113,10 +113,15 @@ nav {
 
     td {
       padding: 8px;
+
+      &.quality {
+        font-size: 0.7em;
+        color: #333;
+      }
     }
 
     .button {
-      opacity: 0;
+      // opacity: 0;
       font-size: 0.8em;
       padding: em(5, 24);
       @include transition(400ms opacity)
@@ -125,9 +130,9 @@ nav {
     &:hover {
       background-color: rgb(245, 245, 245);
 
-      .button {
-        opacity: 1;
-      }
+      // .button {
+      //   opacity: 1;
+      // }
     }
   }
 }

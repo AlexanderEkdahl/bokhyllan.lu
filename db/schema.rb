@@ -19,16 +19,19 @@ ActiveRecord::Schema.define(version: 20130613111758) do
 
   create_table "items", force: true do |t|
     t.string   "name"
-    t.hstore   "properties", default: ""
+    t.hstore   "properties", default: {}
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "orders", force: true do |t|
-    t.integer "user_id"
-    t.integer "item_id"
-    t.integer "buyer_id"
-    t.integer "price"
+    t.integer  "user_id"
+    t.integer  "item_id"
+    t.integer  "buyer_id"
+    t.integer  "price"
+    t.integer  "quality",    limit: 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "orders", ["buyer_id"], name: "index_orders_on_buyer_id", using: :btree
@@ -39,7 +42,7 @@ ActiveRecord::Schema.define(version: 20130613111758) do
     t.string   "login"
     t.string   "password_digest"
     t.boolean  "verified",        default: false
-    t.hstore   "properties",      default: ""
+    t.hstore   "properties",      default: {}
     t.datetime "created_at"
     t.datetime "updated_at"
   end
