@@ -121,18 +121,30 @@ nav {
     }
 
     .button {
-      // opacity: 0;
+      opacity: 0;
       font-size: 0.8em;
       padding: em(5, 24);
       @include transition(400ms opacity)
     }
 
+    &:first-of-type {
+      .button {
+        opacity: 1;
+      }
+    }
+
     &:hover {
       background-color: rgb(245, 245, 245);
 
-      // .button {
-      //   opacity: 1;
-      // }
+      .button {
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  &:hover {
+    .button {
+      opacity: 0 !important;
     }
   }
 }
