@@ -29,6 +29,7 @@ sv:
         login: 'STIL-id'
       order:
         price: Pris
+        quality: Kvalité
 
   support:
     array:

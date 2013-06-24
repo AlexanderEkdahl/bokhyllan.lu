@@ -1,7 +1,7 @@
 <% cache order do %>
   <tr>
-    <td><%= order.price %>:-</td>
-    <td class="quality"><%= stars(order.quality) %></td>
-    <td><%= link_to 'Buy', buy_item_order_path(@item, order), class: 'button' %></td>
+    <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
+    <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
+    <td><%= link_to 'Buy', [:buy, @item, order], class: 'button' %></td>
   </tr>
 <% end %>
