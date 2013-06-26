@@ -10,14 +10,17 @@ en:
   sign_out_success: Successfully signed out.
   settings_updated_successful: Settings was successfully updated.
   user_verified: '%{email} verified.'
+  place_sell_order: Place sell order
+  must_be_signed_in_to_buy: 'You must be signed in to sell or buy %{item}.'
+  author:
+    one: Author
+    other: Authors
+  course:
+    one: Course
+    other: Courses
+  sign_in_proceed: Proceed
 
   activerecord:
     attributes:
       user:
         login: 'STIL-id'
-
-  helpers:
-    submit:
-      create: Create
-      submit: Proceed
-      update: Save

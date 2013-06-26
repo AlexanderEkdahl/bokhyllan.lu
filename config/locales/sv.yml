@@ -13,12 +13,18 @@ sv:
   sign_out_success: Du är nu utloggad.
   settings_updated_successful: Inställningarna sparades.
   user_verified: '%{email} verifierat.'
-
-  author: Författare
-  authors: Författare
-  course: Kurs
-  courses: Kurser
-
+  place_sell_order: Ny säljorder
+  must_be_signed_in_to_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
+  buy: Köp
+  author:
+    one: Författare
+    other: Författare
+  course:
+    one: Kurs
+    other: Kurser
+  create: Skapa
+  save: Spara
+  sign_in_proceed: Gå vidare
   activerecord:
     attributes:
       user:
@@ -30,13 +36,11 @@ sv:
       order:
         price: Pris
         quality: Kvalité
-
   support:
     array:
       last_word_connector: ' och '
       two_words_connector: ' och '
       words_connector: ', '
-
   helpers:
     submit:
       create: Skapa

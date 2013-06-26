@@ -43,7 +43,7 @@
     <% if signed_in? %>
       <%= form_for([@item, @order]) do |f| %>
         <fieldset>
-          <legend>New sellorder</legend>
+          <legend><%= t(:place_sell_order) %></legend>
           <%= f.label :price %>
           <%= telephone_field(:order, :price) %>
           <%= f.label :quality %>
@@ -63,7 +63,7 @@
         </fieldset>
       <% end %>
     <% else %>
-      <%= link_to "You need to be signed in to sell or buy #{@item.name}", sign_in_user_path %>
+      <%= link_to t(:must_be_signed_in_to_buy, item: @item.name), sign_in_user_path %>
     <% end %>
   </div>
 </div>

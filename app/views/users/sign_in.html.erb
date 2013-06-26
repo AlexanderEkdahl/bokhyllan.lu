@@ -1,4 +1,4 @@
-<h1>Sign in</h1>
+<h1><%= t(:sign_in) %></h1>
 
 <div class="sign_in">
   <%= form_for(@user, url: user_path) do |f| %>
@@ -8,7 +8,7 @@
     <%= f.label :password %>
     <%= f.password_field :password %>
 
-    <%= f.submit %>
+    <%= f.submit t(:sign_in_proceed) %>
   <% end %>
 </div>
 <div class="sign_in_info">

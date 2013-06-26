@@ -18,6 +18,10 @@ input {
   }
 }
 
+input:last-of-type {
+  margin-bottom: 0;
+}
+
 input[type="submit"], .button {
   cursor: pointer;
   // color: blue;

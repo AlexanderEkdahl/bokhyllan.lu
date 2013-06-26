@@ -55,6 +55,7 @@ nav {
   @include outer-container;
   padding-left: 0.4em;
   padding-right: 0.4em;
+  margin-bottom: em(32, 24);
 }
 
 .sign_in, .sign_in_info {
