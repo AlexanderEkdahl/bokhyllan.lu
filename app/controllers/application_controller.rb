@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :set_locale
 
+  # add etag for this
   # def render(*args)
   #   if signed_in? and !current_user.verified
   #     verify = "Please verify your account by following the link sent to #{current_user.email}"
@@ -20,8 +21,12 @@ class ApplicationController < ActionController::Base
       http_accept_language.language_region_compatible_from(I18n::available_locales.map(&:to_s))
     end
 
+    def must_be_verified
+      render 'users/must_be_verified' unless current_user.try(:verified)
+    end
+
     def authenticate
-      head :forbidden unless signed_in?
+      redirect_to(sign_in_user_path, flash: { alert: t(:must_be_signed_in) }) unless signed_in?
     end
 
     def signed_in?

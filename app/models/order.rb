@@ -8,5 +8,5 @@ class Order < ActiveRecord::Base
   validates :buyer_id, uniqueness: { scope: :item_id }, allow_nil: true
   validate { errors.add(:buyer_id) if user_id == buyer_id }
 
-  default_scope { order(:price) }
+  default_scope { order('price ASC, quality DESC') }
 end

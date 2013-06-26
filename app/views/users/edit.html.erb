@@ -2,7 +2,7 @@
 
 <%= form_for(current_user) do |f| %>
   <%= f.label :email %>
-  <%= f.text_field :email, disabled: true %>
+  <%= f.text_field :email, disabled: true, value: email_with_verification(f.object) %>
 
   <h2><%= t(:change_password) %></h2>
   <%= f.label :current_password %>

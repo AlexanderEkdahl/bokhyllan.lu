@@ -8,7 +8,7 @@
   <div class="properties">
     <table>
       <tbody>
-        <% properties(@item) do |key, value| %>
+        <% item_properties(@item) do |key, value| %>
           <tr>
             <td><%= key %>:</td>
             <td><%= value %></td>
@@ -27,8 +27,8 @@
       <table data-sort>
         <thead>
           <tr>
-            <th data-sort><%= t "activerecord.attributes.order.price" %></th>
-            <th data-sort data-sort-desc><%= t "activerecord.attributes.order.quality" %></th>
+            <th data-sort><%= t("activerecord.attributes.order.price") %></th>
+            <th data-sort data-sort-desc><%= t("activerecord.attributes.order.quality") %></th>
             <th></th>
           </tr>
         </thead>
