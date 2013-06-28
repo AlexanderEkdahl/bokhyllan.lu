@@ -48,13 +48,9 @@
           <%= telephone_field(:order, :price) %>
           <%= f.label :quality %>
           <div class="quality">
-            <%= f.radio_button(:quality, "5") %>
-            <%= f.label(:quality_5, "&#9733;".html_safe) %>
-            <%= f.radio_button(:quality, "4") %>
-            <%= f.label(:quality_4, "&#9733;".html_safe) %>
-            <%= f.radio_button(:quality, "3", checked: true) %>
+            <%= f.radio_button(:quality, "3") %>
             <%= f.label(:quality_3, "&#9733;".html_safe) %>
-            <%= f.radio_button(:quality, "2") %>
+            <%= f.radio_button(:quality, "2", checked: true) %>
             <%= f.label(:quality_2, "&#9733;".html_safe) %>
             <%= f.radio_button(:quality, "1") %>
             <%= f.label(:quality_1, "&#9733;".html_safe) %>

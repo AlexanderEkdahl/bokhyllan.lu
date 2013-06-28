@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
     errors.add(:current_password) unless authenticate(current_password)
   end
 
-  has_many :orders
+  has_many :orders, dependent: :destroy
   has_many :buying_orders, class_name: 'Order', foreign_key: 'buyer_id'
 
   def self.properties_keys
@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 
   def to_s
     return name unless name.blank?
-    email
+    returnemail
   end
 
   def encrypt_password

@@ -33,4 +33,12 @@ class AuthenticationTest < ActionDispatch::IntegrationTest
       end
     end
   end
+
+  def test_sign_in_incorrect
+    user = create(:user)
+    post_via_redirect('/user', user: { login: user.login, password: user.password })
+    assert_equal('/', path)
+    post_via_redirect('/user', user: { login: user.login, password: 'wrong' })
+    assert_equal('/user', path)
+  end
 end

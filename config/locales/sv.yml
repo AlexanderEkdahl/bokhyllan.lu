@@ -23,9 +23,6 @@ sv:
   course:
     one: Kurs
     other: Kurser
-  create: Skapa
-  save: Spara
-  sign_in_proceed: Gå vidare
   activerecord:
     attributes:
       user:
@@ -44,6 +41,7 @@ sv:
       words_connector: ', '
   helpers:
     submit:
+      user:
+        create: Gå vidare
       create: Skapa
-      submit: Fortsätt
       update: Spara

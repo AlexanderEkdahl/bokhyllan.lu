@@ -24,3 +24,10 @@ en:
     attributes:
       user:
         login: 'STIL-id'
+
+  helpers:
+    submit:
+      user:
+        create: Proceed
+      create: Create
+      update: Save

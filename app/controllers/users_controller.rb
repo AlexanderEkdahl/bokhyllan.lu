@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate, only: [:show, :edit, :update]
 
   def sign_in
+    reset_session
     @user = User.new
   end
 

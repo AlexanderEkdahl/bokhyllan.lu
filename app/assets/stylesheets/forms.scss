@@ -1,6 +1,11 @@
 label {
   font-size: 0.9em;
   display: block;
+  margin-top: 32px;
+}
+
+label:first-of-type {
+  margin-top: 0;
 }
 
 input {
@@ -10,29 +15,18 @@ input {
   font-family: inherit;
   font-size: 1.2em;
   padding: em(4, 24);
-  margin-bottom: 32px;
   box-shadow: none;
 
   &[type="submit"] {
-    margin-top: em(26, 24);
+    margin-top: 55px;
   }
-}
-
-input:last-of-type {
-  margin-bottom: 0;
 }
 
 input[type="submit"], .button {
   cursor: pointer;
-  // color: blue;
-  // background-color: transparent;
   background-color: silver;
   padding: em(8, 24);
   font-size: 0.9em;
-}
-
-.field_with_errors input {
-  background-color: rgba(255, 180, 180, 0.8);
 }
 
 input[disabled] {
@@ -42,7 +36,11 @@ input[disabled] {
 
 form .quality {
   margin: auto;
-  width: 8.3em;
+  width: 5em;
+}
+
+form .quality label {
+  margin-top: 0;
 }
 
 form .quality:not(:checked) > input {
