@@ -11,6 +11,8 @@ class ApplicationController < ActionController::Base
   #   super
   # end
 
+  add_flash_types :success
+
   private
 
     def set_locale

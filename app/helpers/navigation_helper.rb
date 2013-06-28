@@ -1,6 +1,6 @@
 module NavigationHelper
   def nav(*links)
-    links.delete_if(&:nil?).join(' &middot; ').html_safe
+    links.compact.join(' &middot; ').html_safe
   end
 
   def home

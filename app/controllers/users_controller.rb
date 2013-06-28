@@ -34,9 +34,6 @@ class UsersController < ApplicationController
     redirect_to(root_path, notice: t(:sign_out_success))
   end
 
-  def show
-  end
-
   def edit
   end
 
@@ -53,7 +50,7 @@ class UsersController < ApplicationController
     head :forbidden and return unless user
     user.update_attribute(:verified, true)
     session[:user_id] = user.id
-    redirect_to root_path, flash: { success: t(:user_verified, email: user.email)}
+    redirect_to root_path, success: t(:user_verified, email: user.email)
   end
 
   private
