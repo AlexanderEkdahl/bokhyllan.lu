@@ -16,7 +16,8 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'newrelic_rpm'
 gem 'http_accept_language', github: 'iain/http_accept_language'
 
-group :development do
+group :development, :test do
+  gem 'factory_girl_rails'
   gem 'quiet_assets'
   gem 'letter_opener'
 end

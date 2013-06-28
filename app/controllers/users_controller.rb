@@ -6,14 +6,25 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.authenticate(params[:user].symbolize_keys)
-    if @user
-      session[:user_id] = @user.id
-      redirect_to(root_path, notice: t(:sign_in_success))
+    @user = User.find_or_create_by(login: params[:user][:login])
+
+    if @user.new_record?
+      @user.password = params[:user][:password]
+      if @user.save
+        UserMailer.verification_email(@user).deliver
+        session[:user_id] = @user.id
+        redirect_to(root_path, notice: t(:sign_in_success))
+      else
+        render 'sign_in'
+      end
     else
-      @user = User.new
-      flash.now[:alert] = t(:sign_in_unsuccessful)
-      render 'sign_in'
+      if @user.authenticate(params[:user][:password])
+        session[:user_id] = @user.id
+        redirect_to(root_path, notice: t(:sign_in_success))
+      else
+        flash.now[:alert] = t(:sign_in_unsuccessful)
+        render 'sign_in'
+      end
     end
   end
 

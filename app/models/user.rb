@@ -28,8 +28,6 @@ class User < ActiveRecord::Base
   has_many :orders
   has_many :buying_orders, class_name: 'Order', foreign_key: 'buyer_id'
 
-  after_create :send_verification_mail
-
   def self.properties_keys
     [:name, :phone]
   end
@@ -44,26 +42,12 @@ class User < ActiveRecord::Base
     email
   end
 
-  def self.authenticate(login: raise, password: raise)
-    user = find_by(login: login.downcase)
-
-    if user.try(:authenticate, password)
-      user
-    elsif user.nil?
-      create(login: login, password: password)
-    end
-  end
-
   def encrypt_password
     self.password_digest = BCrypt::Password.create(@password) unless @password.blank?
   end
 
   def authenticate(unencrypted_password)
     BCrypt::Password.new(password_digest) == unencrypted_password
-  end
-
-  def send_verification_mail
-    UserMailer.verification_email(self).deliver
   end
 
   def verification_key
