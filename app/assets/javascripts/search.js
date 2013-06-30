@@ -1,4 +1,4 @@
-$(function() {
+var search = function() {
   var $typeahead = $('#search');
 
   if ($typeahead.length > 0) {
@@ -14,4 +14,7 @@ $(function() {
       Turbolinks.visit(datum.url);
     });
   }
-});
+}
+
+$(document).ready(search);
+$(window).on('page:change', search);

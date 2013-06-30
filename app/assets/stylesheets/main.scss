@@ -61,7 +61,7 @@ nav {
 .sign_in, .sign_in_info {
   @include span-columns(1 of 2);
   @include media($mobile) {
-    @include span-columns(12);
+    @include span-columns(1 of 1);
   }
 }
 
@@ -77,7 +77,7 @@ nav {
   @include span-columns(1 of 3);
   // font-size: em(106, 24);
   @include media($mobile) {
-    @include span-columns(12);
+    display: none;
   }
 
   span {
@@ -94,6 +94,9 @@ nav {
 .properties {
   @include span-columns(2 of 3);
   @include omega();
+  @include media($mobile) {
+    @include span-columns(1 of 1);
+  }
 
   td:first-of-type {
     text-align: right;
@@ -104,6 +107,9 @@ nav {
 
 .orders, .new-order {
   @include span-columns(1 of 2);
+  @include media($mobile) {
+    @include span-columns(1 of 1);
+  }
 }
 
 .orders table {

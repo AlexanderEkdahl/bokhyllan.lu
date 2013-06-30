@@ -60,7 +60,7 @@ jQuery.fn.sortElements = (function() {
   };
 })();
 
-$(function() {
+var table = function() {
   $('table[data-sort]').each(function() {
     var table = $(this);
 
@@ -80,4 +80,7 @@ $(function() {
       });
     });
   });
-});
+}
+
+$(document).ready(table);
+$(window).on('page:change', table);

@@ -35,6 +35,7 @@ class UsersController < ApplicationController
   end
 
   def edit
+    fresh_when(current_user)
   end
 
   def update

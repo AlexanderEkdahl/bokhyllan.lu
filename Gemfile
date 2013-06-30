@@ -8,7 +8,6 @@ gem 'neat'
 gem 'pg'
 gem 'puma'
 gem 'jquery-rails'
-gem 'jquery-turbolinks'
 gem 'twitter-typeahead-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
@@ -22,6 +21,6 @@ group :development, :test do
   gem 'letter_opener'
 end
 
-group :production do
+group :staging, :production do
   gem 'rails_12factor'
 end

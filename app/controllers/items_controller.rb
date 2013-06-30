@@ -1,17 +1,17 @@
 class ItemsController < ApplicationController
   def index
-    # fresh_when([signed_in?, flash], :public => true)
+    fresh_when(true, public: true)
   end
 
   def show
-    @item  = Item.includes(:orders).find(params[:id])
+    @item  = Item.find(params[:id])
     @order = Order.new
-    # fresh_when([@item, signed_in?, flash], :public => true)
+    fresh_when(@item, public: true)
   end
 
   def typeahead
     @items = Item.all
-    expires_in(3.hours, :public => true)
-    # fresh_when(@items, :public => true)
+    fresh_when(last_modified: Item.last_modified, public: true)
+    expires_in(3.hours, public: true)
   end
 end

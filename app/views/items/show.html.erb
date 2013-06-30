@@ -21,9 +21,7 @@
 
 <div class="clearfix">
   <div class="orders">
-    <% if @item.orders.empty? %>
-      No one is selling this item.
-    <% else %>
+    <% if @item.orders.first %>
       <table data-sort>
         <thead>
           <tr>
@@ -36,6 +34,8 @@
           <%= render @item.orders %>
         </tbody>
       </table>
+    <% else %>
+      No one is selling this item.
     <% end %>
   </div>
 

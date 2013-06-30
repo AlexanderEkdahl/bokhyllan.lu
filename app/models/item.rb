@@ -10,4 +10,8 @@ class Item < ActiveRecord::Base
   def tokens
     [*name.split, *properties.values.map { |v| v.split(/[\s;]\s?/) }.flatten]
   end
+
+  def self.last_modified
+    maximum(:updated_at)
+  end
 end

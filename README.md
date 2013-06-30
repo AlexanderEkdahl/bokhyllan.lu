@@ -2,6 +2,7 @@
 * Remind buyer that seller might be sleeping
 * Sitemap generation
 * Print QR in book to ease later sale?
+* Remove order from mail link that does not require signing in... Uses and id like the verification thing. Create a concern?
 
 Can now register with alexander.ekdahl.399@student.lu.se and dat12sek@student.lu.se
 Quality is not limited
