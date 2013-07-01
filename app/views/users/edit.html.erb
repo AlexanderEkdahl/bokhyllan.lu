@@ -11,7 +11,7 @@
   <%= f.password_field :password %>
   <h2><%= t(:update_contact_information) %></h2>
 
-  <% User.properties_keys.each do |key| %>
+  <% User::PROPERTIES_KEYS.each do |key| %>
     <%= f.label key %>
     <%= f.text_field key %>
   <% end %>

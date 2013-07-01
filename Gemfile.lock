@@ -1,6 +1,7 @@
 GIT
-  remote: git://github.com/iain/http_accept_language.git
-  revision: 7738e45ba154015597fca749b7d0257861c14a02
+  remote: git://github.com/DouweM/http_accept_language.git
+  revision: fa57cfbf8203964d01cdb1866f63a7c6bb6356bc
+  branch: no-middleware-no-crash
   specs:
     http_accept_language (2.0.0.pre)
 

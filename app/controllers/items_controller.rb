@@ -1,12 +1,12 @@
 class ItemsController < ApplicationController
   def index
-    fresh_when(true, public: true)
+    fresh_when(true)
   end
 
   def show
     @item  = Item.find(params[:id])
     @order = Order.new
-    fresh_when(@item, public: true)
+    fresh_when(@item)
   end
 
   def typeahead

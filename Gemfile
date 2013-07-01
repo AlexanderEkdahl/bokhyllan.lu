@@ -13,7 +13,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'newrelic_rpm'
-gem 'http_accept_language', github: 'iain/http_accept_language'
+gem 'http_accept_language', github: 'DouweM/http_accept_language', branch: 'no-middleware-no-crash'
 
 group :development, :test do
   gem 'factory_girl_rails'

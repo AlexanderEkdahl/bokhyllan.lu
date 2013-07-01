@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Verifiable
+
   require 'bcrypt'
 
   attr_accessor :password
@@ -28,10 +30,8 @@ class User < ActiveRecord::Base
   has_many :orders, dependent: :destroy
   has_many :buying_orders, class_name: 'Order', foreign_key: 'buyer_id'
 
-  def self.properties_keys
-    [:name, :phone]
-  end
-  store_accessor :properties, properties_keys
+  PROPERTIES_KEYS = [:name, :phone]
+  store_accessor :properties, PROPERTIES_KEYS
 
   def email
     "#{login}@student.lu.se"
@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 
   def to_s
     return name unless name.blank?
-    returnemail
+    return email
   end
 
   def encrypt_password
@@ -48,20 +48,5 @@ class User < ActiveRecord::Base
 
   def authenticate(unencrypted_password)
     BCrypt::Password.new(password_digest) == unencrypted_password
-  end
-
-  def verification_key
-    ActiveSupport::MessageEncryptor
-      .new(Rails.application.config.secret_key_base)
-      .encrypt_and_sign(id)
-  end
-
-  def self.find_by_verification_key(value)
-    id = ActiveSupport::MessageEncryptor
-      .new(Rails.application.config.secret_key_base)
-      .decrypt_and_verify(value)
-
-    find(id)
-  rescue ActiveSupport::MessageVerifier::InvalidSignature
   end
 end
