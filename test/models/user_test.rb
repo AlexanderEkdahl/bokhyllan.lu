@@ -47,4 +47,10 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert(@user.authenticate('super_secret'))
   end
+
+  def test_verify!
+    assert(!@user.verified?)
+    @user.verify!
+    assert(@user.verified?)
+  end
 end

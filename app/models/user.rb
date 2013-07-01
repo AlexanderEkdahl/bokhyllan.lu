@@ -27,6 +27,10 @@ class User < ActiveRecord::Base
     errors.add(:current_password) unless authenticate(current_password)
   end
 
+  def verify!
+    update_attribute(:verified, true)
+  end
+
   has_many :orders, dependent: :destroy
   has_many :buying_orders, class_name: 'Order', foreign_key: 'buyer_id'
 

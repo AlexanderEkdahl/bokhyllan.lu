@@ -48,10 +48,10 @@ class UsersController < ApplicationController
 
   def verify
     user = User.find_by_verification_key(params[:key])
-    head :forbidden and return unless user
-    user.update_attribute(:verified, true)
+    head(:forbidden) and return unless user
+    user.verify!
     session[:user_id] = user.id
-    redirect_to root_path, success: t(:user_verified, email: user.email)
+    redirect_to(root_path, success: t(:user_verified, email: user.email))
   end
 
   private

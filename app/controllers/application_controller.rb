@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
     end
 
     def authenticate
-      redirect_to(sign_in_user_path, flash: { alert: t(:must_be_signed_in) }) unless signed_in?
+      redirect_to(sign_in_user_path, alert: t(:must_be_signed_in)) unless signed_in?
     end
 
     def must_be_verified
