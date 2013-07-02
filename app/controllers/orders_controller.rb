@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   before_action :authenticate, :must_be_verified
+  before_action :set_order, only: [:buy, :destroy, :cancel]
 
   def create
     item           = Item.find(params[:item_id])
@@ -15,11 +16,26 @@ class OrdersController < ApplicationController
   end
 
   def buy
-    @order = Order.find(params[:id])
     render 'invalid' unless @order.update_attributes(buyer_id: current_user.id)
   end
 
+  def destroy
+    @order.destroy
+
+    redirect_to(user_path, success: t(:order_destroyed))
+  end
+
+  def cancel
+    @order.update_attributes(buyer_id: nil)
+
+    redirect_to(user_path, success: t(:order_canceled))
+  end
+
   private
+    def set_order
+      @order = Order.find(params[:id])
+    end
+
     def order_params
       params.require(:order).permit(:price, :quality)
     end

@@ -1,0 +1,72 @@
+<% unless current_user.buying_orders.empty? %>
+  <h1><%= t(:active_buy_order, count: current_user.buying_orders.count) %></h1>
+
+  <table class="hover" data-sort>
+    <thead>
+      <tr>
+        <th><%= t("activerecord.attributes.item.name") %></th>
+        <th data-sort><%= t("activerecord.attributes.order.price") %></th>
+        <th data-sort><%= t("activerecord.attributes.order.quality") %></th>
+        <th><%= t(:seller) %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% current_user.buying_orders.each do |order| %>
+        <tr>
+          <td><%= order.item.name %></td>
+          <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
+          <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
+          <td><%= contact_information(order.user) %></td>
+          <td><%= button_to(t(:cancel, rescue_format: nil), [:cancel, order.item, order], class: 'button') %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<% unless current_user.orders.empty? %>
+  <h1><%= t(:active_sell_order, count: current_user.orders.count) %></h1>
+
+  <table>
+    <thead>
+      <tr>
+        <th><%= t("activerecord.attributes.item.name") %></th>
+        <th data-sort><%= t("activerecord.attributes.order.price") %></th>
+        <th data-sort><%= t("activerecord.attributes.order.quality") %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% current_user.orders.each do |order| %>
+        <tr>
+          <td><%= order.item.name %></td>
+          <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
+          <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
+          <td><%= button_to(t(:cancel, rescue_format: nil), [order.item, order], method: :delete, class: 'button') %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+
+<h1><%= t(:settings) %></h1>
+
+<%= form_for(current_user, html: { class: 'form' }) do |f| %>
+  <%= f.label :email %>
+  <%= f.text_field :email, disabled: true, value: email_with_verification(f.object) %>
+
+  <h2><%= t(:change_password) %></h2>
+  <%= f.label :current_password %>
+  <%= f.password_field :current_password %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <h2><%= t(:update_contact_information) %></h2>
+
+  <% User::PROPERTIES_KEYS.each do |key| %>
+    <%= f.label key %>
+    <%= f.text_field key %>
+  <% end %>
+
+  <%= f.submit(class: 'button') %>
+<% end %>

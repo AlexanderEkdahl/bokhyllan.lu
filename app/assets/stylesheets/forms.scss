@@ -1,13 +1,3 @@
-label {
-  font-size: 0.9em;
-  display: block;
-  margin-top: 32px;
-}
-
-label:first-of-type {
-  margin-top: 0;
-}
-
 input {
   @include fill-parent;
   outline: none;
@@ -16,40 +6,54 @@ input {
   font-size: 1.2em;
   padding: em(4, 24);
   box-shadow: none;
-
-  &[type="submit"] {
-    margin-top: 55px;
-  }
 }
 
-input[type="submit"], .button {
+.button {
   cursor: pointer;
   background-color: silver;
-  padding: em(8, 24);
+  padding: 0.3em;
   font-size: 0.9em;
+  border-radius: 2px;
+  border: none;
+  @include box-shadow(0 2px 2px -2px #000);
 }
 
-input[disabled] {
-  cursor: not-allowed;
-  color: #888;
-}
+.form {
+  label {
+    font-size: 0.9em;
+    display: block;
+    margin-top: 32px;
+  }
 
-form .quality {
-  margin: auto;
-  width: 5em;
-}
+  label:first-of-type {
+    margin-top: 0;
+  }
 
-form .quality label {
-  margin-top: 0;
-}
+  .button {
+    margin-top: 55px;
+  }
 
-form .quality:not(:checked) > input {
+  input[disabled] {
+    cursor: not-allowed;
+    color: #888;
+  }
+
+  .quality {
+    margin: auto;
+    width: 5em;
+  }
+
+  .quality label {
+    margin-top: 0;
+  }
+
+  .quality:not(:checked) > input {
     position: absolute;
     top: -9999px;
     clip: rect(0,0,0,0);
-}
+  }
 
-form .quality:not(:checked) > label {
+  .quality:not(:checked) > label {
     float: right;
     width: 1em;
     padding-left: 0.05em;
@@ -60,14 +64,15 @@ form .quality:not(:checked) > label {
     font-size: 1.5em;
     line-height: 1.2;
     color: #ddd;
-}
+  }
 
-form .quality > input:checked ~ label {
+  .quality > input:checked ~ label {
     color: gray;
-}
+  }
 
-form .quality > label:active {
+  .quality > label:active {
     position: relative;
     top: 2px;
     left: 2px;
+  }
 }

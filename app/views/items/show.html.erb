@@ -22,7 +22,7 @@
 <div class="clearfix">
   <div class="orders">
     <% if @item.orders.first %>
-      <table data-sort>
+      <table data-sort class="hover">
         <thead>
           <tr>
             <th data-sort><%= t("activerecord.attributes.order.price") %></th>
@@ -41,7 +41,7 @@
 
   <div class="new-order">
     <% if signed_in? %>
-      <%= form_for([@item, @order]) do |f| %>
+      <%= form_for([@item, @order], html: { class: 'form' }) do |f| %>
         <fieldset>
           <legend><%= t(:place_sell_order) %></legend>
           <%= f.label :price %>
@@ -55,7 +55,7 @@
             <%= f.radio_button(:quality, "1") %>
             <%= f.label(:quality_1, "&#9733;".html_safe) %>
           </div>
-          <%= f.submit %>
+          <%= f.submit(class: 'button') %>
         </fieldset>
       <% end %>
     <% else %>

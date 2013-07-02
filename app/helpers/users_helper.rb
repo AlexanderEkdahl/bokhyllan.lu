@@ -9,4 +9,8 @@ module UsersHelper
       yield(t("activerecord.attributes.order.#{key}"), value) unless value.blank?
     end
   end
+
+  def contact_information(user)
+    [user.email, *user.properties.values.reject(&:blank?)].join(" ")
+  end
 end

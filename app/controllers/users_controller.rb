@@ -34,7 +34,7 @@ class UsersController < ApplicationController
     redirect_to(root_path, notice: t(:sign_out_success))
   end
 
-  def edit
+  def show
     fresh_when(current_user)
   end
 

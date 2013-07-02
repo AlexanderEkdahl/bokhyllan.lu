@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   etag { I18n.locale } # Use response.headers['Vary'] = 'Accept-Language'?
-  etag { signed_in? }
+  etag { current_user.try(:id) }
   etag { [notice, alert, flash[:success]] } #refactor
 
   add_flash_types :success

@@ -3,6 +3,10 @@
 * Sitemap generation
 * Print QR in book to ease later sale?
 * Remove order from mail link that does not require signing in... Uses and id like the verification thing. Create a concern?
+* Add public? method that returns { public: true } if no one is logged in.
+* Touch enabled visitors should not have hover effects
+* Format numbers
+* Email mailto link
 
 Can now register with alexander.ekdahl.399@student.lu.se and dat12sek@student.lu.se
 Quality is not limited

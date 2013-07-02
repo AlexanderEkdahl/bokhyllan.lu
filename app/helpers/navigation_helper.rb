@@ -15,7 +15,7 @@ module NavigationHelper
     link_to(t(:sign_out), sign_out_user_path) if signed_in?
   end
 
-  def settings
-    link_to(t(:settings), edit_user_path) if signed_in? and not current_page?(edit_user_path)
+  def user
+    link_to(current_user.email, user_path) if signed_in? and not current_page?(user_path)
   end
 end

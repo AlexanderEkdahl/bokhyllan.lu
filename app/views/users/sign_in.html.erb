@@ -1,18 +1,16 @@
 <h1><%= t(:sign_in) %></h1>
 
 <div class="sign_in">
-  <%= form_for(@user, url: user_path) do |f| %>
+  <%= form_for(@user, url: user_path, html: { class: 'form' }) do |f| %>
     <%= f.label :login %>
     <%= f.text_field :login %>
 
     <%= f.label :password %>
     <%= f.password_field :password %>
 
-    <%= f.submit %>
+    <%= f.submit(class: 'button') %>
   <% end %>
 </div>
 <div class="sign_in_info">
   <p><%= t(:first_time_login_info) %></p>
-
-  <!-- <p>Forgot your password?</p> -->
 </div>

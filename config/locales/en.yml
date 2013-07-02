@@ -19,6 +19,14 @@ en:
     one: Course
     other: Courses
   sign_in_proceed: Proceed
+  active_sell_order:
+    one: Active sell order
+    other: Active sell orders
+  active_buy_order:
+    one: Active buy order
+    other: Active buy orders
+  cancel: Cancel
+  buy: Buy
 
   activerecord:
     attributes:
