@@ -26,7 +26,11 @@ en:
     one: Active buy order
     other: Active buy orders
   cancel: Cancel
+  remove: Remove
   buy: Buy
+  contact_immediately: Please contact him/her immediately.
+  contact_next_morning: Please contact him/her first thing in the morning.
+  has_your_copy: '%{user} has your copy of %{item}.'
 
   activerecord:
     attributes:

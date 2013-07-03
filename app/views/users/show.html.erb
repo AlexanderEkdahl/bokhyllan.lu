@@ -13,13 +13,15 @@
     </thead>
     <tbody>
       <% current_user.buying_orders.each do |order| %>
-        <tr>
-          <td><%= order.item.name %></td>
-          <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
-          <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-          <td><%= contact_information(order.user) %></td>
-          <td><%= button_to(t(:cancel, rescue_format: nil), [:cancel, order.item, order], class: 'button') %></td>
-        </tr>
+        <% cache [:buy, order, order.user] do %>
+            <tr>
+              <td><%= order.item.name %></td>
+              <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
+              <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
+              <td><%= contact_information(order.user) %></td>
+              <td><%= button_to(t(:cancel), [:cancel, order.item, order], class: 'button') %></td>
+            </tr>
+          <% end %>
       <% end %>
     </tbody>
   </table>
@@ -34,17 +36,21 @@
         <th><%= t("activerecord.attributes.item.name") %></th>
         <th data-sort><%= t("activerecord.attributes.order.price") %></th>
         <th data-sort><%= t("activerecord.attributes.order.quality") %></th>
+        <th><%= t(:buyer) %></th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       <% current_user.orders.each do |order| %>
-        <tr>
-          <td><%= order.item.name %></td>
-          <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
-          <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-          <td><%= button_to(t(:cancel, rescue_format: nil), [order.item, order], method: :delete, class: 'button') %></td>
-        </tr>
+        <% cache [:sell, order, order.buyer] do %>
+          <tr>
+            <td><%= order.item.name %></td>
+            <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
+            <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
+            <td><%= contact_information(order.buyer) %></td>
+            <td><%= button_to(t(:remove), [order.item, order], method: :delete, class: 'button') %></td>
+          </tr>
+        <% end %>
       <% end %>
     </tbody>
   </table>

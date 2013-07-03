@@ -7,7 +7,7 @@ class AuthenticationTest < ActionDispatch::IntegrationTest
 
     user_attributes = attributes_for(:user)
     assert_difference(-> { ActionMailer::Base.deliveries.size }, +1) do
-      assert_difference(-> { User.all.count }, +1) do
+      assert_difference(-> { User.count }, +1) do
         post_via_redirect('/user', user: { login: user_attributes[:login], password: user_attributes[:password] })
         assert_equal('/', path)
       end
@@ -27,7 +27,7 @@ class AuthenticationTest < ActionDispatch::IntegrationTest
     assert_equal('/', path)
 
     assert_difference(-> { ActionMailer::Base.deliveries.size }, 0) do
-      assert_difference(-> { User.all.count }, 0) do
+      assert_difference(-> { User.count }, 0) do
         post_via_redirect('/user', user: { login: user_attributes[:login], password: user_attributes[:password] })
         assert_equal('/', path)
       end

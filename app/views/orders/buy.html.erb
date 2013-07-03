@@ -1,6 +1,6 @@
-<h1><%= @order.user %> has your copy of <%= @order.item.name %></h1>
+<h1><%= t(:has_your_copy, user: @order.user, item: @order.item.name) %></h1>
 
-<p>Please contact him/her immediately.</p>
+<p><%= night? ? t(:contact_next_morning) : t(:contact_immediately) %></p>
 
 <h2><%= t(:contact_information) %></h2>
 

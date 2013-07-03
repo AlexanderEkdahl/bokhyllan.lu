@@ -11,6 +11,6 @@ module UsersHelper
   end
 
   def contact_information(user)
-    [user.email, *user.properties.values.reject(&:blank?)].join(" ")
+    [user.email, *user.properties.values.reject(&:blank?)].join(" ") unless user.nil?
   end
 end
