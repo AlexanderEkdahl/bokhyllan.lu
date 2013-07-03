@@ -1,6 +1,6 @@
 module OrdersHelper
   def stars(quality)
-    ("&#9734; " * quality).html_safe unless quality.nil?
+    ("&#9734;&nbsp;" * quality).html_safe unless quality.nil?
   end
 
   def night?(time = Time.now)
