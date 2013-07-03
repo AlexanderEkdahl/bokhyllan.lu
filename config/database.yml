@@ -13,4 +13,8 @@ development:
 
 test:
   <<: *common
-  database: bookmarket_test
+  database: <%= ENV['DB_TEST_DATABASE'] %>
+  username: <%= ENV['DB_TEST_USERNAME'] %>
+  password: <%= ENV['DB_TEST_PASSWORD'] %>
+  host:     <%= ENV['DB_TEST_HOST'] %>
+  port:     <%= ENV['DB_TEST_PORT'] %>
