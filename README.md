@@ -1,8 +1,6 @@
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
-* Remind buyer that seller might be sleeping
 * Sitemap generation
 * Print QR in book to ease later sale?
-* Remove order from mail link that does not require signing in... Uses and id like the verification thing. Create a concern?
 * Add public? method that returns { public: true } if no one is logged in.
 * Touch enabled visitors should not have hover effects
 * Format numbers

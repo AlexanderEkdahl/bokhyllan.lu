@@ -8,7 +8,7 @@ class OrdersController < ApplicationController
     @order.user_id = current_user.id
 
     if @order.save
-      redirect_to item, success: 'Order was successfully created.'
+      redirect_to(item, success: t(:order_created))
     else
       # TODO render item show
       render action: 'new'

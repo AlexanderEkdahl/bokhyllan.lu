@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
   before_action :set_locale
 
   etag { I18n.locale } # Use response.headers['Vary'] = 'Accept-Language'?
