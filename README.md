@@ -1,6 +1,7 @@
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
 * Print QR in book to ease later sale?
+* Call QR code
 * Add public? method that returns { public: true } if no one is logged in.
 * Touch enabled visitors should not have hover effects
 * Format numbers

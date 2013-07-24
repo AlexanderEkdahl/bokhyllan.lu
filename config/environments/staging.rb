@@ -1,4 +1,4 @@
-Bookmarket::Application.configure do
+Bok::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -88,5 +88,5 @@ Bookmarket::Application.configure do
     :authentication => :plain
   }
 
-  config.action_mailer.default_url_options = { :host => "bookmarket-staging.herokuapp.com" }
+  config.action_mailer.default_url_options = { :host => "bok-staging.herokuapp.com" }
 end

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Bookmarket::Application.config.secret_key_base = '0184f1997d51b7a13688a9fd649c6fa817ea31ee583f8dc9997806ba3418c1a8f76cf9df9866c10740068c1e394c8b9b95a5502c6cc06fa9d57d43578466cf3d'
+Bok::Application.config.secret_key_base = '0184f1997d51b7a13688a9fd649c6fa817ea31ee583f8dc9997806ba3418c1a8f76cf9df9866c10740068c1e394c8b9b95a5502c6cc06fa9d57d43578466cf3d'

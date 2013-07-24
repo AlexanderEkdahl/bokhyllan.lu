@@ -1,4 +1,4 @@
-Bookmarket::Application.routes.draw do
+Bok::Application.routes.draw do
   resource :user, only: [:create, :update] do
     get  'verify'
     get  'sign_in'
