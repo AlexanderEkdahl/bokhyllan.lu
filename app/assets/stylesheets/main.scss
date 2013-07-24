@@ -102,6 +102,7 @@ nav {
 }
 
 .orders, .new-order {
+  margin-top: 60px;
   @include span-columns(1 of 2);
   @include media($mobile) {
     @include span-columns(1 of 1);
