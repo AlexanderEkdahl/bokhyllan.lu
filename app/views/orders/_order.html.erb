@@ -1,7 +1,0 @@
-<% cache order do %>
-  <tr>
-    <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
-    <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-    <td><%= button_to(t(:buy, rescue_format: nil), [:buy, @item, order], class: 'button') %></td>
-  </tr>
-<% end %>

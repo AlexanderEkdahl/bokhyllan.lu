@@ -9,6 +9,16 @@ class ItemsController < ApplicationController
     fresh_when(@item)
   end
 
+  def search
+    item = Item.search(params[:search])
+
+    if item
+      redirect_to(item)
+    else
+      render('not_found')
+    end
+  end
+
   def typeahead
     @items = Item.all
     fresh_when(last_modified: Item.last_modified, public: true)

@@ -16,6 +16,7 @@ gem 'http_accept_language', github: 'DouweM/http_accept_language', branch: 'no-m
 gem 'foreman'
 
 group :development, :test do
+  gem 'debugger'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
   gem 'letter_opener'

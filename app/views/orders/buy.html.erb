@@ -1,6 +1,19 @@
 <h1><%= t(:has_your_copy, user: @order.user, item: @order.item.name) %></h1>
 
-<p><%= night? ? t(:contact_next_morning) : t(:contact_immediately) %></p>
+<% if night? %>
+  <p><%= t(:contact_next_morning) %></p>
+<% elsif @order.user.try(:phone).blank? %>
+  <%= t(:contact_immediately) %>
+<% else %>
+  <table>
+    <tbody>
+      <tr>
+        <td><%= t(:contact_immediately_with_qr, name: @order.user) %></td>
+        <td><%= qr(@order.user, 140) %></td>
+      </tr>
+    </tbody>
+  </table>
+<% end %>
 
 <h2><%= t(:contact_information) %></h2>
 

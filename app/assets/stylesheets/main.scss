@@ -69,10 +69,6 @@ nav {
   @include clearfix();
 }
 
-.price, .properties, .orders, .new-order {
-  margin-top: 60px;
-}
-
 .price {
   @include span-columns(1 of 3);
   // font-size: em(106, 24);
@@ -110,4 +106,10 @@ nav {
   @include media($mobile) {
     @include span-columns(1 of 1);
   }
+}
+
+.buy {
+  width: auto;
+  display: block;
+  margin: 1.5em auto;
 }

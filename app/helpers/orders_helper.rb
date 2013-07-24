@@ -6,4 +6,8 @@ module OrdersHelper
   def night?(time = Time.now)
     time.hour > 22 || time.hour < 6
   end
+
+  def other_items(order)
+    order.user.orders - [order]
+  end
 end

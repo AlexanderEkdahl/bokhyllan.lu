@@ -5,16 +5,16 @@ common: &common
 
 development:
   <<: *common
-  database: <%= ENV['DB_DATABASE'] %>
-  username: <%= ENV['DB_USERNAME'] %>
+  database: <%= ENV['DB_DATABASE'] || 'bookmarket_development' %>
+  username: <%= ENV['DB_USERNAME'] || ENV['USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
   host:     <%= ENV['DB_HOST'] %>
   port:     <%= ENV['DB_PORT'] %>
 
 test:
   <<: *common
-  database: <%= ENV['DB_TEST_DATABASE'] %>
-  username: <%= ENV['DB_TEST_USERNAME'] %>
+  database: <%= ENV['DB_TEST_DATABASE'] || 'bookmarket_test'  %>
+  username: <%= ENV['DB_TEST_USERNAME'] || ENV['USER']  %>
   password: <%= ENV['DB_TEST_PASSWORD'] %>
   host:     <%= ENV['DB_TEST_HOST'] %>
   port:     <%= ENV['DB_TEST_PORT'] %>

@@ -27,10 +27,14 @@ en:
     other: Active buy orders
   cancel: Cancel
   remove: Remove
-  buy: Buy
+  view_contact_info: View contact information
   contact_immediately: Please contact him/her immediately.
+  contact_immediately_with_qr: 'Please contact him/her immediately. Scan the QR code to instantly call %{name}.'
   contact_next_morning: Please contact him/her first thing in the morning.
   has_your_copy: '%{user} has your copy of %{item}.'
+  show: Show
+  purchase_confirmation: When you click this button you will be given exclusive rights to contact the seller. Continue?
+  not_found: '%{query} not found.'
 
   activerecord:
     attributes:

@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
-  before_action :authenticate, :must_be_verified
-  before_action :set_order, only: [:buy, :destroy, :cancel]
+  before_action :authenticate, :must_be_verified, except: :show
+  before_action :set_order, only: [:show, :buy, :destroy, :cancel]
 
   def create
     item           = Item.find(params[:item_id])
@@ -13,6 +13,9 @@ class OrdersController < ApplicationController
       # TODO render item show
       render action: 'new'
     end
+  end
+
+  def show
   end
 
   def buy

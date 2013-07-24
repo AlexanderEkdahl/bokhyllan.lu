@@ -7,9 +7,12 @@ Bok::Application.routes.draw do
   end
 
   resources :items, only: [:show] do
-    get 'typeahead', on: :collection
+    collection do
+      get 'typeahead'
+      post 'search'
+    end
 
-    resources :orders, only: [:create, :destroy] do
+    resources :orders, only: [:show, :create, :destroy] do
       post 'buy', on: :member
       post 'cancel', on: :member
     end

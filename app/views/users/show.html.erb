@@ -9,6 +9,7 @@
         <th data-sort><%= t("activerecord.attributes.order.quality") %></th>
         <th><%= t(:seller) %></th>
         <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +20,7 @@
               <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
               <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
               <td><%= contact_information(order.user) %></td>
+              <td><%= qr(order.user) %></td>
               <td><%= button_to(t(:cancel), [:cancel, order.item, order], class: 'button') %></td>
             </tr>
           <% end %>
@@ -30,13 +32,14 @@
 <% unless current_user.orders.empty? %>
   <h1><%= t(:active_sell_order, count: current_user.orders.count) %></h1>
 
-  <table>
+  <table class="hover">
     <thead>
       <tr>
         <th><%= t("activerecord.attributes.item.name") %></th>
         <th data-sort><%= t("activerecord.attributes.order.price") %></th>
         <th data-sort><%= t("activerecord.attributes.order.quality") %></th>
         <th><%= t(:buyer) %></th>
+        <th></th>
         <th></th>
       </tr>
     </thead>
@@ -48,6 +51,7 @@
             <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
             <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
             <td><%= contact_information(order.buyer) %></td>
+            <td><%= qr(order.buyer) %></td>
             <td><%= button_to(t(:remove), [order.item, order], method: :delete, class: 'button') %></td>
           </tr>
         <% end %>

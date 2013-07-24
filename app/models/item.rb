@@ -14,4 +14,8 @@ class Item < ActiveRecord::Base
   def self.last_modified
     maximum(:updated_at)
   end
+
+  def self.search(search)
+    where('name ILIKE ?', "#{search}%").first
+  end
 end
