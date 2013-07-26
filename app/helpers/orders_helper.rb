@@ -8,6 +8,6 @@ module OrdersHelper
   end
 
   def other_items(order)
-    order.user.orders - [order]
+    order.user.available_orders - [order]
   end
 end

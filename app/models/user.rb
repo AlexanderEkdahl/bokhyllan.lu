@@ -32,6 +32,7 @@ class User < ActiveRecord::Base
   end
 
   has_many :orders, dependent: :destroy
+  has_many :available_orders, -> { where(buyer_id: nil) }, class_name: 'Order'
   has_many :buying_orders, class_name: 'Order', foreign_key: 'buyer_id'
 
   PROPERTIES_KEYS = [:name, :phone]
