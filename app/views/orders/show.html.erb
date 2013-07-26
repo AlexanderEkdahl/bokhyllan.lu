@@ -1,6 +1,6 @@
 <%= render partial: 'search', locals: { item: @order.item } %>
 
-<div class="clearfix">
+<div class="row">
   <div class="price">
     <span><%= @order.price %></span>
   </div>
@@ -19,9 +19,13 @@
   </div>
 </div>
 
-<%= button_to(t(:view_contact_info, rescue_format: nil), [:buy, @order.item, @order], class: 'buy button', data: { confirm: t(:purchase_confirmation) }) %>
+<% if signed_in? %>
+  <%= button_to(t(:view_contact_info, rescue_format: nil), [:buy, @order.item, @order], class: 'buy button', data: { confirm: t(:purchase_confirmation) }) %>
+<% else %>
+  <span class="buy">You need to signed in to view the contact information of the seller.</span>
+<% end %>
 
-<h2>Other items from the same seller</h2>
+<h2>Other items from the same seller.</h2>
 
 <table data-sort class="hover">
   <thead>

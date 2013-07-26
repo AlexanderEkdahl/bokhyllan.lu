@@ -1,9 +1,11 @@
 <%= render partial: 'search', locals: { item: @item } %>
 
-<div class="clearfix">
-  <div class="price">
-    <span><%= @item.cheapest %></span>
-  </div>
+<div class="row">
+  <% unless @item.image.blank? %>
+    <div class="image">
+      <%= image_tag(@item.image) %>
+    </div>
+  <% end %>
 
   <div class="properties">
     <table>
@@ -19,9 +21,9 @@
   </div>
 </div>
 
-<div class="clearfix">
+<div class="row">
   <div class="orders">
-    <% if @item.orders.first %>
+    <% if @item.orders(true).any? %>
       <table data-sort class="hover">
         <thead>
           <tr>
@@ -31,7 +33,7 @@
           </tr>
         </thead>
         <tbody>
-          <% @item.orders.each do |order| %>
+          <% @item.orders(true).available.each do |order| %>
             <tr>
               <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
               <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
@@ -41,7 +43,11 @@
         </tbody>
       </table>
     <% else %>
-      No one is selling this item.
+      <% if @item.alternative.blank? %>
+        <%= t(:no_one_is_selling, name: @item.name) %>
+      <% else %>
+        <%= t(:no_one_is_selling_with_alternative_html, name: @item.name, alternative: alternative_link(@item)) %>
+      <% end %>
     <% end %>
   </div>
 
@@ -50,6 +56,9 @@
       <%= form_for([@item, @order], html: { class: 'form' }) do |f| %>
         <fieldset>
           <legend><%= t(:place_sell_order) %></legend>
+          <% @order.errors.full_messages.each do |msg| %>
+            <%= msg %>
+          <% end %>
           <%= f.label :price %>
           <%= telephone_field(:order, :price) %>
           <%= f.label :quality %>
@@ -65,7 +74,11 @@
         </fieldset>
       <% end %>
     <% else %>
-      <%= link_to t(:must_be_signed_in_to_buy, item: @item.name), sign_in_user_path %>
+      <% if @item.orders(true).any? %>
+        <%= link_to t(:must_be_signed_in_to_sell_or_buy, item: @item.name), sign_in_user_path %>
+      <% else %>
+        <%= link_to t(:must_be_signed_in_to_sell, item: @item.name), sign_in_user_path %>
+      <% end %>
     <% end %>
   </div>
 </div>

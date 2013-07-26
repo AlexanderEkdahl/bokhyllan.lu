@@ -3,15 +3,14 @@ class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :buy, :destroy, :cancel]
 
   def create
-    item           = Item.find(params[:item_id])
-    @order         = item.orders.build(order_params)
+    @item          = Item.find(params[:item_id])
+    @order         = @item.orders.build(order_params)
     @order.user_id = current_user.id
 
     if @order.save
-      redirect_to(item, success: t(:order_created))
+      redirect_to(@item, success: t(:order_created))
     else
-      # TODO render item show
-      render action: 'new'
+      render 'items/show'
     end
   end
 
@@ -19,7 +18,7 @@ class OrdersController < ApplicationController
   end
 
   def buy
-    render 'invalid' unless @order.update_attributes(buyer_id: current_user.id)
+    render 'invalid' unless @order.buy(current_user)
   end
 
   def destroy
@@ -29,7 +28,7 @@ class OrdersController < ApplicationController
   end
 
   def cancel
-    @order.update_attributes(buyer_id: nil)
+    @order.cancel_purchase
 
     redirect_to(user_path, success: t(:order_canceled))
   end

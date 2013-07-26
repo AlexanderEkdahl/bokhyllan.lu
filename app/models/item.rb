@@ -1,11 +1,7 @@
 class Item < ActiveRecord::Base
   validates :name, presence: true
 
-  has_many :orders, -> { where(buyer_id: nil) }
-
-  def cheapest
-    orders.first.try(:price)
-  end
+  has_many :orders, dependent: :destroy
 
   def tokens
     [*name.split, *properties.values.map { |v| v.split(/[\s;]\s?/) }.flatten]
@@ -16,6 +12,6 @@ class Item < ActiveRecord::Base
   end
 
   def self.search(search)
-    where('name ILIKE ?', "#{search}%").first
+    where('name ILIKE ?', "%#{search}%")
   end
 end

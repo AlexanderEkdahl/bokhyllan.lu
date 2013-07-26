@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   before_action :authenticate, only: [:show, :edit, :update]
 
   def sign_in
-    reset_session
     @user = User.new
   end
 
@@ -30,8 +29,7 @@ class UsersController < ApplicationController
   end
 
   def sign_out
-    reset_session
-    redirect_to(root_path, notice: t(:sign_out_success))
+    logout
   end
 
   def show

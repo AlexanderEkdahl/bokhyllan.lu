@@ -8,6 +8,14 @@ module OrdersHelper
   end
 
   def other_items(order)
-    order.user.available_orders - [order]
+    order.user.orders.available - [order]
+  end
+
+  def orders_invalid(order)
+    if order.errors.added?(:buyer_id, :taken)
+      t(:already_buying, name: order.item.name)
+    elsif order.errors.added?(:buyer_id, :invalid)
+      t(:cannot_buy_from_self, name: order.item.name)
+    end
   end
 end

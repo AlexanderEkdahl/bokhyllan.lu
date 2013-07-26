@@ -1,4 +1,4 @@
-Bok::Application.routes.draw do
+Bokhyllan::Application.routes.draw do
   resource :user, only: [:create, :update] do
     get  'verify'
     get  'sign_in'
@@ -7,10 +7,7 @@ Bok::Application.routes.draw do
   end
 
   resources :items, only: [:show] do
-    collection do
-      get 'typeahead'
-      post 'search'
-    end
+    get 'typeahead', on: :collection
 
     resources :orders, only: [:show, :create, :destroy] do
       post 'buy', on: :member

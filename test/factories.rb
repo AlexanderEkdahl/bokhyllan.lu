@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :user do
-    sequence(:login) { |n| "dat#{n}sek" }
+    sequence(:login, 'aaa') { |n| "dat12#{n}" }
     password 'secret'
   end
 

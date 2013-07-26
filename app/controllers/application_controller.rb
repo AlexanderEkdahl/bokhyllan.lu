@@ -18,12 +18,19 @@ class ApplicationController < ActionController::Base
       http_accept_language.language_region_compatible_from(I18n::available_locales.map(&:to_s))
     end
 
+    def logout
+      reset_session
+      redirect_to(root_path, notice: t(:sign_out_success))
+    end
+
     def signed_in?
       !session[:user_id].nil?
     end
 
     def current_user
       @current_user ||= User.find(session[:user_id]) if signed_in?
+    rescue ActiveRecord::RecordNotFound
+      logout
     end
 
     def authenticate

@@ -1,7 +1,10 @@
 <h1><%= t(:sign_in) %></h1>
 
 <div class="sign_in">
-  <%= form_for(@user, url: user_path, html: { class: 'form' }) do |f| %>
+  <%= form_for(@user, url: user_path, html: { class: 'form' }, method: :post) do |f| %>
+    <% @user.errors.full_messages.each do |msg| %>
+      <%= msg %>
+    <% end %>
     <%= f.label :login %>
     <%= f.text_field :login %>
 

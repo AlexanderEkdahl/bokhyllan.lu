@@ -11,14 +11,14 @@ en:
   settings_updated_successful: Settings was successfully updated.
   user_verified: '%{email} verified.'
   place_sell_order: Place sell order
-  must_be_signed_in_to_buy: 'You must be signed in to sell or buy %{item}.'
+  must_be_signed_in_to_sell: 'You must be signed in to sell %{item}.'
+  must_be_signed_in_to_sell_or_buy: 'You must be signed in to sell or buy %{item}.'
   author:
     one: Author
     other: Authors
   course:
     one: Course
     other: Courses
-  sign_in_proceed: Proceed
   active_sell_order:
     one: Active sell order
     other: Active sell orders
@@ -35,6 +35,10 @@ en:
   show: Show
   purchase_confirmation: When you click this button you will be given exclusive rights to contact the seller. Continue?
   not_found: '%{query} not found.'
+  cannot_buy_from_self: You cannot buy your own item. You can cancel that order by going to your profile.
+  already_buying: 'You are already attempting to purchase %{name}. You can cancel that order by going to your profile.'
+  no_one_is_selling: No one is selling this %{name}.
+  no_one_is_selling_with_alternative_html: 'No one is selling this %{name}. You can purchase a new copy on %{alternative}'
 
   activerecord:
     attributes:

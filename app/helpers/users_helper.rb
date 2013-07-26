@@ -19,6 +19,6 @@ module UsersHelper
 
     qr_call = "TEL:#{user.phone}"
     qr      = "http://api.qrserver.com/v1/create-qr-code/?data=#{CGI::escape(qr_call)}&size=#{size}x#{size}"
-    image_tag(qr, class: "qr", alt: qr_call, size: size)
+    image_tag(qr, class: "qr", alt: qr_call, size: size.to_s)
   end
 end

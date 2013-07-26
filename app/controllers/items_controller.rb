@@ -1,11 +1,22 @@
 class ItemsController < ApplicationController
   def index
-    fresh_when(true)
+    if params[:search]
+      items = Item.search(params[:search])
+
+      case items.length
+      when 0
+        render 'not_found'
+      when 1
+        redirect_to(items.first)
+      else
+        render 'search_results'
+      end
+    end
   end
 
   def show
     @item  = Item.find(params[:id])
-    @order = Order.new
+    @order = @item.orders.build
     fresh_when(@item)
   end
 
