@@ -5,13 +5,8 @@
 * Add public? method that returns { public: true } if no one is logged in.
 * Touch enabled visitors should not have hover effects
 * Format phone numbers
-* Email mailto link
 * User created items
 * Search item metadata
-
-##Needs fixing
-
-* User should not use hstore. Should have columns for name and phone
 
 To run the database
 

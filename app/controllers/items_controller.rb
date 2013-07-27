@@ -1,13 +1,15 @@
 class ItemsController < ApplicationController
+  include Metatags
+
   def index
     if params[:search]
-      items = Item.search(params[:search])
+      @items = Item.search(params[:search])
 
-      case items.length
+      case @items.length
       when 0
         render 'not_found'
       when 1
-        redirect_to(items.first)
+        redirect_to(@items.first)
       else
         render 'search_results'
       end
@@ -18,16 +20,6 @@ class ItemsController < ApplicationController
     @item  = Item.find(params[:id])
     @order = @item.orders.build
     fresh_when(@item)
-  end
-
-  def search
-    item = Item.search(params[:search])
-
-    if item
-      redirect_to(item)
-    else
-      render('not_found')
-    end
   end
 
   def typeahead

@@ -1,3 +1,5 @@
+<% title current_user.to_s %>
+
 <% unless current_user.buying_orders.empty? %>
   <h1><%= t(:active_buy_order, count: current_user.buying_orders.count) %></h1>
 
@@ -14,16 +16,14 @@
     </thead>
     <tbody>
       <% current_user.buying_orders.each do |order| %>
-        <% cache [:buy, order, order.user] do %>
-            <tr>
-              <td><%= order.item.name %></td>
-              <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
-              <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-              <td><%= contact_information(order.user) %></td>
-              <td><%= qr(order.user) %></td>
-              <td><%= button_to(t(:cancel), [:cancel, order.item, order], class: 'button') %></td>
-            </tr>
-          <% end %>
+        <tr>
+          <td><%= order.item.name %></td>
+          <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
+          <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
+          <td><%= contact_information(order.user) %></td>
+          <td><%= qr(order.user) %></td>
+          <td><%= button_to(t(:cancel), [:cancel, order.item, order], class: 'button') %></td>
+        </tr>
       <% end %>
     </tbody>
   </table>
@@ -45,16 +45,14 @@
     </thead>
     <tbody>
       <% current_user.orders.each do |order| %>
-        <% cache [:sell, order, order.buyer] do %>
-          <tr>
-            <td><%= order.item.name %></td>
-            <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
-            <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-            <td><%= contact_information(order.buyer) %></td>
-            <td><%= qr(order.buyer) %></td>
-            <td><%= button_to(t(:remove), [order.item, order], method: :delete, class: 'button') %></td>
-          </tr>
-        <% end %>
+        <tr>
+          <td><%= order.item.name %></td>
+          <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
+          <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
+          <td><%= contact_information(order.buyer) %></td>
+          <td><%= qr(order.buyer) %></td>
+          <td><%= button_to(t(:remove), [order.item, order], method: :delete, class: 'button') %></td>
+        </tr>
       <% end %>
     </tbody>
   </table>
@@ -71,12 +69,12 @@
   <%= f.password_field :current_password %>
   <%= f.label :password %>
   <%= f.password_field :password %>
-  <h2><%= t(:update_contact_information) %></h2>
 
-  <% User::PROPERTIES_KEYS.each do |key| %>
-    <%= f.label key %>
-    <%= f.text_field key %>
-  <% end %>
+  <h2><%= t(:update_contact_information) %></h2>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :phone %>
+  <%= f.text_field :phone %>
 
   <%= f.submit(class: 'button') %>
 <% end %>

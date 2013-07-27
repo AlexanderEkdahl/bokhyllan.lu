@@ -14,6 +14,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'newrelic_rpm'
 gem 'http_accept_language', github: 'DouweM/http_accept_language', branch: 'no-middleware-no-crash'
 gem 'foreman'
+gem 'meta-tags', :require => 'meta_tags'
 
 group :development, :test do
   gem 'debugger'

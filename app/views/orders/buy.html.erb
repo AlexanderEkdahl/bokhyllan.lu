@@ -21,7 +21,7 @@
   <tbody>
     <tr>
       <td><%= t(:email) %>:</td>
-      <td><%= @order.user.email %></td>
+      <td><%= mail_to(@order.user.email) %></td>
     </tr>
     <% user_properties(@order.user) do |key, value| %>
       <tr>

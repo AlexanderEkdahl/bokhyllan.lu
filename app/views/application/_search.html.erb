@@ -2,7 +2,7 @@
   <%= text_field_tag('search', '',
                      class: 'search',
                      placeholder: t(:search_placeholder),
-                     value: (item.name if defined?(item)),
+                     value: (title(item.name) if defined?(item)),
                      data: { prefetch: typeahead_items_path(format: :json) },
                      autofocus: true) %>
   <%= submit_tag("", style: "position: absolute; left: -9999px; width: 1px; height: 1px;", name: nil ) %>

@@ -5,13 +5,13 @@ module UsersHelper
   end
 
   def user_properties(user)
-    user.properties.each do |key, value|
+    {name: user.name, phone: user.phone}.each do |key, value|
       yield(t("activerecord.attributes.order.#{key}"), value) unless value.blank?
     end
   end
 
   def contact_information(user)
-    [user.email, *user.properties.values.reject(&:blank?)].join(" ") unless user.nil?
+    [mail_to(user.email), *user.name, *user.phone].join(" ").html_safe unless user.nil?
   end
 
   def qr(user, size = 100)

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bokhyllan.lu</title>
+    <%= display_meta_tags(site: 'Bokhyllan.lu', separator: '&middot;'.html_safe, reverse: true, keywords: Metatags::DEFAULT) %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= stylesheet_link_tag "application", media: "all" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>
   </head>
   <body>

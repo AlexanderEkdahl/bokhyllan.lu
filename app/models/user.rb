@@ -34,9 +34,6 @@ class User < ActiveRecord::Base
   has_many :orders, dependent: :destroy
   has_many :buying_orders, class_name: 'Order', foreign_key: 'buyer_id'
 
-  PROPERTIES_KEYS = [:name, :phone]
-  store_accessor :properties, PROPERTIES_KEYS
-
   def email
     "#{login}@student.lu.se"
   end
