@@ -7,7 +7,8 @@ var search = function() {
       prefetch: {
         url: $typeahead.data('prefetch'),
         ttl: 500
-      }
+      },
+      footer: $typeahead.data('footer')
     });
 
     $typeahead.on('typeahead:selected', function(e, datum) {

@@ -20,7 +20,7 @@
           <td><%= order.item.name %></td>
           <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
           <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-          <td><%= contact_information(order.user) %></td>
+          <td><%= contact_information_without_keys(order.user) %></td>
           <td><%= qr(order.user) %></td>
           <td><%= button_to(t(:cancel), [:cancel, order.item, order], class: 'button') %></td>
         </tr>
@@ -49,7 +49,7 @@
           <td><%= order.item.name %></td>
           <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
           <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-          <td><%= contact_information(order.buyer) %></td>
+          <td><%= contact_information_without_keys(order.buyer) %></td>
           <td><%= qr(order.buyer) %></td>
           <td><%= button_to(t(:remove), [order.item, order], method: :delete, class: 'button') %></td>
         </tr>

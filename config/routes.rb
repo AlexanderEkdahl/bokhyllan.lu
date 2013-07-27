@@ -6,7 +6,7 @@ Bokhyllan::Application.routes.draw do
     root 'users#show', as: ''
   end
 
-  resources :items, only: [:show] do
+  resources :items, only: [:show, :new, :create] do
     get 'typeahead', on: :collection
 
     resources :orders, only: [:show, :create, :destroy] do

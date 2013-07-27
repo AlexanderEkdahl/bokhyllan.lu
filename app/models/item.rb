@@ -1,7 +1,11 @@
 class Item < ActiveRecord::Base
-  validates :name, presence: true
-
   has_many :orders, dependent: :destroy
+  accepts_nested_attributes_for :orders
+
+  validates :name, presence: true, length: { minimum: 3, maximum: 100 }
+
+  PROPERTIES_KEYS = [:courses, :authors]
+  store_accessor :properties, PROPERTIES_KEYS
 
   def tokens
     [*name.split, *properties.values.map { |v| v.split(/[\s;]\s?/) }.flatten]

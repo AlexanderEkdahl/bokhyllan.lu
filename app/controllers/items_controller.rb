@@ -1,4 +1,6 @@
 class ItemsController < ApplicationController
+  before_action :authenticate, only: [:new, :create]
+
   include Metatags
 
   def index
@@ -16,6 +18,22 @@ class ItemsController < ApplicationController
     end
   end
 
+  def new
+    @item = Item.new(params[:name] ? { name: params[:name] } : nil)
+    @order = @item.orders.build
+  end
+
+  def create
+    @item = Item.new(item_params)
+    @item.orders.first.user_id = current_user.id
+
+    if @item.save
+      redirect_to(@item)
+    else
+      render 'new'
+    end
+  end
+
   def show
     @item  = Item.find(params[:id])
     @order = @item.orders.build
@@ -27,4 +45,10 @@ class ItemsController < ApplicationController
     fresh_when(last_modified: Item.last_modified, public: true)
     expires_in(3.hours, public: true)
   end
+
+  private
+
+    def item_params
+      params.require(:item).permit(:name, orders_attributes: [:price, :quality])
+    end
 end

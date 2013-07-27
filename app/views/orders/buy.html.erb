@@ -19,11 +19,7 @@
 
 <table>
   <tbody>
-    <tr>
-      <td><%= t(:email) %>:</td>
-      <td><%= mail_to(@order.user.email) %></td>
-    </tr>
-    <% user_properties(@order.user) do |key, value| %>
+    <% contact_information_with_keys(@order.user) do |key, value| %>
       <tr>
         <td><%= key %>:</td>
         <td><%= value %></td>

@@ -4,14 +4,18 @@ module UsersHelper
     user.email
   end
 
-  def user_properties(user)
-    {name: user.name, phone: user.phone}.each do |key, value|
-      yield(t("activerecord.attributes.order.#{key}"), value) unless value.blank?
+  def contact_information(user)
+    {email: mail_to(user.email), name: user.name, phone: user.phone}.reject { |_, value| value.blank? }
+  end
+
+  def contact_information_with_keys(user)
+    contact_information(user).each do |key, value|
+      yield(t("activerecord.attributes.user.#{key}"), value)
     end
   end
 
-  def contact_information(user)
-    [mail_to(user.email), *user.name, *user.phone].join(" ").html_safe unless user.nil?
+  def contact_information_without_keys(user)
+    contact_information(user).values.join(" ").html_safe unless user.nil?
   end
 
   def qr(user, size = 100)
