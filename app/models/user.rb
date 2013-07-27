@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   include Verifiable
 
-  require 'bcrypt'
-
   attr_accessor :password
 
   validates :login, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A[a-z]{3}[0-9]{2}[a-z]{3}\z/ }

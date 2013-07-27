@@ -25,25 +25,27 @@
   <span class="buy">You need to signed in to view the contact information of the seller.</span>
 <% end %>
 
-<h2>Other items from the same seller.</h2>
+<% if other_items(@order).any? %>
+  <h2>Other items from the same seller.</h2>
 
-<table data-sort class="hover">
-  <thead>
-    <tr>
-      <th><%= t("activerecord.attributes.item.name") %></th>
-      <th data-sort><%= t("activerecord.attributes.order.price") %></th>
-      <th data-sort data-sort-desc><%= t("activerecord.attributes.order.quality") %></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% other_items(@order).each do |order| %>
+  <table data-sort class="hover">
+    <thead>
       <tr>
-        <td><%= order.item.name %></td>
-        <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
-        <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-        <td><%= link_to(t(:show, rescue_format: nil), [order.item, order], class: 'button') %></td>
+        <th><%= t("activerecord.attributes.item.name") %></th>
+        <th data-sort><%= t("activerecord.attributes.order.price") %></th>
+        <th data-sort data-sort-desc><%= t("activerecord.attributes.order.quality") %></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% other_items(@order).each do |order| %>
+        <tr>
+          <td><%= order.item.name %></td>
+          <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
+          <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
+          <td><%= link_to(t(:show, rescue_format: nil), [order.item, order], class: 'button') %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>

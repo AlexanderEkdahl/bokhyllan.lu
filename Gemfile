@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 gem 'rails', '4.0'
 gem 'sass-rails', '4.0'
@@ -10,11 +11,11 @@ gem 'jquery-rails'
 gem 'twitter-typeahead-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
-gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0', require: 'bcrypt'
 gem 'newrelic_rpm'
 gem 'http_accept_language', github: 'DouweM/http_accept_language', branch: 'no-middleware-no-crash'
 gem 'foreman'
-gem 'meta-tags', :require => 'meta_tags'
+gem 'meta-tags', require: 'meta_tags'
 
 group :development, :test do
   gem 'debugger'
