@@ -3,6 +3,7 @@ require 'uri'
 module ItemsHelper
   def item_properties(item)
     item.properties.each do |key, value|
+      next if value.blank?
       value = value.split(/;\s?/)
       key   = t(key, count: value.length)
       yield(key, value.to_sentence)
