@@ -5,7 +5,7 @@ module UsersHelper
   end
 
   def contact_information(user)
-    {email: mail_to(user.email), name: user.name, phone: user.phone}.reject { |_, value| value.blank? }
+    { email: mail_to(user.email), name: user.name, phone: user.phone }.reject { |_, value| value.blank? }
   end
 
   def contact_information_with_keys(user)

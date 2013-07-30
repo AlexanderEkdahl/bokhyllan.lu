@@ -16,6 +16,7 @@ gem 'newrelic_rpm'
 gem 'http_accept_language', github: 'DouweM/http_accept_language', branch: 'no-middleware-no-crash'
 gem 'foreman'
 gem 'meta-tags', require: 'meta_tags'
+gem 'analytics-ruby'
 
 group :development, :test do
   gem 'factory_girl_rails'
