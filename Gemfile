@@ -18,7 +18,6 @@ gem 'foreman'
 gem 'meta-tags', require: 'meta_tags'
 
 group :development, :test do
-  gem 'debugger'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
   gem 'letter_opener'
