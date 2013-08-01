@@ -32,7 +32,8 @@ class UsersController < ApplicationController
 
   def sign_out
     track("Signed out")
-    logout
+    reset_session
+    redirect_to(root_path, notice: t(:sign_out_success))
   end
 
   def show
