@@ -1,0 +1,46 @@
+.flash {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  z-index: 100;
+
+  .notice, .alert, .success {
+    padding: em(14, 24);
+    display: inline-block;
+    @include user-select(none);
+    @include animation(fade-in-then-out 3.5s);
+    opacity: 0;
+    cursor: default;
+  }
+
+  .notice {
+    background-color: rgba(180, 215, 255, 0.8);
+  }
+
+  .alert {
+    background-color: rgba(255, 180, 180, 0.8);
+  }
+
+  .success {
+    background-color: rgba(192, 255, 181, 0.8);
+  }
+}
+
+@include keyframes(fade-in-then-out) {
+  0% {
+    @include transform(scale(0.5));
+    opacity: 0;
+  }
+  12% {
+    @include transform(rotateX(0) scale(1));
+    opacity: 1;
+  }
+  85% {
+    @include transform(rotateX(0) scale(1));
+    opacity: 1;
+  }
+  100% {
+    @include transform(scale(0.5));
+    opacity: 0;
+  }
+}

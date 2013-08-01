@@ -24,6 +24,27 @@ th, input, body, h1, h2, h3 {
   font-weight: 100;
 }
 
-h1:first-of-type {
-  margin-top: 0;
+* {
+  @include prefixer(box-sizing, border-box, webkit moz spec);
+}
+
+.full-width {
+  width: 100%;
+  float: left;
+}
+
+@mixin column($numerator, $denominator: 1) {
+  @if $numerator == 1 {
+    @if $denominator == 1 {
+      @extend .full-width;
+    }
+  }
+  width: $numerator / $denominator * 100%;
+  float: left;
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
 }

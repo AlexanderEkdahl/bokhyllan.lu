@@ -1,0 +1,88 @@
+.users.sign_in {
+  & > div:first-of-type {
+    @include column(1, 2);
+    padding-right: 2rem;
+    border-right: 1px solid #eee;
+  }
+
+  & > div:last-of-type {
+    @include column(1, 2);
+    padding-left: 2rem;
+  }
+}
+
+.items.show, .orders.show {
+  .properties {
+    @include column(2, 3);
+
+    td:first-of-type {
+      text-align: right;
+      font-size: 0.8em;
+      padding-right: em(10, 24);
+    }
+
+    @include mobile {
+      @include column(1, 1);
+    }
+
+    &:first-of-type {
+      @include column(1, 1);
+    }
+  }
+}
+
+.items.show {
+  .image {
+    @include column(1, 3);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .list, .new-order {
+    margin-top: 1em;
+
+    @include column(1, 2);
+    @include mobile {
+      @include column(1, 1);
+    }
+  }
+
+  .list {
+    padding-right: 2rem;
+  }
+
+  .new-order {
+    padding-left: 2rem;
+  }
+}
+
+.orders.show {
+  .price {
+    @include column(1, 3);
+    text-align: center;
+
+    span {
+      font-size: em(106, 24);
+    }
+
+    @include mobile {
+      @include column(1, 1);
+    }
+  }
+
+  .buy {
+    @include column(1, 1);
+    text-align: center;
+    margin: 1em 0;
+
+    input {
+      width: auto;
+    }
+  }
+
+  .list {
+    @include column(1, 1);
+  }
+}

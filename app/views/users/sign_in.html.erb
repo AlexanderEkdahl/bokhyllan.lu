@@ -1,6 +1,6 @@
 <h1><%= title(t(:sign_in)) %></h1>
 
-<div class="sign_in">
+<div>
   <%= form_for(@user, url: user_path, html: { class: 'form' }, method: :post) do |f| %>
     <% @user.errors.full_messages.each do |msg| %>
       <%= msg %>
@@ -14,6 +14,6 @@
     <%= f.submit(class: 'button') %>
   <% end %>
 </div>
-<div class="sign_in_info">
+<div>
   <p><%= t(:first_time_login_info) %></p>
 </div>

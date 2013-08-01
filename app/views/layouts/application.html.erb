@@ -17,7 +17,7 @@
       <% end %>
     </div>
 
-    <div class="main">
+    <div class="main <%= "#{params[:controller]} #{params[:action]}" %>">
       <%= yield %>
     </div>
   </body>

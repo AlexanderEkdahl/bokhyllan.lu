@@ -44,6 +44,7 @@ en:
     - buy
     - sell
     - lund
+  sign_in_required: You need to signed in to view the contact information of the seller.
 
   activerecord:
     attributes:
