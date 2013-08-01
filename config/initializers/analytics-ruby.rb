@@ -1,1 +1,1 @@
-Analytics.init(secret: '9rafu6woozroozlb1v1m')
+Analytics.init(secret: ENV['SEGMENTIO_API'] || '')
