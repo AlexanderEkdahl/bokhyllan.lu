@@ -85,8 +85,9 @@ Bokhyllan::Application.configure do
     authentication: "plain",
     enable_starttls_auto: true,
     user_name: ENV["GMAIL_USERNAME"],
-    password: ENV["g"]
+    password: ENV["GMAIL_PASSWORD"]
   }
+  ActionMailer::Base.delivery_method = :smtp
 
   config.action_mailer.default_url_options = { :host => "bokhyllan.herokuapp.com" }
 end
