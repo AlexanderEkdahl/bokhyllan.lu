@@ -78,15 +78,5 @@ Bokhyllan::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # https://devcenter.heroku.com/articles/mailtrap#using-with-rails-3-x
-  ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.smtp_settings = {
-    :user_name => ENV['MAILTRAP_USER_NAME'],
-    :password => ENV['MAILTRAP_PASSWORD'],
-    :address => ENV['MAILTRAP_HOST'],
-    :port => ENV['MAILTRAP_PORT'],
-    :authentication => :plain
-  }
-
-  config.action_mailer.default_url_options = { :host => "bokhyllan-staging.herokuapp.com" }
+  config.action_mailer.default_url_options = { :host => "bokhyllan.herokuapp.com" }
 end
