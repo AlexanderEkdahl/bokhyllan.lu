@@ -1,6 +1,6 @@
 #Bokhyllan.lu
 
-https://www.codeship.io/projects/88ba9be0-dd0d-0130-211e-425e173b3297/status
+[![Codeship Status for AlexanderEkdahl/bokhyllan.lu](https://www.codeship.io/projects/88ba9be0-dd0d-0130-211e-425e173b3297/status?branch=master)](https://www.codeship.io/projects/5559)
 
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
