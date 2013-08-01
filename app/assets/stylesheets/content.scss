@@ -9,6 +9,14 @@
     @include column(1, 2);
     padding-left: 2rem;
   }
+
+  @include mobile {
+    & > div:last-of-type, & > div:first-of-type {
+      @include column(1);
+      padding: 0;
+      border: none;
+    }
+  }
 }
 
 .items.show, .orders.show {
@@ -22,11 +30,11 @@
     }
 
     @include mobile {
-      @include column(1, 1);
+      @include column(1);
     }
 
     &:first-of-type {
-      @include column(1, 1);
+      @include column(1);
     }
   }
 }
@@ -40,21 +48,23 @@
     }
   }
 
-  .list, .new-order {
-    margin-top: 1em;
-
-    @include column(1, 2);
-    @include mobile {
-      @include column(1, 1);
-    }
-  }
-
   .list {
     padding-right: 2rem;
   }
 
   .new-order {
     padding-left: 2rem;
+  }
+
+  .list, .new-order {
+    margin-top: 1em;
+
+    @include column(1, 2);
+    @include mobile {
+      @include column(1);
+      padding: 0;
+      text-align: center;
+    }
   }
 }
 
@@ -68,12 +78,12 @@
     }
 
     @include mobile {
-      @include column(1, 1);
+      @include column(1);
     }
   }
 
   .buy {
-    @include column(1, 1);
+    @include column(1);
     text-align: center;
     margin: 1em 0;
 
@@ -83,6 +93,6 @@
   }
 
   .list {
-    @include column(1, 1);
+    @include column(1);
   }
 }

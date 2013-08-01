@@ -28,17 +28,7 @@ th, input, body, h1, h2, h3 {
   @include prefixer(box-sizing, border-box, webkit moz spec);
 }
 
-.full-width {
-  width: 100%;
-  float: left;
-}
-
 @mixin column($numerator, $denominator: 1) {
-  @if $numerator == 1 {
-    @if $denominator == 1 {
-      @extend .full-width;
-    }
-  }
   width: $numerator / $denominator * 100%;
   float: left;
 }
