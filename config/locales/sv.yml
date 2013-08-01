@@ -15,14 +15,35 @@ sv:
   user_verified: '%{email} verifierat.'
   place_sell_order: Ny säljorder
   must_be_signed_in: Du måste vara inloggad
-  must_be_signed_in_to_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
+  has_your_copy: '%{user} har din kopia av %{item}.'
+  sign_in_required: You need to signed in to view the contact information of the seller.
+  must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
+  must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
+  sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontakt information.
+  other_items: Samma person säljer även
+  purchase_confirmation: När du klickat på denna knapp ges du exklusiva rättigheter att kontakta säljaren. Fortsätt?
+  contact_immediately: Var god kontakta honom/henne omgående.
+  contact_immediately_with_qr: 'Var god kontakta honom/henne omgående. Du kan scanna QR koden till vänster för att ringa %{name}'
+  contact_next_morning: Please contact him/her first thing in the morning.
+  show: Visa
+  cancel: Avbryt
+  remove: Ta bort
   buy: Köp
-  author:
+  authors:
     one: Författare
     other: Författare
-  course:
+  courses:
     one: Kurs
     other: Kurser
+  active_sell_order:
+    one: Aktiva säljorder
+    other: Aktiva säljorder
+  active_buy_order:
+    one: Aktiva köpeorder
+    other: Aktiva köpeorder
+  view_contact_info: Visa kontakt information
+  buyer: Köpare
+  seller: Säljare
   activerecord:
     attributes:
       user:
@@ -34,6 +55,8 @@ sv:
       order:
         price: Pris
         quality: Kvalité
+      item:
+        name: Namn
   support:
     array:
       last_word_connector: ' och '

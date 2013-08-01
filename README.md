@@ -3,9 +3,11 @@
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
 * Add public? method that returns { public: true } if no one is logged in.
-* Touch enabled visitors should not have hover effects
+* Touch enabled visitors should not have hover effects for tables
 * Format phone numbers
 * Search item metadata
+* Expand QR codes on hover
+* Responsive tables a lá BBC(responsive news)
 
 ##Getting started
 

@@ -6,7 +6,8 @@ input {
   font-size: 1.2em;
   padding: em(4, 24);
   box-shadow: none;
-  border-radius: none;
+  border-radius: 0;
+  @include appearance(none);
 }
 
 .button {

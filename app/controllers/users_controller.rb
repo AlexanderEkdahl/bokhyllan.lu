@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.find_or_create_by(login: params[:user][:login])
+    @user = User.find_or_create_by(login: params[:user][:login].downcase)
 
     if @user.new_record?
       @user.password = params[:user][:password]

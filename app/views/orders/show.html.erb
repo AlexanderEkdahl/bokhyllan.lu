@@ -21,13 +21,13 @@
   <% if signed_in? %>
     <%= button_to(t(:view_contact_info, rescue_format: nil), [:buy, @order.item, @order], class: 'button', data: { confirm: t(:purchase_confirmation) }) %>
   <% else %>
-    <%= link_to(t(:sign_in_required), sign_in_user_path) %>
+    <%= link_to(t(:sign_in_required_to_view_info), sign_in_user_path) %>
   <% end %>
 </div>
 
 <% if other_items(@order).any? %>
   <div class="list">
-    <h2>Other items from the same seller.</h2>
+    <h2><%= t(:other_items) %></h2>
 
     <table data-sort class="hover">
       <thead>
