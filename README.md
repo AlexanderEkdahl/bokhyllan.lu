@@ -1,5 +1,7 @@
 #Bokhyllan.lu
 
+https://www.codeship.io/projects/88ba9be0-dd0d-0130-211e-425e173b3297/status
+
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
 * Add public? method that returns { public: true } if no one is logged in.
