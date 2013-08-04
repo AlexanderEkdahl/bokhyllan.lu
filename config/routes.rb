@@ -11,7 +11,7 @@ Bokhyllan::Application.routes.draw do
 
     resources :orders, only: [:show, :create, :destroy] do
       post 'buy', on: :member
-      post 'cancel', on: :member
+      delete 'cancel', on: :member
     end
   end
 

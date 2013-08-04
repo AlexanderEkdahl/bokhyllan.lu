@@ -6,10 +6,11 @@ class UsersHelperTest < ActionView::TestCase
   end
 
   def test_email_with_verification
+    # TODO update to use localization data
     @user.login = 'email'
-    assert_equal('email@student.lu.se', email_with_verification(@user))
+    assert_equal('email@student.lu.se(Not verified)', email_with_verification(@user))
     @user.verify!
-    assert_equal('email@student.lu.se &#10003;', email_with_verification(@user))
+    assert_equal('email@student.lu.se', email_with_verification(@user))
   end
 
   def test_contact_information

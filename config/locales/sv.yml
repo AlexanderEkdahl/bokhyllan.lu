@@ -25,6 +25,7 @@ sv:
   contact_immediately: Var god kontakta honom/henne omgående.
   contact_immediately_with_qr: 'Var god kontakta honom/henne omgående. Du kan scanna QR koden till vänster för att ringa %{name}'
   contact_next_morning: Please contact him/her first thing in the morning.
+  email_not_verified: '%{email}(Ej verifierat)'
   show: Visa
   cancel: Avbryt
   remove: Ta bort

@@ -31,11 +31,7 @@
       </thead>
       <tbody>
         <% @item.orders(true).available.each do |order| %>
-          <tr>
-            <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
-            <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-            <td><%= link_to(t(:show, rescue_format: nil), [order.item, order], class: 'button') %></td>
-          </tr>
+          <%= item_order_row(order) %>
         <% end %>
       </tbody>
     </table>

@@ -1,7 +1,0 @@
-@import "neat-helpers";
-
-$border-box-sizing: false;
-$max-width: 700px;
-
-$mobile: new-breakpoint(max-width 480px);
-$tablet: new-breakpoint(max-width 768px);

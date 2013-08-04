@@ -1,13 +1,12 @@
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Bokhyllan';
   font-style: normal;
   font-weight: 100;
-  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGC-IiwWNzQT_LXAtr-Ee9Pw.woff) format('woff');
+  src: font-url('Bokhyllan-ExtraLight.otf');
 }
 
 body {
-  font-family: Source Sans Pro, sans-serif;
-  font-size: 1.5em;
+  font-family: Bokhyllan, sans-serif;
 }
 
 a {
