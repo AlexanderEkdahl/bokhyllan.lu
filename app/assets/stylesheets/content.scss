@@ -25,21 +25,11 @@
 
 .items.show, .orders.show {
   .properties {
+    @include column(1);
+  }
+
+  div ~ .properties {
     @include column(2, 3);
-
-    td:first-of-type {
-      text-align: right;
-      font-size: 0.8em;
-      padding-right: 0.3r em;
-    }
-
-    @include mobile {
-      @include column(1);
-    }
-
-    &:first-of-type {
-      @include column(1);
-    }
   }
 }
 

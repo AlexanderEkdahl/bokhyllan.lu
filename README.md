@@ -9,7 +9,7 @@
 * Search item metadata
 * Expand QR codes on hover
 * Responsive tables a lá BBC(responsive news)
-* Remove order confirmation
+* Remove-order confirmation
 
 ##Getting started
 

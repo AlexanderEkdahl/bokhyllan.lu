@@ -18,6 +18,10 @@ table {
     color: #333;
   }
 
+  th[data-sort] {
+    cursor: pointer;
+  }
+
   &.hover tbody {
     tr {
       @include transition(400ms background-color);
@@ -28,7 +32,11 @@ table {
     }
   }
 
-  th[data-sort] {
-    cursor: pointer;
+  &.properties {
+    td:first-of-type {
+      text-align: right;
+      font-size: 0.8em;
+      width: 25%;
+    }
   }
 }

@@ -6,18 +6,14 @@
   </div>
 <% end %>
 
-<div class="properties">
-  <table>
-    <tbody>
-      <% item_properties(@item) do |key, value| %>
-        <tr>
-          <td><%= key %>:</td>
-          <td><%= value %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+<table class="properties">
+  <% item_properties(@item) do |key, value| %>
+    <tr>
+      <td><%= key %>:</td>
+      <td><%= value %></td>
+    </tr>
+  <% end %>
+</table>
 
 <div class="list">
   <% if @item.orders(true).any? %>

@@ -1,3 +1,5 @@
 <%= render 'search' %>
 
-search_results.html.erb
+<% @items.each do |item| %>
+  <h2><%= link_to(item.name, item) %></h2>
+<% end %>

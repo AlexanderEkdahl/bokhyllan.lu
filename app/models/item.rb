@@ -18,4 +18,8 @@ class Item < ActiveRecord::Base
   def self.search(search)
     where('name ILIKE ?', "%#{search}%")
   end
+
+  def cheapest
+    orders.first.try(:price)
+  end
 end

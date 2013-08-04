@@ -10,13 +10,14 @@ en:
   sign_out_success: Successfully signed out.
   settings_updated_successful: Settings was successfully updated.
   user_verified: '%{email} verified.'
+  must_be_verified: 'You must verify your account to perform this action. A verification email have been sent to %{email}.'
   place_sell_order: Place sell order
   must_be_signed_in_to_sell: 'You must be signed in to sell %{item}.'
   must_be_signed_in_to_sell_or_buy: 'You must be signed in to sell or buy %{item}.'
-  author:
+  authors:
     one: Author
     other: Authors
-  course:
+  courses:
     one: Course
     other: Courses
   active_sell_order:
