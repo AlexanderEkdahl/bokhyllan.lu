@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    @item.orders.first.user_id = current_user.id
+    @item.orders.first.user_id = current_user.id if @item.orders.first
 
     if @item.save
       track("Created a new item", id: @item.id)

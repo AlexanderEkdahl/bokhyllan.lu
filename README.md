@@ -4,12 +4,16 @@
 
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
-* Touch enabled visitors should not have hover effects for tables
 * Format phone numbers
 * Search item metadata
 * Expand QR codes on hover
 * Responsive tables a lá BBC(responsive news)
 * Remove-order confirmation
+* StatHat
+* Cloudfront
+* Merge item data when duplicates are found. Also move orders
+* Signing in with email fails
+* Link item with other textbook
 
 ##Getting started
 
