@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
   def index
     if params[:search]
       @items = Item.search(params[:search])
+      track("Searched for an item", query: params[:search], results: @items.length)
 
       case @items.length
       when 0
@@ -25,9 +26,10 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    @item.orders.first.user_id = current_user.id
+    @item.orders.first.user_id = current_user.id if @item.orders.first
 
     if @item.save
+      track("Created a new item", id: @item.id)
       redirect_to(@item)
     else
       render 'new'
@@ -37,7 +39,7 @@ class ItemsController < ApplicationController
   def show
     @item  = Item.find(params[:id])
     @order = @item.orders.build
-    fresh_when(@item)
+    # fresh_when(@item)
   end
 
   def typeahead
@@ -49,6 +51,6 @@ class ItemsController < ApplicationController
   private
 
     def item_params
-      params.require(:item).permit(:name, orders_attributes: [:price, :quality])
+      params.require(:item).permit(:name, *Item::PROPERTIES_KEYS, orders_attributes: [:price, :quality])
     end
 end

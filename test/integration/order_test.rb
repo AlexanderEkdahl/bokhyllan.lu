@@ -10,7 +10,7 @@ class OrderTest < ActionDispatch::IntegrationTest
       seller.post_via_redirect(item_orders_path(item), order: { price: 200, quality: 2 })
       seller.assert_response(:success)
       assert_equal(item_path(item), seller.path)
-      seller.assert_select(".orders table tbody tr", 1)
+      seller.assert_select(".list table tbody tr", 1)
     end
 
     order = item.orders.first
@@ -18,6 +18,6 @@ class OrderTest < ActionDispatch::IntegrationTest
     buyer.assert_response(:success)
 
     buyer.get(item_path(item))
-    buyer.assert_select(".orders table tbody tr", 0)
+    buyer.assert_select(".list table tbody tr", 0)
   end
 end

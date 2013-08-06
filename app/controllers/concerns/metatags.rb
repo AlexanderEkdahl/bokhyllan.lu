@@ -1,5 +1,7 @@
 module Metatags
   extend ActiveSupport::Concern
 
-  DEFAULT = I18n.t(:default_tags)
+  def self.default_tags
+    I18n.t(:default_tags)
+  end
 end

@@ -1,129 +1,15 @@
-nav {
-  text-align: right;
-  margin: 0.8em;
-}
-
-.flash {
-  @include fill-parent;
-  position: absolute;
-  text-align: center;
-  z-index: 100;
-
-  .notice, .alert, .success {
-    padding: em(14, 24);
-    display: inline-block;
-    @include user-select(none);
-    @include animation(fade-in-then-out 3.5s);
-    opacity: 0;
-    cursor: default;
-  }
-
-  .notice {
-    background-color: rgba(180, 215, 255, 0.8);
-  }
-
-  .alert {
-    background-color: rgba(255, 180, 180, 0.8);
-  }
-
-  .success {
-    background-color: rgba(192, 255, 181, 0.8);
-  }
-}
-
-@include keyframes(fade-in-then-out) {
-  0% {
-    @include transform(scale(0.5));
-    opacity: 0;
-  }
-  12% {
-    @include transform(rotateX(0) scale(1));
-    opacity: 1;
-  }
-  85% {
-    @include transform(rotateX(0) scale(1));
-    opacity: 1;
-  }
-  100% {
-    @include transform(scale(0.5));
-    opacity: 0;
-  }
+body {
+  font-size: 1.5em;
 }
 
 .main {
-  margin-top: em(70, 24);
-  @include outer-container;
-  padding-left: 0.4em;
-  padding-right: 0.4em;
-  margin-bottom: em(32, 24);
-}
+  @include clearfix;
+  max-width: 45rem;
+  margin: 4.5rem auto 2rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
 
-.sign_in, .sign_in_info {
-  @include span-columns(1 of 2);
-  @include media($mobile) {
-    @include span-columns(1 of 1);
+  h1:first-child {
+    margin-top: 0;
   }
-}
-
-.row {
-  @include clearfix();
-}
-
-.image {
-  @include span-columns(1 of 3);
-
-  img {
-    max-width: 100%;
-  }
-}
-
-.price {
-  @include span-columns(1 of 3);
-  // font-size: em(106, 24);
-  @include media($mobile) {
-    display: none;
-  }
-
-  span {
-    font-size: em(106, 24);
-    line-height: 0.8;
-  }
-
-  span:not(:empty):after {
-    content: "kr";
-    font-size: em(8, 24);
-  }
-}
-
-.properties {
-  @include span-columns(2 of 3);
-  @include omega();
-  @include media($mobile) {
-    @include span-columns(1 of 1);
-  }
-
-  &:first-of-type {
-    @include span-columns(1 of 1);
-  }
-
-  td:first-of-type {
-    text-align: right;
-    font-size: 0.8em;
-    padding-right: em(10, 24);
-  }
-}
-
-.orders, .new-order {
-  margin-top: 60px;
-  @include span-columns(1 of 2);
-  @include media($mobile) {
-    @include span-columns(1 of 1);
-  }
-}
-
-.buy {
-  text-align: center;
-  width: auto;
-  display: block;
-  margin: 1.5em auto;
 }

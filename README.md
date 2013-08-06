@@ -1,22 +1,31 @@
 #Bokhyllan.lu
 
+[![Codeship Status for AlexanderEkdahl/bokhyllan.lu](https://www.codeship.io/projects/88ba9be0-dd0d-0130-211e-425e173b3297/status?branch=master)](https://www.codeship.io/projects/5559)
+
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
-* Add public? method that returns { public: true } if no one is logged in.
-* Touch enabled visitors should not have hover effects
 * Format phone numbers
-* User created items
 * Search item metadata
-
-To run the database
-
-    pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+* Expand QR codes on hover
+* Responsive tables a lá BBC(responsive news)
+* Remove-order confirmation
+* StatHat
+* Cloudfront
+* Merge item data when duplicates are found. Also move orders
+* Signing in with email fails
+* Link item with other textbook
 
 ##Getting started
 
 ###Nitrous.io
 
 ###Mac OS X
+
+Postgres, bundler
+
+    bundle install
+    pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+    rails s
 
 ###Linux
 

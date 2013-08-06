@@ -1,51 +1,44 @@
 <%= render partial: 'search', locals: { item: @order.item } %>
 
-<div class="row">
-  <div class="price">
-    <span><%= @order.price %></span>
-  </div>
+<div class="price">
+  <span><%= @order.price %></span>kr
+</div>
 
-  <div class="properties">
-    <table>
+<table class="properties">
+  <% item_properties(@order.item) do |key, value| %>
+    <tr>
+      <td><%= key %>:</td>
+      <td><%= value %></td>
+    </tr>
+  <% end %>
+</table>
+
+<div class="buy">
+  <% if signed_in? %>
+    <%= button_to(t(:view_contact_info, rescue_format: nil), [:buy, @order.item, @order], class: 'button', data: { confirm: t(:purchase_confirmation) }) %>
+  <% else %>
+    <%= link_to(t(:sign_in_required_to_view_info), sign_in_user_path) %>
+  <% end %>
+</div>
+
+<% if other_items(@order).any? %>
+  <div class="list">
+    <h2><%= t(:other_items) %></h2>
+
+    <table data-sort class="hover">
+      <thead>
+        <tr>
+          <th><%= t("activerecord.attributes.item.name") %></th>
+          <th data-sort><%= t("activerecord.attributes.order.price") %></th>
+          <th data-sort data-sort-desc><%= t("activerecord.attributes.order.quality") %></th>
+          <th></th>
+        </tr>
+      </thead>
       <tbody>
-        <% item_properties(@order.item) do |key, value| %>
-          <tr>
-            <td><%= key %>:</td>
-            <td><%= value %></td>
-          </tr>
+        <% other_items(@order).each do |order| %>
+          <%= order_row(order) %>
         <% end %>
       </tbody>
     </table>
   </div>
-</div>
-
-<% if signed_in? %>
-  <%= button_to(t(:view_contact_info, rescue_format: nil), [:buy, @order.item, @order], class: 'buy button', data: { confirm: t(:purchase_confirmation) }) %>
-<% else %>
-  <span class="buy">You need to signed in to view the contact information of the seller.</span>
-<% end %>
-
-<% if other_items(@order).any? %>
-  <h2>Other items from the same seller.</h2>
-
-  <table data-sort class="hover">
-    <thead>
-      <tr>
-        <th><%= t("activerecord.attributes.item.name") %></th>
-        <th data-sort><%= t("activerecord.attributes.order.price") %></th>
-        <th data-sort data-sort-desc><%= t("activerecord.attributes.order.quality") %></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% other_items(@order).each do |order| %>
-        <tr>
-          <td><%= order.item.name %></td>
-          <td data-sort-value="<%= order.price %>"><%= order.price %>kr</td>
-          <td class="quality" data-sort-value="<%= order.quality %>"><%= stars(order.quality) %></td>
-          <td><%= link_to(t(:show, rescue_format: nil), [order.item, order], class: 'button') %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
 <% end %>

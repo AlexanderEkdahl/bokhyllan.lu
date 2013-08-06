@@ -4,7 +4,7 @@ module NavigationHelper
   end
 
   def home
-    link_to(t(:home), root_path) unless ['items', 'orders'].include?(params[:controller])
+    link_to(t(:home).html_safe, root_path) unless ['items', 'orders'].include?(params[:controller])
   end
 
   def sign_in

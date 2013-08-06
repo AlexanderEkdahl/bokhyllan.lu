@@ -1,6 +1,6 @@
 class Item < ActiveRecord::Base
   has_many :orders, dependent: :destroy
-  accepts_nested_attributes_for :orders
+  accepts_nested_attributes_for :orders, reject_if: proc { |attributes| attributes['price'].blank? }
 
   validates :name, presence: true, length: { minimum: 3, maximum: 100 }
 
@@ -17,5 +17,9 @@ class Item < ActiveRecord::Base
 
   def self.search(search)
     where('name ILIKE ?', "%#{search}%")
+  end
+
+  def cheapest
+    orders.first.try(:price)
   end
 end

@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20130727092100) do
 
   create_table "items", force: true do |t|
     t.string   "name"
-    t.hstore   "properties",  default: {}
+    t.hstore   "properties",  default: ""
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "alternative"

@@ -5,7 +5,6 @@ table {
 
   th, td {
     padding: 0.4em;
-    line-height: 1.2;
     text-align: left;
   }
 
@@ -13,49 +12,31 @@ table {
     font-size: 0.8em;
   }
 
-  .button {
-    font-size: 0.8em;
-    width: 5em;
-    float: right;
-  }
-
+  //  TODO fix font for stars
   .quality {
     font-size: 0.7em;
     color: #333;
   }
 
-  &.hover tbody {
-    .button {
-      opacity: 0;
-      @include transition(400ms opacity)
-    }
+  th[data-sort] {
+    cursor: pointer;
+  }
 
+  &.hover tbody {
     tr {
       @include transition(400ms background-color);
 
-      &:first-of-type {
-        .button {
-          opacity: 1;
-        }
-      }
-
       &:hover {
         background-color: rgb(245, 245, 245);
-
-        .button {
-          opacity: 1 !important;
-        }
-      }
-    }
-
-    &:hover {
-      .button {
-        opacity: 0 !important;
       }
     }
   }
 
-  th[data-sort] {
-    cursor: pointer;
+  &.properties {
+    td:first-of-type {
+      text-align: right;
+      font-size: 0.8em;
+      width: 25%;
+    }
   }
 }

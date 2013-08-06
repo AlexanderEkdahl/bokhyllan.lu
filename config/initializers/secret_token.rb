@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Bokhyllan::Application.config.secret_key_base = '0184f1997d51b7a13688a9fd649c6fa817ea31ee583f8dc9997806ba3418c1a8f76cf9df9866c10740068c1e394c8b9b95a5502c6cc06fa9d57d43578466cf3d'
+Bokhyllan::Application.config.secret_key_base = ENV['SECRET_KEY_BASE'] || '5d94a2a62aa19e7d9b55u8w224c2bdau27dla2bewj'

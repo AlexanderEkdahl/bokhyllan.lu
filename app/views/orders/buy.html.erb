@@ -6,24 +6,20 @@
   <%= t(:contact_immediately) %>
 <% else %>
   <table>
-    <tbody>
-      <tr>
-        <td><%= t(:contact_immediately_with_qr, name: @order.user) %></td>
-        <td><%= qr(@order.user, 140) %></td>
-      </tr>
-    </tbody>
+    <tr>
+      <td><%= t(:contact_immediately_with_qr, name: @order.user) %></td>
+      <td><%= qr(@order.user, 140) %></td>
+    </tr>
   </table>
 <% end %>
 
 <h2><%= t(:contact_information) %></h2>
 
 <table>
-  <tbody>
-    <% contact_information_with_keys(@order.user) do |key, value| %>
-      <tr>
-        <td><%= key %>:</td>
-        <td><%= value %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% contact_information_with_keys(@order.user) do |key, value| %>
+    <tr>
+      <td><%= key %>:</td>
+      <td><%= value %></td>
+    </tr>
+  <% end %>
 </table>

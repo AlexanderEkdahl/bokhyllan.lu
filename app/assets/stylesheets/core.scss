@@ -1,13 +1,12 @@
 @font-face {
-  font-family: 'Source Sans Pro';
+  font-family: 'Bokhyllan';
   font-style: normal;
   font-weight: 100;
-  src: local('Source Sans Pro ExtraLight'), local('SourceSansPro-ExtraLight'), url(http://themes.googleusercontent.com/static/fonts/sourcesanspro/v5/toadOcfmlt9b38dHJxOBGC-IiwWNzQT_LXAtr-Ee9Pw.woff) format('woff');
+  src: font-url('Bokhyllan-ExtraLight.otf');
 }
 
 body {
-  font-family: Source Sans Pro, sans-serif;
-  font-size: 1.5em;
+  font-family: Bokhyllan, sans-serif;
 }
 
 a {
@@ -24,6 +23,17 @@ th, input, body, h1, h2, h3 {
   font-weight: 100;
 }
 
-h1:first-of-type {
-  margin-top: 0;
+* {
+  @include prefixer(box-sizing, border-box, webkit moz spec);
+}
+
+@mixin column($numerator, $denominator: 1) {
+  width: $numerator / $denominator * 100%;
+  float: left;
+}
+
+@mixin mobile() {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
 }

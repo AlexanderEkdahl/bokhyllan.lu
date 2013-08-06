@@ -48,4 +48,8 @@ class User < ActiveRecord::Base
   def authenticate(unencrypted_password)
     BCrypt::Password.new(password_digest) == unencrypted_password
   end
+
+  def traits
+    { email: email, name: name, phone: phone, created: created_at, verified: verified }.reject { |_, value| value.blank? }
+  end
 end
