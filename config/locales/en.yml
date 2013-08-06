@@ -17,6 +17,8 @@ en:
   place_sell_order: Place sell order
   must_be_signed_in_to_sell: 'You must be signed in to sell %{item}.'
   must_be_signed_in_to_sell_or_buy: 'You must be signed in to sell or buy %{item}.'
+  must_be_signed_in: You have to be signed in
+  buy: Buy
   authors:
     one: Author
     other: Authors

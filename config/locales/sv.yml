@@ -14,6 +14,8 @@ sv:
   settings_updated_successful: Inställningarna sparades.
   user_verified: '%{email} verifierat.'
   place_sell_order: Ny säljorder
+  must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
+  must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
   must_be_signed_in: Du måste vara inloggad
   has_your_copy: '%{user} har din kopia av %{item}.'
   sign_in_required: You need to signed in to view the contact information of the seller.
@@ -36,15 +38,34 @@ sv:
   courses:
     one: Kurs
     other: Kurser
+  buyer: Köpare
+  seller: Säljare
   active_sell_order:
     one: Aktiva säljorder
     other: Aktiva säljorder
   active_buy_order:
-    one: Aktiva köpeorder
-    other: Aktiva köpeorder
-  view_contact_info: Visa kontakt information
-  buyer: Köpare
-  seller: Säljare
+    one: Aktiv köporder
+    other: Aktiva körorder
+  cancel: Avbryt
+  remove: Ta bort
+  view_contact_info: Visa kontaktinformation
+  contact_immediately: Vänligen kontakta säljaren så fort som möjligt
+  contact_immediately_with_qr: 'Vänligen kontakta säljaren så fort som möjligt, skanna QR koden för att kontakta %{name} direkt.'
+  contact_next_morning: Vänligen kontakta säljaren imorgonbitti. 
+  has_your_copy: '%{user} hhar din kopia av %{item}.'
+  show: Visa
+  purchase_confirmation: När du klickar på denna knappen får du exklusiva rättigheter att kontakta säljaren. Vill du gå vidare?
+  not_found: '%{query} hittades ej.'
+  cannot_buy_from_self: Du kan inte köpa din egen bok, vill du avsluta säljordern?
+  already_buying: 'You are already attempting to purchase %{name}. Would you like to cancel your purchase?'
+  no_one_is_selling: No one is selling this %{name}.
+  no_one_is_selling_with_alternative_html: 'No one is selling this %{name}. You can purchase a new copy on %{alternative}'
+  add_item: Click here to add it to our repository
+  default_tags:
+    - buy
+    - sell
+    - lund
+
   activerecord:
     attributes:
       user:
