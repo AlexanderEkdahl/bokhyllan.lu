@@ -7,6 +7,7 @@ module NavigationHelper
     link_to(t(:home).html_safe, root_path)# unless ['items', 'orders'].include?(params[:controller])
   end
 
+  #TODO: should not be visibile if on /user after a failed login, should be not signed in and controller[:user]
   def sign_in
     link_to(t(:sign_in), sign_in_user_path) unless signed_in? or current_page?(sign_in_user_path)
   end

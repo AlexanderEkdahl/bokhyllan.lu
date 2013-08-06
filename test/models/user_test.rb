@@ -12,34 +12,34 @@ class UserTest < ActiveSupport::TestCase
   end
 
   def test_should_normalize_login
-    @user.login = 'ALLCAPS'
+    @user = User.find_or_create_by_login('ALLCAPS')
     @user.save
-    assert_equal(@user.login, 'allcaps')
+    assert_equal('allcaps', @user.login)
   end
 
   def test_should_remove_email
-    @user.login = 'email@email'
+    @user = User.find_or_create_by_login('email@email')
     @user.save
-    assert_equal(@user.login, 'email')
+    assert_equal('email', @user.login)
   end
 
   def test_email
     @user.login = 'login'
     @user.save
-    assert_equal(@user.email, 'login@student.lu.se')
+    assert_equal('login@student.lu.se', @user.email)
   end
 
   def test_verifiable
     @user.save
     key = @user.verification_key
-    assert_equal(User.find_by_verification_key(key), @user)
+    assert_equal(@user, User.find_by_verification_key(key))
   end
 
   def test_to_s
     @user.name = ''
     assert_equal(@user.to_s, @user.email)
     @user.name = 'Einstein'
-    assert_equal(@user.to_s, 'Einstein')
+    assert_equal('Einstein', @user.to_s)
   end
 
   def test_password

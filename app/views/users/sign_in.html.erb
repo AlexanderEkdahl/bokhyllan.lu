@@ -15,5 +15,11 @@
   <% end %>
 </div>
 <div>
-  <p><%= t(:first_time_login_info) %></p>
+  <p>
+    <% if @sign_in_unsuccessful %>
+      <%= button_to(t(:send_confirmation_email, email: @user.email), reset_user_path(login: @user.login)) %>
+    <% else %>
+      <%= t(:first_time_login_info) %>
+    <% end %>
+  </p>
 </div>

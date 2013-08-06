@@ -61,6 +61,9 @@ en:
   other_items: Other items from the same seller.
   email_not_verified: '%{email}(Not verified)'
 
+  # Nya översättningar som du kanske vill flytta på:
+  send_confirmation_email: 'Reset password?'
+
   activerecord:
     attributes:
       user:

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.find_or_create_by(login: params[:user][:login].downcase)
+    @user = User.find_or_create_by_login(params[:user][:login])
 
     if @user.new_record?
       @user.password = params[:user][:password]
@@ -24,6 +24,7 @@ class UsersController < ApplicationController
         track("Signed in")
         redirect_to(root_path, notice: t(:sign_in_success))
       else
+        @sign_in_unsuccessful = true
         flash.now[:alert] = t(:sign_in_unsuccessful)
         render 'sign_in'
       end
@@ -59,6 +60,16 @@ class UsersController < ApplicationController
       redirect_to(root_path, success: t(:user_verified, email: user.email))
     else
       head(:forbidden)
+    end
+  end
+
+  def reset
+    @user = User.find_by(login: params[:login])
+
+    if @user
+      UserMailer.reset_email(@user).deliver
+      flash.now[:success] = t(:reset_email_sent, email: @user.email)
+      render 'sign_in'
     end
   end
 

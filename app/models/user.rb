@@ -1,3 +1,5 @@
+require 'securerandom'
+
 class User < ActiveRecord::Base
   include Verifiable
 
@@ -6,12 +8,12 @@ class User < ActiveRecord::Base
   validates :login, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A[a-z]{3}[0-9]{2}[a-z]{3}\z/ }
   validates :password, presence: true, length: { minimum: 3 }, if: :password_required?
 
-  before_validation :normalize_login
   before_save :encrypt_password
 
-  def normalize_login
+  def self.find_or_create_by_login(login)
     login.downcase!
     login.gsub!(/@.*/, '')
+    User.find_or_create_by(login: login)
   end
 
   attr_accessor :current_password
@@ -39,6 +41,13 @@ class User < ActiveRecord::Base
   def to_s
     return name unless name.blank?
     return email
+  end
+  # alias :username
+
+  def reset_password
+    self.password = SecureRandom.hex(4)
+    self.save(validate: false)
+    self.password
   end
 
   def encrypt_password
