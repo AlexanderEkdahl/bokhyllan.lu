@@ -45,7 +45,7 @@ class UsersController < ApplicationController
       track("Updated the profile")
       redirect_to(root_path, notice: t(:settings_updated_successful))
     else
-      render action: 'edit'
+      render action: 'show'
     end
   end
 

@@ -1,19 +1,22 @@
 #Bokhyllan.lu
 
-[![Codeship Status for AlexanderEkdahl/bokhyllan.lu](https://www.codeship.io/projects/88ba9be0-dd0d-0130-211e-425e173b3297/status?branch=master)](https://www.codeship.io/projects/5559)
-
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
 * Format phone numbers
 * Search item metadata
 * Expand QR codes on hover
-* Responsive tables a lá BBC(responsive news)
+* Responsive tables á la BBC(responsive news)
 * Remove-order confirmation
 * StatHat
 * Cloudfront
 * Merge item data when duplicates are found. Also move orders
 * Signing in with email fails
 * Link item with other textbook
+* Course names as an attribute
+* Improve encouragement to verify the account
+* Remove lower price limit(Charity)
+* Simplfiy password reset both for logged in and logged out users
+* Remember me function
 
 ##Getting started
 
