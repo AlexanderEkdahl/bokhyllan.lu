@@ -14,8 +14,6 @@ sv:
   settings_updated_successful: Inställningarna sparades.
   user_verified: '%{email} verifierat.'
   place_sell_order: Ny säljorder
-  must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
-  must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
   must_be_signed_in: Du måste vara inloggad
   has_your_copy: '%{user} har din kopia av %{item}.'
   sign_in_required: You need to signed in to view the contact information of the seller.
@@ -23,10 +21,7 @@ sv:
   must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontakt information.
   other_items: Samma person säljer även
-  purchase_confirmation: När du klickat på denna knapp ges du exklusiva rättigheter att kontakta säljaren. Fortsätt?
   contact_immediately: Var god kontakta honom/henne omgående.
-  contact_immediately_with_qr: 'Var god kontakta honom/henne omgående. Du kan scanna QR koden till vänster för att ringa %{name}'
-  contact_next_morning: Please contact him/her first thing in the morning.
   email_not_verified: '%{email}(Ej verifierat)'
   show: Visa
   cancel: Avbryt
@@ -46,13 +41,9 @@ sv:
   active_buy_order:
     one: Aktiv köporder
     other: Aktiva körorder
-  cancel: Avbryt
-  remove: Ta bort
   view_contact_info: Visa kontaktinformation
-  contact_immediately: Vänligen kontakta säljaren så fort som möjligt
   contact_immediately_with_qr: 'Vänligen kontakta säljaren så fort som möjligt, skanna QR koden för att kontakta %{name} direkt.'
-  contact_next_morning: Vänligen kontakta säljaren imorgonbitti. 
-  has_your_copy: '%{user} hhar din kopia av %{item}.'
+  contact_next_morning: Vänligen kontakta säljaren imorgonbitti.
   show: Visa
   purchase_confirmation: När du klickar på denna knappen får du exklusiva rättigheter att kontakta säljaren. Vill du gå vidare?
   not_found: '%{query} hittades ej.'
