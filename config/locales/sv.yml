@@ -13,13 +13,14 @@ sv:
   sign_out_success: Du är nu utloggad.
   settings_updated_successful: Inställningarna sparades.
   user_verified: '%{email} verifierat.'
+  must_be_verified: 'Du måste verifiera ditt konto innan du kan göra detta. En verifieringslänk har skickats till %{email}.'
   place_sell_order: Ny säljorder
   must_be_signed_in: Du måste vara inloggad
   has_your_copy: '%{user} har din kopia av %{item}.'
-  sign_in_required: You need to signed in to view the contact information of the seller.
+  sign_in_required: Du måste vara inloggad för att se säljarens kontaktinformation.
   must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
   must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
-  sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontakt information.
+  sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation.
   other_items: Samma person säljer även
   contact_immediately: Var god kontakta honom/henne omgående.
   email_not_verified: '%{email}(Ej verifierat)'
@@ -48,15 +49,18 @@ sv:
   purchase_confirmation: När du klickar på denna knappen får du exklusiva rättigheter att kontakta säljaren. Vill du gå vidare?
   not_found: '%{query} hittades ej.'
   cannot_buy_from_self: Du kan inte köpa din egen bok, vill du avsluta säljordern?
-  already_buying: 'You are already attempting to purchase %{name}. Would you like to cancel your purchase?'
-  no_one_is_selling: No one is selling this %{name}.
-  no_one_is_selling_with_alternative_html: 'No one is selling this %{name}. You can purchase a new copy on %{alternative}'
-  add_item: Click here to add it to our repository
+  already_buying: 'Du köper redan %{name} från någon annan. Vill du avbryta det tidigare köpet?'
+  no_one_is_selling: Ingen säljer för närvarande %{name}.
+  no_one_is_selling_with_alternative_html: 'Ingen säljer för närvarande %{name}. Du kan köpa en ny upplaga på %{alternative}'
+  add_item: Klicka här för att lägga till den i vårt register. 
   default_tags:
     - buy
     - sell
     - lund
-
+  sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation
+  other_items: Other items from the same seller.
+  email_not_verified: '%{email}(Not verified)'
+ 
   activerecord:
     attributes:
       user:
