@@ -1,23 +1,33 @@
-.users.sign_in, .users.create, .users.reset {
-  & > div:first-of-type {
-    padding-right: 2rem;
-    border-right: 1px solid #eee;
-  }
-
-  & > div:last-of-type {
-    padding-left: 2rem;
-  }
-
-  & > div {
-    @include column(1, 2);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    @include mobile {
-      @include column(1);
-      padding: 0 !important;
-      border: none !important;
+.users {
+  &.sign_in, &.users.create, &.users.reset {
+    & > div:first-of-type {
+      padding-right: 2rem;
+      border-right: 1px solid #eee;
     }
+
+    & > div:last-of-type {
+      padding-left: 2rem;
+    }
+
+    & > div {
+      @include column(1, 2);
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      @include mobile {
+        @include column(1);
+        padding: 0 !important;
+        border: none !important;
+      }
+    }
+  }
+
+  .reset input {
+    display: inline;
+    width: auto;
+    white-space: normal;
+    text-align: left;
+    font-size: 1em;
   }
 }
 
