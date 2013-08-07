@@ -39,7 +39,6 @@ class ItemsController < ApplicationController
   def show
     @item  = Item.find(params[:id])
     @order = @item.orders.build
-    # fresh_when(@item)
   end
 
   def typeahead

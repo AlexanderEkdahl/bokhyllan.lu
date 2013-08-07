@@ -38,7 +38,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    # fresh_when(current_user)
   end
 
   def update
