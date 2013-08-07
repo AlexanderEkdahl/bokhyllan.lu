@@ -1,0 +1,67 @@
+.items, .orders {
+  .properties, .image, .price, .list, .new-order {
+    margin-top: 3rem;
+  }
+
+  .properties {
+    @include column(1);
+  }
+
+  div ~ .properties {
+    @include column(2, 3);
+  }
+
+  .image {
+    @include column(1, 3);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .list {
+    padding-right: 2rem;
+  }
+
+  .new-order {
+    padding-left: 2rem;
+  }
+
+  .list, .new-order {
+    @include column(1, 2);
+
+    @include mobile {
+      @include column(1);
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .price {
+    @include column(1, 3);
+    text-align: center;
+
+    span {
+      font-size: 6.7rem;
+    }
+
+    @include mobile {
+      @include column(1);
+    }
+  }
+
+  .buy {
+    @include column(1);
+    text-align: center;
+    margin: 1.5rem;
+
+    input {
+      margin: 0;
+      width: auto;
+    }
+  }
+
+  .related {
+    @include column(1);
+  }
+}
