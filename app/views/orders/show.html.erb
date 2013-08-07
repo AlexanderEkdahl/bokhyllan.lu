@@ -15,7 +15,7 @@
 
 <div class="buy">
   <% if signed_in? %>
-    <%= button_to(t(:view_contact_info, rescue_format: nil), [:buy, @order.item, @order], class: 'button', data: { confirm: t(:purchase_confirmation) }) %>
+    <%= button_to(t(:view_contact_info, rescue_format: nil), [:buy, @order.item, @order], form_class: 'form', data: { confirm: t(:purchase_confirmation) }) %>
   <% else %>
     <%= link_to(t(:sign_in_required_to_view_info), sign_in_user_path) %>
   <% end %>

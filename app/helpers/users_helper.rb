@@ -34,6 +34,6 @@ module UsersHelper
         link_to(stars(order.quality), link, data: { :'sort-value' => order.quality }, class: 'quality'),
         contact_information_without_keys(target),
         qr(target),
-        button_to("&#xE002;".html_safe, [method, order.item, order].compact, method: :delete, form_class: 'remove'))
+        button_to("&#xE002;".html_safe, [method, order.item, order].compact, method: :delete, class: 'remove'))
   end
 end

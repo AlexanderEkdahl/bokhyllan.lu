@@ -1,5 +1,5 @@
 sv:
-  search_placeholder: "Sök titel, författare, kurs, osv."
+  search_placeholder: 'Sök titel, författare, kurs, osv.'
   sign_in: Logga in
   sign_out: Logga ut
   settings: Inställningar
@@ -48,15 +48,16 @@ sv:
   show: Visa
   purchase_confirmation: När du klickar på denna knappen får du exklusiva rättigheter att kontakta säljaren. Vill du gå vidare?
   not_found: '%{query} hittades ej.'
-  cannot_buy_from_self: Du kan inte köpa din egen bok, vill du avsluta säljordern?
+  cannot_buy_from_self: 'Du kan inte köpa din egen bok, vill du avsluta säljordern?'
   already_buying: 'Du köper redan %{name} från någon annan. Vill du avbryta det tidigare köpet?'
-  no_one_is_selling: Ingen säljer för närvarande %{name}.
+  no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
   no_one_is_selling_with_alternative_html: 'Ingen säljer för närvarande %{name}. Du kan köpa en ny upplaga på %{alternative}'
   add_item: Klicka här för att lägga till den i vårt register.
   default_tags:
-    - buy
-    - sell
+    - köp
+    - sälj
     - lund
+    - kurslitteratur
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation
   other_items: Other items from the same seller.
   email_not_verified: '%{email}(Not verified)'
@@ -71,7 +72,7 @@ sv:
         login: 'STIL-id'
       order:
         price: Pris
-        quality: Kvalité
+        quality: Kvalitet
       item:
         name: Namn
         courses: Kurser

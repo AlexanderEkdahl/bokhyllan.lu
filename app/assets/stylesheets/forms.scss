@@ -1,41 +1,10 @@
 input {
-  width: 100%;
-  outline: none;
-  border: 1px solid #ccc;
-  font-family: inherit;
-  font-size: 1.2em;
-  padding: em(4, 24);
-  box-shadow: none;
-  border-radius: 0;
-  @include appearance(none);
-}
-
-input[type="submit"] {
   @include appearance(none);
   background-color: transparent;
   border: none;
-}
-
-.button {
-  text-align: center;
-  cursor: pointer;
-  background-color: silver !important;
-  padding: 0.3em 0.45em;
-  font-size: 0.9em;
-  border-radius: 2px;
-  border: none;
-  box-shadow: 0 2px 2px -2px #000;
-}
-
-.remove {
-  input {
-    @include transition(color 400ms, text-shadow 400ms)
-  }
-
-  &:hover input {
-    text-shadow: 0px 0px 3px rgba(255, 0, 0, 0.6);
-    color: red !important;
-  }
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
 }
 
 .form {
@@ -49,8 +18,24 @@ input[type="submit"] {
     margin-top: 0;
   }
 
+  input {
+    width: 100%;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: 1.2em;
+    padding: em(4, 24);
+  }
+
   input[type="submit"] {
     margin-top: 55px;
+    text-align: center;
+    cursor: pointer;
+    background-color: silver !important;
+    padding: 0.3em 0.45em;
+    font-size: 0.9em;
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0 2px 2px -2px #000;
   }
 
   input[disabled] {

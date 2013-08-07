@@ -64,6 +64,7 @@ en:
   # Nya översättningar som du kanske vill flytta på:
   send_confirmation_email: 'Reset password for %{email}?'
   your_sell_order: 'Your sell order'
+  sign_in_unsuccessful: 'sign_in_unsuccessful'
 
   activerecord:
     attributes:

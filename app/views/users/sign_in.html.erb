@@ -12,7 +12,7 @@
 </div>
 <div>
   <% if @sign_in_unsuccessful %>
-    <%= button_to(t(:send_confirmation_email, email: @user.email), reset_user_path(login: @user.login), form_class: 'reset') %>
+    <%= button_to(t(:send_confirmation_email, email: @user.email), reset_user_path(login: @user.login), class: 'reset') %>
   <% else %>
     <p><%= t(:first_time_login_info) %></p>
   <% end %>

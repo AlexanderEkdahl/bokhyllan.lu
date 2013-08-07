@@ -1,0 +1,49 @@
+.search {
+  font-size: 1.5em;
+  padding: 9px;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.twitter-typeahead {
+  width: 100%;
+
+  input {
+    font-size: 1.5em;
+    padding: 9px;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .tt-hint {
+    color: #bbbbbb;
+  }
+
+  .tt-dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 100%;
+  }
+
+  .tt-suggestion {
+    padding: 9px;
+    border-bottom: 1px solid #eeeeee;
+
+    p {
+      font-size: 1.25em;
+      margin-top: 0.1em;
+      margin-bottom: 0.1em;
+    }
+  }
+
+  .footer {
+    color: #999999;
+    font-size: 0.83em;
+    padding: 9px;
+
+    a {
+      color: inherit;
+      color: #777777;
+      text-decoration: underline;
+    }
+  }
+}

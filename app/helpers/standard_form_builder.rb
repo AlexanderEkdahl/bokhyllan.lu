@@ -16,7 +16,7 @@ class StandardFormBuilder < ActionView::Helpers::FormBuilder
     telephone_field(:price)
   end
 
-  def quality(*args)
+  def quality
     label(:quality) +
     @template.content_tag(:div, class: 'quality') do
       radio_button(:quality, "3") +
