@@ -88,6 +88,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.7.7)
     multipart-post (1.2.0)
+    newrelic_rpm (3.6.5.130)
     pg (0.15.1)
     polyglot (0.3.3)
     puma (2.1.1)
@@ -159,6 +160,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   meta-tags
+  newrelic_rpm
   pg
   puma
   quiet_assets
