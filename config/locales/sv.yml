@@ -52,7 +52,7 @@ sv:
   already_buying: 'Du köper redan %{name} från någon annan. Vill du avbryta det tidigare köpet?'
   no_one_is_selling: Ingen säljer för närvarande %{name}.
   no_one_is_selling_with_alternative_html: 'Ingen säljer för närvarande %{name}. Du kan köpa en ny upplaga på %{alternative}'
-  add_item: Klicka här för att lägga till den i vårt register. 
+  add_item: Klicka här för att lägga till den i vårt register.
   default_tags:
     - buy
     - sell
@@ -60,7 +60,7 @@ sv:
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation
   other_items: Other items from the same seller.
   email_not_verified: '%{email}(Not verified)'
- 
+
   activerecord:
     attributes:
       user:
@@ -74,6 +74,8 @@ sv:
         quality: Kvalité
       item:
         name: Namn
+        courses: Kurser
+        authors: Författare
   support:
     array:
       last_word_connector: ' och '

@@ -4,4 +4,10 @@ module ApplicationHelper
       values.map { |x| content_tag(:td, x) }.join.html_safe
     end
   end
+
+  def standard_form_for(name, *args, &block)
+    options = args.extract_options!
+
+    form_for(name, *(args << options.merge(:builder => StandardFormBuilder, html: { class: 'form' })), &block)
+  end
 end

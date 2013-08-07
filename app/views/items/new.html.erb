@@ -1,29 +1,18 @@
 <h1>New item</h1>
 
-<%= form_for(@item, html: { class: 'form' }) do |f| %>
-  <%= f.label :name %>
+<%= standard_form_for(@item) do |f| %>
   <%= f.text_field :name %>
 
   <% Item::PROPERTIES_KEYS.each do |key| %>
-    <%= f.label key %>
     <%= f.text_field key %>
   <% end %>
 
-  <h2>Your sell order</h2>
+  <h2><%= t(:your_sell_order) %></h2>
 
   <%= f.fields_for(:orders, @order) do |o| %>
-    <%= o.label :price %>
-    <%= o.text_field :price %>
-    <%= o.label :quality %>
-    <div class="quality">
-      <%= o.radio_button(:quality, "3") %>
-      <%= o.label(:quality_3, "&#9733;".html_safe) %>
-      <%= o.radio_button(:quality, "2", checked: true) %>
-      <%= o.label(:quality_2, "&#9733;".html_safe) %>
-      <%= o.radio_button(:quality, "1") %>
-      <%= o.label(:quality_1, "&#9733;".html_safe) %>
-    </div>
+    <%= o.price %>
+    <%= o.quality %>
   <% end %>
 
-  <%= f.submit(class: 'button') %>
+  <%= f.submit %>
 <% end %>

@@ -42,24 +42,15 @@
 
 <div class="new-order">
   <% if signed_in? %>
-    <%= form_for([@item, @order], html: { class: 'form' }) do |f| %>
+    <%= standard_form_for([@item, @order]) do |f| %>
       <fieldset>
         <legend><%= t(:place_sell_order) %></legend>
         <% @order.errors.full_messages.each do |msg| %>
           <%= msg %>
         <% end %>
-        <%= f.label :price %>
-        <%= telephone_field(:order, :price) %>
-        <%= f.label :quality %>
-        <div class="quality">
-          <%= f.radio_button(:quality, "3") %>
-          <%= f.label(:quality_3, "&#9733;".html_safe) %>
-          <%= f.radio_button(:quality, "2", checked: true) %>
-          <%= f.label(:quality_2, "&#9733;".html_safe) %>
-          <%= f.radio_button(:quality, "1") %>
-          <%= f.label(:quality_1, "&#9733;".html_safe) %>
-        </div>
-        <%= f.submit(class: 'button') %>
+        <%= f.price %>
+        <%= f.quality :quality %>
+        <%= f.submit %>
       </fieldset>
     <% end %>
   <% else %>

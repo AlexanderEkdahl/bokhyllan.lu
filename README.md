@@ -17,6 +17,8 @@
 * Remove lower price limit(Charity)
 * Simplfiy password reset both for logged in and logged out users
 * Remember me function
+* Coveralls
+* Code Climate
 
 ##Getting started
 
