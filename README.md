@@ -10,11 +10,9 @@
 * StatHat
 * Cloudfront
 * Merge item data when duplicates are found. Also move orders
-* Signing in with email fails
 * Link item with other textbook
 * Course names as an attribute
 * Improve encouragement to verify the account
-* Remove lower price limit(Charity)
 * Simplfiy password reset both for logged in and logged out users
 * Remember me function
 * Coveralls

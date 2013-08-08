@@ -1,9 +1,5 @@
 require File.expand_path('../boot', __FILE__)
-
 require 'rails/all'
-
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
 module Bokhyllan
@@ -12,8 +8,6 @@ module Bokhyllan
 
     config.i18n.fallbacks = true
 
-    config.action_view.field_error_proc = Proc.new { |html_tag, instance|
-      "#{html_tag}".html_safe
-    }
+    config.action_view.field_error_proc = Proc.new { |html_tag, _| html_tag }
   end
 end

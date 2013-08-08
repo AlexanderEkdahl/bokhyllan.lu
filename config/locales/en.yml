@@ -72,7 +72,7 @@ en:
         name: Name
         phone: Phone number
         current_password: Current password
-        password: New password
+        password: Password
         login: 'STIL-id'
       order:
         price: Price

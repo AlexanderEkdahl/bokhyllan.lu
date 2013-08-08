@@ -2,9 +2,6 @@
 
 <div>
   <%= standard_form_for(@user, url: user_path, method: :post) do |f| %>
-    <% @user.errors.full_messages.each do |msg| %>
-      <%= msg %>
-    <% end %>
     <%= f.text_field :login %>
     <%= f.password_field :password %>
     <%= f.submit %>

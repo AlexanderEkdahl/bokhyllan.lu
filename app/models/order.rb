@@ -3,7 +3,7 @@ class Order < ActiveRecord::Base
   belongs_to :item, touch: true
   belongs_to :buyer, touch: true, class_name: 'User'
 
-  validates :price, numericality: { only_integer: true, less_than: 1000 }
+  validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than: 1000 }
   validates :quality, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 3 }
   validates :user_id, presence: true
   validates :buyer_id, uniqueness: { scope: :item_id }, allow_nil: true

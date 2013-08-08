@@ -47,9 +47,6 @@
 <h1><%= t(:settings) %></h1>
 
 <%= standard_form_for(current_user) do |f| %>
-  <% current_user.errors.full_messages.each do |msg| %>
-    <%= msg %>
-  <% end %>
   <%= f.text_field :email, disabled: true, value: email_with_verification(f.object) %>
 
   <h2><%= t(:change_password) %></h2>
@@ -58,7 +55,7 @@
 
   <h2><%= t(:update_contact_information) %></h2>
   <%= f.text_field :name %>
-  <%= f.text_field :phone %>
+  <%= f.phone_field :phone %>
 
   <%= f.submit %>
 <% end %>
