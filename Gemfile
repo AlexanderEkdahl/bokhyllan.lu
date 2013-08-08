@@ -16,6 +16,7 @@ gem 'foreman'
 gem 'meta-tags', require: 'meta_tags'
 gem 'analytics-ruby'
 gem 'newrelic_rpm'
+gem 'uglifier'
 
 group :development, :test do
   gem 'debugger'
