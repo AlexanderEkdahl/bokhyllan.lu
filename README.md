@@ -17,6 +17,7 @@
 * Remember me function
 * Coveralls
 * Code Climate
+* jQuery 2.0
 
 ##Getting started
 

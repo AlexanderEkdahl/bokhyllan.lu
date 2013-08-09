@@ -2,11 +2,11 @@ class ItemsController < ApplicationController
   before_action :authenticate, :must_be_verified, only: [:new, :create]
 
   include Metatags
+  include Moderator
 
   def index
     if params[:search]
       @items = Item.search(params[:search])
-      track("Searched for an item", query: params[:search], results: @items.length)
 
       case @items.length
       when 0
@@ -29,7 +29,7 @@ class ItemsController < ApplicationController
     @item.orders.first.user_id = current_user.id if @item.orders.first
 
     if @item.save
-      track("Created a new item", id: @item.id)
+      moderator("Created #{@item.name}")
       redirect_to(@item)
     else
       render 'new'
