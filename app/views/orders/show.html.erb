@@ -13,13 +13,22 @@
   <% end %>
 </table>
 
-<div class="buy">
-  <% if signed_in? %>
-    <%= button_to(t(:view_contact_info, rescue_format: nil), [:buy, @order.item, @order], form_class: 'form', data: { confirm: t(:purchase_confirmation) }) %>
-  <% else %>
-    <%= link_to(t(:sign_in_required_to_view_info), sign_in_user_path) %>
-  <% end %>
-</div>
+<h2><%= t(:contact_information) %></h2>
+
+<section class="contact-information">
+  <table>
+    <% contact_information_with_keys(@order.user) do |key, value| %>
+      <tr>
+        <td><%= key %>:</td>
+        <td><%= value %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <div class="qr">
+    <%= qr(@order.user, 140) %>
+  </div>
+</section>
 
 <% if other_items(@order).any? %>
   <div class="related">

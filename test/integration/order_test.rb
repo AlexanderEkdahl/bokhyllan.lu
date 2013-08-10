@@ -12,12 +12,5 @@ class OrderTest < ActionDispatch::IntegrationTest
       assert_equal(item_path(item), seller.path)
       seller.assert_select(".list table tbody tr", 1)
     end
-
-    order = item.orders.first
-    buyer.post_via_redirect(buy_item_order_path(item, order))
-    buyer.assert_response(:success)
-
-    buyer.get(item_path(item))
-    buyer.assert_select(".list table tbody tr", 0)
   end
 end

@@ -66,6 +66,7 @@ en:
   your_sell_order: 'Your sell order'
   sign_in_unsuccessful: 'sign_in_unsuccessful'
   order_destroyed: 'order_destroyed'
+  index_information: 'Bokhyllan gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris. Kom igång genom att logga in/registrera eller sök efter på en bok, författare eller kurs.'
 
   activerecord:
     attributes:

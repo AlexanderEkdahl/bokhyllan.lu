@@ -4,7 +4,7 @@ class Item < ActiveRecord::Base
 
   validates :name, presence: true, length: { minimum: 3, maximum: 100 }
 
-  PROPERTIES_KEYS = [:courses, :authors]
+  PROPERTIES_KEYS = [:courses, :authors, :program]
   store_accessor :properties, PROPERTIES_KEYS
 
   def tokens

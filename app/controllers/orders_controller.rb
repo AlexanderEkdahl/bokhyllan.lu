@@ -17,20 +17,10 @@ class OrdersController < ApplicationController
   def show
   end
 
-  def buy
-    render('invalid') unless @order.buy(current_user)
-  end
-
   def destroy
     @order.destroy
 
     redirect_to(user_path, success: t(:order_destroyed))
-  end
-
-  def cancel
-    @order.cancel_purchase
-
-    redirect_to(user_path, success: t(:order_canceled))
   end
 
   private

@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   include Moderator
 
   def index
-    if params[:search]
+    unless params[:search].blank?
       @items = Item.search(params[:search])
 
       case @items.length

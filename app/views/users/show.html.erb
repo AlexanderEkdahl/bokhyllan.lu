@@ -1,27 +1,5 @@
 <% title current_user.to_s %>
 
-<% unless current_user.buying_orders.empty? %>
-  <h1><%= t(:active_buy_order, count: current_user.buying_orders.count) %></h1>
-
-  <table class="hover" data-sort>
-    <thead>
-      <tr>
-        <th><%= t("activerecord.attributes.item.name") %></th>
-        <th data-sort><%= t("activerecord.attributes.order.price") %></th>
-        <th data-sort><%= t("activerecord.attributes.order.quality") %></th>
-        <th><%= t(:seller) %></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% current_user.buying_orders.each do |order| %>
-        <%= user_order_row(order, order.user, :cancel) %>
-      <% end %>
-    </tbody>
-  </table>
-<% end %>
-
 <% unless current_user.orders.empty? %>
   <h1><%= t(:active_sell_order, count: current_user.orders.count) %></h1>
 
@@ -31,14 +9,12 @@
         <th><%= t("activerecord.attributes.item.name") %></th>
         <th data-sort><%= t("activerecord.attributes.order.price") %></th>
         <th data-sort><%= t("activerecord.attributes.order.quality") %></th>
-        <th><%= t(:buyer) %></th>
-        <th></th>
         <th></th>
       </tr>
     </thead>
     <tbody>
       <% current_user.orders.each do |order| %>
-        <%= user_order_row(order, order.buyer) %>
+        <%= user_order_row(order) %>
       <% end %>
     </tbody>
   </table>

@@ -26,7 +26,7 @@
         </tr>
       </thead>
       <tbody>
-        <% @item.orders(true).available.each do |order| %>
+        <% @item.orders(true).each do |order| %>
           <%= item_order_row(order) %>
         <% end %>
       </tbody>

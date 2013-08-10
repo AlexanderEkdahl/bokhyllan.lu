@@ -3,9 +3,6 @@
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
 * Format phone numbers
-* Search item metadata
-* Expand QR codes on hover
-* Responsive tables á la BBC(responsive news)
 * Remove-order confirmation
 * StatHat
 * Cloudfront
@@ -18,6 +15,14 @@
 * Coveralls
 * Code Climate
 * jQuery 2.0
+* Nypris
+* Cancel order direct link
+* Har swish eller ej
+* Searchify(Search item metadata)
+* Show cheaper alternative for order if exists
+* Search icon
+* Reorganize fonts
+* Advanced queries
 
 ##Getting started
 
