@@ -4,10 +4,7 @@ var search = function() {
   if ($typeahead.length > 0) {
     $typeahead.typeahead({
       name: 'items',
-      prefetch: {
-        url: $typeahead.data('prefetch'),
-        ttl: 500
-      },
+      remote: $typeahead.data('remote'),
       footer: $typeahead.data('footer')
     });
 
@@ -19,3 +16,8 @@ var search = function() {
 
 $(document).ready(search);
 $(window).on('page:change', search);
+
+      // // prefetch: {
+      // //   url: $typeahead.data('prefetch'),
+      // //   ttl: 500
+      // // },

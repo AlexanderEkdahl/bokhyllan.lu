@@ -34,6 +34,7 @@ Postgres, bundler
 
     bundle install
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+    elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
     rails s
 
 ###Linux

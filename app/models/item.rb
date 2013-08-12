@@ -1,4 +1,7 @@
 class Item < ActiveRecord::Base
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
+
   has_many :orders, dependent: :destroy
   accepts_nested_attributes_for :orders, reject_if: proc { |attributes| attributes['price'].blank? }
 
@@ -15,11 +18,12 @@ class Item < ActiveRecord::Base
     maximum(:updated_at)
   end
 
-  def self.search(search)
-    where('name ILIKE ?', "%#{search}%")
+  def self.search(query)
+    tire.search("#{query}*")
   end
 
-  def cheapest
-    orders.first.try(:price)
+  mapping do
+    indexes :id, index: :not_analyzed
+    indexes :name, type: :string, boost: 100.0, analyzer: :snowball
   end
 end

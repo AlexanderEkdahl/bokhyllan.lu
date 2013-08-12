@@ -41,10 +41,8 @@ class ItemsController < ApplicationController
     @order = @item.orders.build
   end
 
-  def typeahead
-    @items = Item.all
-    fresh_when(last_modified: Item.last_modified, public: true)
-    expires_in(3.hours, public: true)
+  def autocomplete
+    @items = Item.search(params[:search])
   end
 
   private

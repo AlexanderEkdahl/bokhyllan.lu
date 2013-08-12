@@ -17,6 +17,7 @@ gem 'meta-tags', require: 'meta_tags'
 gem 'newrelic_rpm'
 gem 'uglifier'
 gem 'hipchat'
+gem 'tire'
 
 group :development, :test do
   gem 'debugger'

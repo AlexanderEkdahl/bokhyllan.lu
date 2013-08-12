@@ -13,9 +13,9 @@
   <% end %>
 </table>
 
-<h2><%= t(:contact_information) %></h2>
-
 <section class="contact-information">
+  <h2><%= t(:contact_information) %></h2>
+
   <table>
     <% contact_information_with_keys(@order.user) do |key, value| %>
       <tr>
