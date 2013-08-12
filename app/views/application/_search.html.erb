@@ -3,7 +3,7 @@
                      class: 'search',
                      placeholder: t(:search_placeholder),
                      value: (title(item.name) if defined?(item)),
-                     data: { remote: "#{autocomplete_items_path(format: :json)}?search=%QUERY",
+                     data: { remote: autocomplete_items_path(search: 'QUERY', format: :json),
                              footer: "<span class='footer'>Can not find what you are looking for? <a href='#{new_item_path}'>Add it to our repository.</a></span>" },
                      autofocus: true) %>
   <%= submit_tag("", style: "position: absolute; left: -9999px; width: 1px; height: 1px;", name: nil ) %>

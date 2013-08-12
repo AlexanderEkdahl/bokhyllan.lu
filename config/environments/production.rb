@@ -86,4 +86,6 @@ Bokhyllan::Application.configure do
   }
 
   config.action_mailer.default_url_options = { :host => "bokhyllan.herokuapp.com" }
+
+  config.action_controller.asset_host = "d2u5dxicfo6np6.cloudfront.net"
 end

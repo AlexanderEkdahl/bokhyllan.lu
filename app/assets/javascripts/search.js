@@ -4,7 +4,10 @@ var search = function() {
   if ($typeahead.length > 0) {
     $typeahead.typeahead({
       name: 'items',
-      remote: $typeahead.data('remote'),
+      remote: {
+        url: $typeahead.data('remote'),
+        wildcard: 'QUERY'
+      },
       footer: $typeahead.data('footer')
     });
 

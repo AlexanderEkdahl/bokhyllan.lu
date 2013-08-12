@@ -30,7 +30,7 @@ class StandardForm < ActionView::Helpers::FormBuilder
     label(:quality) +
     content_tag(:div, class: 'quality') do
       STARS.downto(1).map do |i|
-        checked = STARS / 2 + 1 == i
+        checked = (STARS / 2.0).ceil == i
         radio_button(:quality, i, checked: checked) + label("quality_#{i}", STAR)
       end.join.html_safe
     end
@@ -39,11 +39,4 @@ class StandardForm < ActionView::Helpers::FormBuilder
   def submit
     super(class: "button")
   end
-
-  private
-
-    def errors(name)
-      return false unless @object.respond_to?(:errors) && object.errors.any?
-      true
-    end
 end
