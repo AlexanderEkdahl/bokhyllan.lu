@@ -8,7 +8,6 @@ class OrdersController < ApplicationController
     @order.user_id = current_user.id
 
     if @order.save
-      track("Created an order")
       redirect_to(@item, success: t(:order_created))
     else
       render 'items/show'
@@ -18,26 +17,10 @@ class OrdersController < ApplicationController
   def show
   end
 
-  def buy
-    if @order.buy(current_user)
-      track("Purchased an item")
-    else
-      render('invalid')
-    end
-  end
-
   def destroy
     @order.destroy
-    track("Destroyed an order")
 
     redirect_to(user_path, success: t(:order_destroyed))
-  end
-
-  def cancel
-    @order.cancel_purchase
-    track("Canceled an order")
-
-    redirect_to(user_path, success: t(:order_canceled))
   end
 
   private

@@ -50,14 +50,20 @@
     }
   }
 
-  .buy {
+  .contact-information {
     @include column(1);
-    text-align: center;
-    margin: 1.5rem;
 
-    input {
-      margin: 0;
-      width: auto;
+    table {
+      @include column(2, 3);
+    }
+
+    table:last-child {
+      @include column(1);
+    }
+
+    .qr {
+      text-align: center;
+      @include column(1, 3);
     }
   }
 

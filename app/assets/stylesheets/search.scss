@@ -5,12 +5,22 @@
   margin-bottom: 0;
 }
 
+.search:before {
+  content: "\E006";
+  position: absolute;
+  left: 9px;
+  font-size: 1.2em;
+  line-height: 1;
+  color: silver;
+}
+
 .twitter-typeahead {
   width: 100%;
 
   input {
     font-size: 1.5em;
     padding: 9px;
+    padding-left: 1.2em;
     width: 100%;
     margin-bottom: 0;
   }

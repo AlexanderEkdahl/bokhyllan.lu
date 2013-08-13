@@ -22,14 +22,6 @@ class ApplicationController < ActionController::Base
       @current_user ||= User.find(session[:user_id]) unless session[:user_id].nil?
     end
 
-    def track(event, properties = {})
-      return unless signed_in?
-
-      context = { userAgent: request.env["HTTP_USER_AGENT"] }
-      Analytics.identify(user_id: current_user.id, traits: current_user.traits, context: context)
-      Analytics.track(user_id: current_user.id, event: event, properties: properties, context: context)
-    end
-
     def authenticate
       redirect_to(sign_in_user_path, alert: t(:must_be_signed_in)) unless signed_in?
     end

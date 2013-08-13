@@ -8,12 +8,9 @@ Bokhyllan::Application.routes.draw do
   end
 
   resources :items, only: [:show, :new, :create] do
-    get 'typeahead', on: :collection
+    get 'autocomplete', on: :collection
 
-    resources :orders, only: [:show, :create, :destroy] do
-      post 'buy', on: :member
-      delete 'cancel', on: :member
-    end
+    resources :orders, only: [:show, :create, :destroy]
   end
 
   root 'items#index'

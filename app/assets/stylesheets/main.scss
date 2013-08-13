@@ -13,3 +13,7 @@ body {
     margin-top: 0;
   }
 }
+
+.main > section {
+  @include clearfix;
+}

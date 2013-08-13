@@ -62,6 +62,8 @@ sv:
   other_items: Other items from the same seller.
   email_not_verified: '%{email}(Not verified)'
 
+  index_information: 'Bokhyllan.lu gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris. Kom igång genom att logga in/registrera eller sök efter en bok, författare eller kurs.'
+
   activerecord:
     attributes:
       user:

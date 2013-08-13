@@ -3,12 +3,7 @@
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
 * Sitemap generation
 * Format phone numbers
-* Search item metadata
-* Expand QR codes on hover
-* Responsive tables á la BBC(responsive news)
-* Remove-order confirmation
 * StatHat
-* Cloudfront
 * Merge item data when duplicates are found. Also move orders
 * Link item with other textbook
 * Course names as an attribute
@@ -17,6 +12,12 @@
 * Remember me function
 * Coveralls
 * Code Climate
+* Nypris
+* Cancel order direct link
+* IndexTank
+* Show cheaper alternative for order if exists
+* Reorganize fonts
+* Advanced queries
 
 ##Getting started
 
@@ -28,6 +29,8 @@ Postgres, bundler
 
     bundle install
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+    elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+    rake environment tire:import CLASS='Item' FORCE=true
     rails s
 
 ###Linux

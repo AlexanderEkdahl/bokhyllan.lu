@@ -12,7 +12,6 @@ class UsersController < ApplicationController
       @user.password = params[:user][:password]
       if @user.save
         session[:user_id] = @user.id
-        track("Signed in for the first time")
         UserMailer.verification_email(@user).deliver
         redirect_to(root_path, notice: t(:sign_in_success))
       else
@@ -21,7 +20,6 @@ class UsersController < ApplicationController
     else
       if @user.authenticate(params[:user][:password])
         session[:user_id] = @user.id
-        track("Signed in")
         redirect_to(root_path, notice: t(:sign_in_success))
       else
         @sign_in_unsuccessful = true
@@ -32,7 +30,6 @@ class UsersController < ApplicationController
   end
 
   def sign_out
-    track("Signed out")
     reset_session
     redirect_to(root_path, notice: t(:sign_out_success))
   end
@@ -42,7 +39,6 @@ class UsersController < ApplicationController
 
   def update
     if current_user.update(user_params)
-      track("Updated the profile")
       redirect_to(root_path, notice: t(:settings_updated_successful))
     else
       render action: 'show'
@@ -55,7 +51,6 @@ class UsersController < ApplicationController
     if user
       user.verify!
       session[:user_id] = user.id
-      track("Verified the email")
       redirect_to(root_path, success: t(:user_verified, email: user.email))
     else
       head(:forbidden)
