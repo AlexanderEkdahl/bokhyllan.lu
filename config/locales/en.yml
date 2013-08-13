@@ -1,13 +1,13 @@
 en:
   search_placeholder: Search title, author, course, etc.
-  sign_in: Sign in
+  sign_in: Sign in/Register
   sign_out: Sign out
   settings: Settings
   contact_information: Contact information
   home: Home
   change_password: Change password
   update_contact_information: Update contact information
-  first_time_login_info: If this is your first time signing in an email will be sent to your STIL-email verifiying your account.
+  first_time_login_info: To register, simply type your student-ID (ex. abc10def) and a password of your choice, and a verification email will be sent to said adress (@student.lu.se).
   sign_in_success: Successfully signed in.
   sign_in_unsuccessfull: Incorrect sign in credentials.
   sign_out_success: Successfully signed out.
