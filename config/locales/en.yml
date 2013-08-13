@@ -64,9 +64,9 @@ en:
   # Nya översättningar som du kanske vill flytta på:
   send_confirmation_email: 'Reset password for %{email}?'
   your_sell_order: 'Your sell order'
-  sign_in_unsuccessful: 'sign_in_unsuccessful'
-  order_destroyed: 'order_destroyed'
-  index_information: 'Bokhyllan.lu gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris. Kom igång genom att logga in/registrera eller sök efter en bok, författare eller kurs.'
+  sign_in_unsuccessful: 'Login failed'
+  order_destroyed: 'Order removed'
+  index_information: 'Bokhyllan.lu offers an easy way to find second-hand literature at the best price possible. Get started by logging in/register or search for a book, author or course.'
 
   activerecord:
     attributes:
