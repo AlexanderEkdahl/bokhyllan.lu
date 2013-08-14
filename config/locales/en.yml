@@ -21,7 +21,7 @@ en:
   must_be_signed_in_to_sell: 'You must be signed in to sell %{item}.'
   must_be_signed_in_to_sell_or_buy: 'You must be signed in to sell or buy %{item}.'
   sign_in_required_to_view_info: You need to signed in to view the contact information of the seller.
-  other_items: The same person also sells
+  other_items: '%{name} also sells'
   contact_immediately: Please contact the seller immediatly
   email_not_verified: '%{email}(Not verified)'
   show: Show
@@ -58,8 +58,6 @@ en:
     - sell
     - lund
   sign_in_required_to_view_info: You need to signed in to view the contact information of the seller.
-  other_items: Other items from the same seller.
-  email_not_verified: '%{email}(Not verified)'
 
   # Nya översättningar som du kanske vill flytta på:
   send_confirmation_email: 'Reset password for %{email}?'

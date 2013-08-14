@@ -18,9 +18,9 @@ class UsersHelperTest < ActionView::TestCase
     @user.name  = @user.phone = ''
     assert_equal({email: mail_to('email@student.lu.se')}, contact_information(@user))
     @user.phone = '+46712345'
-    assert_equal({email: mail_to('email@student.lu.se'), phone: '+46712345'}, contact_information(@user))
+    assert_equal({phone: '+46712345', email: mail_to('email@student.lu.se')}, contact_information(@user))
     @user.name = 'Catarina'
-    assert_equal({email: mail_to('email@student.lu.se'), phone: '+46712345', name: 'Catarina'}, contact_information(@user))
+    assert_equal({name: 'Catarina', phone: '+46712345', email: mail_to('email@student.lu.se')}, contact_information(@user))
   end
 
   def test_contact_information_without_keys
@@ -29,6 +29,6 @@ class UsersHelperTest < ActionView::TestCase
     @user.name  = @user.phone = ''
     assert_equal(mail_to('email@student.lu.se'), contact_information_without_keys(@user))
     @user.phone = '+46712345'
-    assert_equal("#{mail_to('email@student.lu.se')} +46712345", contact_information_without_keys(@user))
+    assert_equal("+46712345 #{mail_to('email@student.lu.se')}", contact_information_without_keys(@user))
   end
 end

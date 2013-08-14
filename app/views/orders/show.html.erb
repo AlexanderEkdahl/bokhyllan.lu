@@ -32,7 +32,7 @@
 
 <% if other_items(@order).any? %>
   <div class="related">
-    <h2><%= t(:other_items) %></h2>
+    <h2><%= t(:other_items, name: @order.user.to_s) %></h2>
 
     <table data-sort class="hover">
       <thead>

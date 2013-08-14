@@ -21,7 +21,7 @@ sv:
   must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
   must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation.
-  other_items: Samma person säljer även
+  other_items: '%{name} säljer även'
   contact_immediately: Var god kontakta honom/henne omgående.
   email_not_verified: '%{email}(Ej verifierat)'
   show: Visa
@@ -59,8 +59,6 @@ sv:
     - lund
     - kurslitteratur
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation
-  other_items: Other items from the same seller.
-  email_not_verified: '%{email}(Not verified)'
 
   index_information: 'Bokhyllan.lu gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris. Kom igång genom att logga in/registrera eller sök efter en bok, författare eller kurs.'
 

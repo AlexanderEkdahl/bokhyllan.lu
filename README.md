@@ -18,6 +18,10 @@
 * Show cheaper alternative for order if exists
 * Reorganize fonts
 * Advanced queries
+* Kvalité(stjärnor) under pris
+* Sliten/Få anteckningar, mindre slitage/Nyskick
+* html border-top
+* Write detailed tests for the navigation
 
 ##Getting started
 
