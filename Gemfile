@@ -3,7 +3,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0'
 gem 'sass-rails'
-gem 'bourbon'
+gem 'neat'
 gem 'pg'
 gem 'puma'
 gem 'jquery-rails'

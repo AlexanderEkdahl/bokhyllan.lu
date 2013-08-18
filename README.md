@@ -22,6 +22,7 @@
 * Sliten/Få anteckningar, mindre slitage/Nyskick
 * html border-top
 * Write detailed tests for the navigation
+* Font should be required in the header of the html to decrease the critical path
 
 ##Getting started
 
