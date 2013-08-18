@@ -16,4 +16,9 @@ body {
 
 .main > section {
   @include clearfix;
+  margin-top: 3rem;
+
+  h2:first-child {
+    margin-top: 0;
+  }
 }

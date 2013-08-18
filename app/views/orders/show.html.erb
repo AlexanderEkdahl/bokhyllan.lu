@@ -1,22 +1,25 @@
 <%= render partial: 'search', locals: { item: @order.item } %>
 
-<div class="price">
-  <span><%= @order.price %></span>kr
-</div>
+<section>
+  <div class="hero">
+    <span class="price"><%= @order.price %></span>kr
+    <span class="stars"><%= stars(@order.quality) %></span>
+  </div>
 
-<table class="properties">
-  <% item_properties(@order.item) do |key, value| %>
-    <tr>
-      <td><%= key %>:</td>
-      <td><%= value %></td>
-    </tr>
-  <% end %>
-</table>
+  <table class="properties">
+    <% item_properties(@order.item) do |key, value| %>
+      <tr>
+        <td><%= key %>:</td>
+        <td><%= value %></td>
+      </tr>
+    <% end %>
+  </table>
+</section>
 
-<section class="contact-information">
+<section>
   <h2><%= t(:contact_information) %></h2>
 
-  <table>
+  <table class="contact-information">
     <% contact_information_with_keys(@order.user) do |key, value| %>
       <tr>
         <td><%= key %>:</td>
@@ -32,7 +35,7 @@
 
 <% if other_items(@order).any? %>
   <div class="related">
-    <h2><%= t(:other_items, name: @order.user.to_s) %></h2>
+    <h3><%= t(:other_items, name: @order.user.to_s) %></h3>
 
     <table data-sort class="hover">
       <thead>

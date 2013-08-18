@@ -5,8 +5,6 @@
 * Format phone numbers
 * StatHat
 * Merge item data when duplicates are found. Also move orders
-* Link item with other textbook
-* Course names as an attribute
 * Improve encouragement to verify the account
 * Simplfiy password reset both for logged in and logged out users
 * Remember me function
@@ -14,11 +12,8 @@
 * Code Climate
 * Nypris
 * Cancel order direct link
-* IndexTank
 * Show cheaper alternative for order if exists
-* Reorganize fonts
 * Advanced queries
-* Kvalité(stjärnor) under pris
 * Sliten/Få anteckningar, mindre slitage/Nyskick
 * html border-top
 * Write detailed tests for the navigation

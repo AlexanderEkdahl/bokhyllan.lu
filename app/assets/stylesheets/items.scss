@@ -1,8 +1,4 @@
 .items, .orders {
-  .properties, .image, .price, .list, .new-order {
-    margin-top: 3rem;
-  }
-
   .properties {
     @include column(1);
   }
@@ -37,12 +33,16 @@
     }
   }
 
-  .price {
+  .hero {
     @include column(1, 3);
     text-align: center;
 
-    span {
+    .price {
       font-size: 6.7rem;
+    }
+
+    .stars {
+      font-size: 1.8rem;
     }
 
     @include mobile {
@@ -51,20 +51,16 @@
   }
 
   .contact-information {
-    @include column(1);
+    @include column(3, 4);
 
-    table {
-      @include column(2, 3);
-    }
-
-    table:last-child {
+    &:last-child {
       @include column(1);
     }
+  }
 
-    .qr {
-      text-align: center;
-      @include column(1, 3);
-    }
+  .qr {
+    text-align: center;
+    @include column(1, 4);
   }
 
   .related {
