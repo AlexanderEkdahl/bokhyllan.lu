@@ -60,6 +60,10 @@ sv:
     - kurslitteratur
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation
 
+  send_confirmation_email: 'Vill du återställa lösenordet för %{email}?'
+  your_sell_order: 'Din säljorder'
+  sign_in_unsuccessful: 'Inloggningen misslyckades'
+  order_destroyed: 'Order borttagen'
   index_information: 'Bokhyllan.lu gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris. Kom igång genom att logga in/registrera eller sök efter en bok, författare eller kurs.'
 
   activerecord:
