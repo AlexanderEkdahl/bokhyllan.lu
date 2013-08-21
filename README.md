@@ -1,7 +1,7 @@
 #Bokhyllan.lu
 
 * Your privacy is honored and information won't be shared with those who do not need it(i.e. Google)
-* Sitemap generation
+* Sitemap generation(https://github.com/kjvarga/sitemap_generator)
 * Format phone numbers
 * StatHat
 * Merge item data when duplicates are found. Also move orders

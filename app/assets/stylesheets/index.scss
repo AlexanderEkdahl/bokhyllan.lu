@@ -1,0 +1,35 @@
+.items.index {
+  .sell, .buy {
+    @include column(1, 2);
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+
+    li {
+      font-size: 0.8em;
+      line-height: 1.8;
+      border-bottom: 1px solid #eee;
+    }
+
+    li:last-of-type {
+      border: none;
+    }
+  }
+
+  .sell {
+    text-align: right;
+    padding-right: 2rem;
+    border-right: 1px solid #eee;
+  }
+
+  .buy {
+    padding-left: 2rem;
+  }
+
+  h3 {
+    margin-top: 2rem;
+    text-align: center;
+  }
+}

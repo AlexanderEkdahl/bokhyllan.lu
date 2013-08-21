@@ -30,7 +30,8 @@ input {
     margin-top: 55px;
     text-align: center;
     cursor: pointer;
-    background-color: silver !important;
+    background-color: $main_color !important;
+    color: white;
     padding: 0.3em 0.45em;
     font-size: 0.9em;
     border-radius: 2px;
