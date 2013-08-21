@@ -59,6 +59,14 @@ sv:
     - lund
     - kurslitteratur
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation
+  send_confirmation_email: 'Återställ lösenordet för %{email}?'
+  your_sell_order: 'Din säljorder'
+  sign_in_unsuccessful: 'Inloggningen misslyckades'
+  order_destroyed: 'Annonsen borttagen'
+  no_hit: Hittar du inte vad du söker?
+  new_item: Ny bok
+  description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.
+  support_feedback: Support/Feedback
   sell: Sälj
   sell_info:
     - Registrera ett konto
@@ -67,17 +75,11 @@ sv:
   buy: Köp
   buy_info:
     - Sök efter boken du vill köpa
-    - Välj annons efter önskad kvalitet och pris
+    - Välj annons efter önskat pris och kvalitet
     - Kontakta säljaren
   done: Klart!
-  send_confirmation_email: 'Vill du återställa lösenordet för %{email}?'
-  your_sell_order: 'Din säljorder'
-  sign_in_unsuccessful: 'Inloggningen misslyckades'
-  order_destroyed: 'Order borttagen'
-  index_information: 'Bokhyllan.lu gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris. Kom igång genom att logga in/registrera eller sök efter en bok, författare eller kurs.'
-  no_hit: Finns inte boken du letar efter?
-  new_item: Ny bok
-  description: Bokhyllan.lu gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris.
+
+  site_info: Köp och sälj kurslitteratur till bästa möjliga pris!
 
   activerecord:
     attributes:

@@ -57,27 +57,29 @@ en:
     - buy
     - sell
     - lund
-  sign_in_required_to_view_info: You need to signed in to view the contact information of the seller.
+    - Course literature
+  sign_in_required_to_view_info: You need to sign in to view the contact information of the seller.
   send_confirmation_email: 'Reset password for %{email}?'
   your_sell_order: 'Your sell order'
   sign_in_unsuccessful: 'Login failed'
   order_destroyed: 'Order removed'
-  index_information: 'Bokhyllan.lu offers an easy way to find second-hand literature at the best price possible. Get started by signing in/register or search for a book, author or course.'
   no_hit: Cannot find what you are looking for?
   new_item: New item
   description: Bokhyllan.lu offers an easy way to find second-hand literature at the best price possible.
   support_feedback: Support/Feedback
-  sell: Sälj
+  sell: Sell
   sell_info:
-    - Registrera ett konto
-    - Sök efter boken du vill sälja
-    - Ange ditt pris och kvaliteten på boken
-  buy: Köp
+    - Registrer an account and sign in
+    - Search for the desired book
+    - State the quality and name your price
+  buy: Buy
   buy_info:
-    - Sök efter boken du vill köpa
-    - Välj annons efter önskad kvalitet och pris
-    - Kontakta säljaren
-  done: Klart!
+    - Search for a specific book
+    - Choose the order you desire
+    - Contact the seller
+  done: Done!
+
+  site_info: Buy or sell course literature at best possible price. 
 
   activerecord:
     attributes:
@@ -92,6 +94,8 @@ en:
         quality: Quality
       item:
         name: Name
+        courses: Courses
+        authors: Author
   support:
     array:
       last_word_connector: ' and '
