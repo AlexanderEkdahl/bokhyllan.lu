@@ -7,9 +7,15 @@
     <%= javascript_include_tag "application" %>
   </head>
   <body>
-    <nav>
-      <%= nav(home, sign_in, user, sign_out) %>
-    </nav>
+    <header>
+      <%= link_to(root_path) do %>
+        <%= image_tag('logo.png', size: '60') %>
+        <h1>Bokhyllan<span>.lu</span></h1>
+      <% end %>
+      <nav>
+        <%= nav(home, sign_in, user, sign_out) %>
+      </nav>
+    </header>
 
     <div class="flash">
       <% flash.each do |k, v| %>
@@ -17,8 +23,8 @@
       <% end %>
     </div>
 
-    <div class="main <%= "#{params[:controller]} #{params[:action]}" %>">
+    <main class="<%= "#{params[:controller]} #{params[:action]}" %>">
       <%= yield %>
-    </div>
+    </main>
   </body>
 </html>

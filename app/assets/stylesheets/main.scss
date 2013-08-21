@@ -2,7 +2,7 @@ body {
   font-size: 1.5em;
 }
 
-.main {
+main {
   @include clearfix;
   max-width: 45rem;
   margin: 4.5rem auto 2rem;
@@ -14,7 +14,7 @@ body {
   }
 }
 
-.main > section {
+main > section {
   @include clearfix;
   margin-top: 3rem;
 
