@@ -9,6 +9,10 @@ header {
   h1 {
     margin-left: 0;
 
+    @include mobile {
+      display: none;
+    }
+
     span {
       color: $main_color;
     }
