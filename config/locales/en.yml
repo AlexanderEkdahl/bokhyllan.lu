@@ -67,6 +67,17 @@ en:
   new_item: New item
   description: Bokhyllan.lu offers an easy way to find second-hand literature at the best price possible.
   support_feedback: Support/Feedback
+  sell: Sälj
+  sell_info:
+    - Registrera ett konto
+    - Sök efter boken du vill sälja
+    - Ange ditt pris och kvaliteten på boken
+  buy: Köp
+  buy_info:
+    - Sök efter boken du vill köpa
+    - Välj annons efter önskad kvalitet och pris
+    - Kontakta säljaren
+  done: Klart!
 
   activerecord:
     attributes:

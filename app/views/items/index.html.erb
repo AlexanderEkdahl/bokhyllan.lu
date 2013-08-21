@@ -2,21 +2,21 @@
 
 <section>
   <div class="sell">
-    <h2>Sälja</h2>
+    <h2><%= t(:sell) %></h2>
     <ul>
-      <li>Registrera ett konto</li>
-      <li>Sök efter boken du vill sälja</li>
-      <li>Ange ditt pris och kvaliteten på boken</li>
+      <% t(:sell_info).each do |info| %>
+        <li><%= info %></li>
+      <% end %>
     </ul>
   </div>
   <div class="buy">
-  <h2>Köpa</h2>
+    <h2><%= t(:buy) %></h2>
     <ul>
-      <li>Sök efter boken du vill köpa</li>
-      <li>Välj annons efter önskad kvalitet och pris.</li>
-      <li>Kontakta säljaren</li>
+      <% t(:buy_info).each do |info| %>
+        <li><%= info %></li>
+      <% end %>
     </ul>
   </div>
 </section>
 
-<h3>Klart!</h3>
+<h3><%= t(:done) %></h3>

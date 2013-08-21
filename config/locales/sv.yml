@@ -59,7 +59,17 @@ sv:
     - lund
     - kurslitteratur
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation
-
+  sell: Sälj
+  sell_info:
+    - Registrera ett konto
+    - Sök efter boken du vill sälja
+    - Ange ditt pris och kvaliteten på boken
+  buy: Köp
+  buy_info:
+    - Sök efter boken du vill köpa
+    - Välj annons efter önskad kvalitet och pris
+    - Kontakta säljaren
+  done: Klart!
   send_confirmation_email: 'Vill du återställa lösenordet för %{email}?'
   your_sell_order: 'Din säljorder'
   sign_in_unsuccessful: 'Inloggningen misslyckades'
