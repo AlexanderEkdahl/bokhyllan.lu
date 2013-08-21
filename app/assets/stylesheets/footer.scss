@@ -1,0 +1,13 @@
+footer {
+  text-align: center;
+  font-size: 0.8em;
+
+  a {
+    color: #aaa !important;
+    @include transition(400ms color);
+  }
+
+  &:hover a {
+    color: black !important;
+  }
+}

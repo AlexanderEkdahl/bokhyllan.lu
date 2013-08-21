@@ -1,4 +1,5 @@
 <% title current_user.to_s %>
+<% noindex %>
 
 <% unless current_user.orders.empty? %>
   <h1><%= t(:active_sell_order, count: current_user.orders.count) %></h1>

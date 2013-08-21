@@ -66,6 +66,7 @@ en:
   no_hit: Cannot find what you are looking for?
   new_item: New item
   description: Bokhyllan.lu offers an easy way to find second-hand literature at the best price possible.
+  support_feedback: Support/Feedback
 
   activerecord:
     attributes:

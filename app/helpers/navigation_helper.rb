@@ -19,6 +19,10 @@ module NavigationHelper
     link_to(current_user.email, user_path) if signed_in? and not controller?('users')
   end
 
+  def support
+    link_to(t(:support_feedback), 'https://www.hipchat.com/grR40Vhv6')
+  end
+
   private
 
     def controller?(*controllers)

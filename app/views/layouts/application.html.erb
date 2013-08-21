@@ -27,5 +27,9 @@
     <main class="<%= "#{params[:controller]} #{params[:action]}" %>">
       <%= yield %>
     </main>
+
+    <footer>
+      <%= nav(support) %>
+    </footer>
   </body>
 </html>
