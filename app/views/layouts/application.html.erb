@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= display_meta_tags(site: 'Bokhyllan.lu', separator: '&middot;'.html_safe, reverse: true, keywords: Metatags::default_tags) %>
+    <meta charset=utf-8>
+    <%= display_meta_tags(site: 'Bokhyllan.lu', separator: '&middot;'.html_safe, reverse: true, keywords: Metatags::default_tags, :description => t(:description)) %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "application" %>

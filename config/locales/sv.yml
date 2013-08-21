@@ -67,6 +67,7 @@ sv:
   index_information: 'Bokhyllan.lu gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris. Kom igång genom att logga in/registrera eller sök efter en bok, författare eller kurs.'
   no_hit: Finns inte boken du letar efter?
   new_item: Ny bok
+  description: Bokhyllan.lu gör det enkelt för dig att hitta begagnad kurslitteratur till bästa möjliga pris.
 
   activerecord:
     attributes:
