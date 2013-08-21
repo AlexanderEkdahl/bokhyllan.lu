@@ -58,13 +58,13 @@ en:
     - sell
     - lund
   sign_in_required_to_view_info: You need to signed in to view the contact information of the seller.
-
-  # Nya översättningar som du kanske vill flytta på:
   send_confirmation_email: 'Reset password for %{email}?'
   your_sell_order: 'Your sell order'
   sign_in_unsuccessful: 'Login failed'
   order_destroyed: 'Order removed'
   index_information: 'Bokhyllan.lu offers an easy way to find second-hand literature at the best price possible. Get started by signing in/register or search for a book, author or course.'
+  no_hit: Cannot find what you are looking for?
+  new_item: New item
 
   activerecord:
     attributes:
