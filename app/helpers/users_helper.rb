@@ -5,11 +5,15 @@ module UsersHelper
   end
 
   def tel_to(phone)
-    link_to(phone, "tel:#{phone}")
+    link_to(phone, "tel://#{phone}")
   end
 
   def contact_information(user)
-    { name: user.name, phone: tel_to(user.phone), email: mail_to(user.email) }.reject { |_, value| value.blank? }
+    hash         = {}
+    hash[:name]  = user.name unless user.name.blank?
+    hash[:phone] = tel_to(user.phone) unless user.phone.blank?
+    hash[:email] = mail_to(user.email)
+    hash
   end
 
   def contact_information_with_keys(user)
