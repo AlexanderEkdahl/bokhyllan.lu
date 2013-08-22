@@ -1,4 +1,23 @@
 .items.index {
+  // .slogan {
+  //   margin-top: 0;
+  //   text-align: center;
+  // }
+
+  .result {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+
+    h2 {
+      margin: 0.4em 0;
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
   .sell, .buy {
     @include column(1, 2);
   }

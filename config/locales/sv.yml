@@ -79,7 +79,7 @@ sv:
     - Kontakta säljaren
   done: Klart!
 
-  site_info: Köp och sälj kurslitteratur till bästa möjliga pris!
+  slogan: Köp och sälj kurslitteratur till bästa möjliga pris!
 
   activerecord:
     attributes:

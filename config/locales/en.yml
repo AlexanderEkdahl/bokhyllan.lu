@@ -79,7 +79,7 @@ en:
     - Contact the seller
   done: Done!
 
-  site_info: Buy or sell course literature at best possible price. 
+  slogan: Buy or sell course literature at best possible price.
 
   activerecord:
     attributes:

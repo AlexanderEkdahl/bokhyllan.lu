@@ -1,5 +1,9 @@
 <%= render 'search' %>
 
 <% @items.each do |item| %>
-  <h2><%= link_to(item.name, item) %></h2>
+  <%= link_to(item, class: 'result') do %>
+    <h2><%= item.name %></h2>
+    <span><%= item.courses %></span> -
+    <span><%= item.authors %></span>
+  <% end %>
 <% end %>

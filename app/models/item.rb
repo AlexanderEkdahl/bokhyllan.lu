@@ -22,8 +22,11 @@ class Item < ActiveRecord::Base
     tire.search("#{query}*")
   end
 
-  mapping do
-    indexes :id, index: :not_analyzed
-    indexes :name, type: :string, boost: 100.0, analyzer: :snowball
+  def to_indexed_json
+    {
+      :name    => name,
+      :authors => properties['authors'],
+      :courses => properties['courses']
+    }.to_json
   end
 end
