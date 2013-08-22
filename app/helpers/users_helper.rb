@@ -4,8 +4,12 @@ module UsersHelper
     t(:email_not_verified, email: user.email)
   end
 
+  def tel_to(phone)
+    link_to(phone, "tel:#{phone}")
+  end
+
   def contact_information(user)
-    { name: user.name, phone: user.phone, email: mail_to(user.email) }.reject { |_, value| value.blank? }
+    { name: user.name, phone: tel_to(user.phone), email: mail_to(user.email) }.reject { |_, value| value.blank? }
   end
 
   def contact_information_with_keys(user)

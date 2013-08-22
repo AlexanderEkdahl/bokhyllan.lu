@@ -2,7 +2,8 @@ module ItemsHelper
   require 'uri'
 
   def item_properties(item)
-    item.properties.each do |key, value|
+    Item::PROPERTIES_KEYS.each do |key|
+      value = item.send(key) # Compatible with ElasticSearch
       next if value.blank?
       value = value.split(/;\s?/)
       key   = t(key, count: value.length)

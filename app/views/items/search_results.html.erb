@@ -3,7 +3,8 @@
 <% @items.each do |item| %>
   <%= link_to(item, class: 'result') do %>
     <h2><%= item.name %></h2>
-    <span><%= item.courses %></span> -
-    <span><%= item.authors %></span>
+    <% item_properties(item) do |_, value| %>
+      <span><%= value %></span>
+    <% end %>
   <% end %>
 <% end %>
