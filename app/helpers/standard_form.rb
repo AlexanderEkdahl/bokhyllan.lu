@@ -12,13 +12,14 @@ class StandardForm < ActionView::Helpers::FormBuilder
       options = args.extract_options!
       options[:spellcheck] = false
 
-      suffix = ''
       if object.respond_to?(:errors) && object.errors.include?(name)
         options[:class] = 'error'
-        suffix = content_tag(:span, object.errors.get(name).to_sentence)
+        suffix = object.errors.get(name).to_sentence
+      else
+        suffix = I18n.t("#{name}_help", default: '')
       end
 
-      label(name) + super(name, options) + suffix
+      label(name) + super(name, options) + content_tag(:span, suffix)
     end
   end
 

@@ -77,7 +77,9 @@ en:
     - Search for a specific book
     - Choose the order you desire
     - Contact the seller
-  done: Done!
+  authors_help: 'Ex. Jonas Månsson; Patrik Nordbeck'
+  courses_help: 'Ex. FMAA01; FMAA05'
+  program_help: 'Ex. C; D; F'
 
   slogan: Buy or sell course literature at best possible price.
 

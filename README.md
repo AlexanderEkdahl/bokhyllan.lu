@@ -19,13 +19,8 @@
 * Font should be required in the header of the html to decrease the critical path
 * Format search results(remove semicolons)
 * STIL verification
-
-###Lars
-* Vad som är länkar och inte är inte alltd självklart. tex, per holm är inte .... lägg till den....
 * När jag hade signat kom jag inloggad men inte där jag var senast med att lägga till en ny bok.
-* Kunde inte trycka på några köp/sälj bilder när ja loggades in första gången
 * Hittar ingen stans, alla böcker som är inne.
-* När man lägger till en bok kan det vara bra med lite förklarande texter kanske? Hur skriver man program?? (D/C), (D,C), (D&C), Data och InfoCom.....
 
 ##Getting started
 
@@ -38,7 +33,7 @@ Postgres, bundler
     bundle install
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
     elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
-    rake environment tire:import CLASS='Item' FORCE=true
+    rake environment tire:import CLASS='Item' FORCE=true NEWRELIC_ENABLE=false
     rails s
 
 ###Linux

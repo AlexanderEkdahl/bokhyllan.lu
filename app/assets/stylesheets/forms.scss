@@ -44,13 +44,16 @@ input {
     color: #888;
   }
 
+  span {
+    font-size: 0.8em;
+  }
+
   .error {
     border-color: red;
     box-shadow: 0px 0px 3px rgba(255, 0, 0, 0.6);
   }
 
-  .error ~ span{
-    font-size: 0.8em;
+  .error + span{
     color: red;
   }
 
