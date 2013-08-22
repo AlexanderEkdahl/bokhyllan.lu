@@ -19,7 +19,7 @@ class StandardForm < ActionView::Helpers::FormBuilder
         suffix = I18n.t("#{name}_help", default: '')
       end
 
-      label(name) + super(name, options) + content_tag(:span, suffix)
+      label(name) + super(name, options) + content_tag(:span, suffix, class: 'suffix')
     end
   end
 
