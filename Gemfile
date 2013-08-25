@@ -3,7 +3,7 @@ ruby '2.0.0'
 
 gem 'rails', '4.0'
 gem 'sass-rails'
-gem 'neat'
+gem 'bourbon'
 gem 'pg'
 gem 'jquery-rails'
 gem 'twitter-typeahead-rails'
@@ -15,6 +15,7 @@ gem 'meta-tags', require: 'meta_tags'
 gem 'uglifier'
 gem 'hipchat'
 gem 'tire'
+gem 'sitemap_generator'
 
 group :development, :test do
   gem 'foreman'

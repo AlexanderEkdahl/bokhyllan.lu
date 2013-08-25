@@ -93,9 +93,6 @@ GEM
     minitest (4.7.5)
     multi_json (1.7.9)
     multi_xml (0.5.5)
-    neat (1.3.0)
-      bourbon (>= 2.1)
-      sass (>= 3.2)
     newrelic_rpm (3.6.6.147)
     pg (0.16.0)
     polyglot (0.3.3)
@@ -132,6 +129,8 @@ GEM
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
+    sitemap_generator (4.2.0)
+      builder
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -172,6 +171,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
+  bourbon
   debugger
   factory_girl_rails
   foreman
@@ -181,7 +181,6 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   meta-tags
-  neat
   newrelic_rpm
   pg
   puma
@@ -189,6 +188,7 @@ DEPENDENCIES
   rails (= 4.0)
   rails_12factor
   sass-rails
+  sitemap_generator
   tire
   turbolinks
   twitter-typeahead-rails

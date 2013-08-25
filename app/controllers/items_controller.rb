@@ -17,6 +17,8 @@ class ItemsController < ApplicationController
         render 'search_results'
       end
     end
+  rescue Errno::ECONNREFUSED
+    render 'not_found'
   end
 
   def new
