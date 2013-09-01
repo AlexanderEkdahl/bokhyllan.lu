@@ -1,16 +1,13 @@
 en:
   search_placeholder: Search title, author, course, etc.
-  sign_in: Sign in/Register
+  sign_in: 'Sign in'
   sign_out: Sign out
   settings: Settings
   contact_information: Contact information
   home: Home
   change_password: Change password
   update_contact_information: Update contact information
-  first_time_login_info: To register, simply type your student-ID (ex. abc10def) and a password of your choice, and a verification email will be sent to said adress (@student.lu.se).
   sign_in_success: Successfully signed in.
-  sign_in_unsuccessfull: Incorrect sign in credentials.
-  sign_out_success: Successfully signed out.
   settings_updated_successful: Settings was successfully updated.
   user_verified: '%{email} verified.'
   must_be_verified: 'You must verify your account to perform this action. A verification email have been sent to %{email}.'
@@ -63,6 +60,7 @@ en:
   your_sell_order: 'Your sell order'
   sign_in_unsuccessful: 'Login failed'
   order_destroyed: 'Order removed'
+  order_created: 'Order created'
   no_hit: Cannot find what you are looking for?
   new_item: New item
   description: Bokhyllan.lu offers an easy way to find second-hand literature at the best price possible.
