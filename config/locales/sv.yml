@@ -68,9 +68,9 @@ sv:
   description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.
   support_feedback: Support/Feedback
   sell: Sälj
-  sell_info_sign_up: Registrera ett konto
   sell_info:
     - Sök efter boken du vill sälja
+    - Logga in med ditt STIL-id
     - Ange ditt pris och kvaliteten på boken
   buy: Köp
   buy_info:

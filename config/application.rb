@@ -9,5 +9,7 @@ module Bokhyllan
     config.i18n.fallbacks = true
 
     config.action_view.field_error_proc = Proc.new { |html_tag, _| html_tag }
+
+    config.rack_cas.server_url = 'https://cas.lu.se/'
   end
 end

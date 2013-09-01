@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate, :must_be_verified, only: [:new, :create]
+  before_action :authenticate, only: [:new, :create]
 
   include Metatags
   include Moderator

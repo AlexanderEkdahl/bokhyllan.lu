@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :set_locale
+  before_action :set_locale, :current_user
 
   add_flash_types :success
 
@@ -15,19 +15,15 @@ class ApplicationController < ActionController::Base
     end
 
     def signed_in?
-      !current_user.nil?
+      !request.session['cas'].nil?
     end
 
     def current_user
-      @current_user ||= User.find(session[:user_id]) unless session[:user_id].nil?
+      @current_user ||= User.find_or_create_by(login: request.session['cas']['user']) if signed_in?
     end
 
     def authenticate
-      redirect_to(sign_in_user_path, alert: t(:must_be_signed_in)) unless signed_in?
-    end
-
-    def must_be_verified
-      render 'users/must_be_verified' unless current_user.try(:verified)
+      head status: :unauthorized unless signed_in?
     end
 
     helper_method :current_user, :signed_in?

@@ -17,9 +17,9 @@
 * Sliten/Få anteckningar, mindre slitage/Nyskick
 * Write detailed tests for the navigation
 * Font should be required in the header of the html to decrease the critical path
-* STIL verification
-* När jag hade signat kom jag inloggad men inte där jag var senast med att lägga till en ny bok - Lars
 * Hittar ingen stans, alla böcker som är inne - Lars
+* Automatically fetch name and phonenumber
+* Propose prices
 
 ##Getting started
 

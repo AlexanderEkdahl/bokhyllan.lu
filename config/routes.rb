@@ -1,9 +1,7 @@
 Bokhyllan::Application.routes.draw do
-  resource :user, only: [:create, :update] do
-    get  'verify'
-    post 'reset'
-    get  'sign_in'
-    get  'sign_out'
+  get 'logout', to: 'users#sign_out', as: 'sign_out_user'
+  resource :user, only: :update do
+    get 'sign_in'
     root 'users#show', as: ''
   end
 

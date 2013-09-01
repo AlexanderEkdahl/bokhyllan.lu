@@ -3,7 +3,7 @@ class Item < ActiveRecord::Base
   include Tire::Model::Callbacks
 
   has_many :orders, dependent: :destroy
-  accepts_nested_attributes_for :orders, reject_if: proc { |attributes| attributes['price'].blank? }
+  accepts_nested_attributes_for :orders
 
   validates :name, presence: true, length: { minimum: 3, maximum: 100 }
 

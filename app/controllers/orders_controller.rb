@@ -1,6 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :authenticate, :must_be_verified, except: :show
-  before_action :set_order, only: [:show, :buy, :destroy, :cancel]
+  before_action :authenticate, except: :show
 
   def create
     @item          = Item.find(params[:item_id])
@@ -15,18 +14,17 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @order = Order.find(params[:id])
   end
 
   def destroy
+    @order = Order.find(params[:id])
     @order.destroy
 
     redirect_to(user_path, success: t(:order_destroyed))
   end
 
   private
-    def set_order
-      @order = Order.find(params[:id])
-    end
 
     def order_params
       params.require(:order).permit(:price, :quality)

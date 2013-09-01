@@ -24,11 +24,7 @@
 <h1><%= t(:settings) %></h1>
 
 <%= standard_form_for(current_user) do |f| %>
-  <%= f.text_field :email, disabled: true, value: email_with_verification(f.object) %>
-
-  <h2><%= t(:change_password) %></h2>
-  <%= f.password_field :current_password %>
-  <%= f.password_field :password %>
+  <%= f.text_field :email, disabled: true %>
 
   <h2><%= t(:update_contact_information) %></h2>
   <%= f.text_field :name %>

@@ -16,6 +16,7 @@ gem 'uglifier'
 gem 'hipchat'
 gem 'tire'
 gem 'sitemap_generator'
+gem 'rack-cas'
 
 group :development, :test do
   gem 'foreman', require: false

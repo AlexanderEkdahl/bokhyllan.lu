@@ -90,10 +90,13 @@ GEM
     meta-tags (1.5.0)
       actionpack
     mime-types (1.24)
+    mini_portile (0.5.1)
     minitest (4.7.5)
     multi_json (1.7.9)
     multi_xml (0.5.5)
     newrelic_rpm (3.6.6.147)
+    nokogiri (1.6.0)
+      mini_portile (~> 0.5.0)
     pg (0.16.0)
     polyglot (0.3.3)
     puma (2.5.1)
@@ -101,6 +104,10 @@ GEM
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
+    rack-cas (0.8.1)
+      addressable (>= 2.3)
+      nokogiri
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.0)
@@ -185,6 +192,7 @@ DEPENDENCIES
   pg
   puma
   quiet_assets
+  rack-cas
   rails (= 4.0)
   rails_12factor
   sass-rails

@@ -68,9 +68,9 @@ en:
   description: Bokhyllan.lu offers an easy way to find second-hand literature at the best price possible.
   support_feedback: Support/Feedback
   sell: Sell
-  sell_info_sign_up: Registrer an account and sign in
   sell_info:
     - Search for the desired book
+    - Sign in using your STIL-id
     - State the quality and name your price
   buy: Buy
   buy_info:

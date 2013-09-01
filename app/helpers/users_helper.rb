@@ -1,9 +1,4 @@
 module UsersHelper
-  def email_with_verification(user)
-    return user.email if user.verified?
-    t(:email_not_verified, email: user.email)
-  end
-
   def tel_to(phone)
     link_to(phone, "tel://#{phone}")
   end

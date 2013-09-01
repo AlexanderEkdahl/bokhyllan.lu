@@ -6,7 +6,6 @@
   <div class="sell">
     <h2><%= t(:sell) %></h2>
     <ul>
-      <li><%= link_to(t(:sell_info_sign_up), sign_in_user_path) %></li>
       <% t(:sell_info).each do |info| %>
         <li><%= info %></li>
       <% end %>
