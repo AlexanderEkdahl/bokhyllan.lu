@@ -23,7 +23,6 @@ group :development, :test do
   gem 'debugger'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
-  gem 'letter_opener'
 end
 
 group :staging, :production do

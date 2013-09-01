@@ -5,8 +5,6 @@
 * Format phone numbers
 * StatHat
 * Merge item data when duplicates are found. Also move orders
-* Improve encouragement to verify the account
-* Simplfiy password reset both for logged in and logged out users
 * Remember me function
 * Coveralls
 * Code Climate
@@ -16,8 +14,9 @@
 * Advanced queries
 * Sliten/Få anteckningar, mindre slitage/Nyskick
 * Write detailed tests for the navigation
+* Capybara
 * Font should be required in the header of the html to decrease the critical path
-* Hittar ingen stans, alla böcker som är inne - Lars
+* "Hittar ingen stans, alla böcker som är inne" - Lars
 * Automatically fetch name and phonenumber
 * Propose prices
 
