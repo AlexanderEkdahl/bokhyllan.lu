@@ -40,3 +40,8 @@ Postgres, bundler
 ###Windows
 
 Don't even bother.
+
+##Production
+
+    rake sitemap:refresh NEWRELIC_ENABLE=false
+    rake environment tire:import CLASS='Item' FORCE=true NEWRELIC_ENABLE=false

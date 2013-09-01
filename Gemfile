@@ -18,7 +18,7 @@ gem 'tire'
 gem 'sitemap_generator'
 
 group :development, :test do
-  gem 'foreman'
+  gem 'foreman', require: false
   gem 'debugger'
   gem 'factory_girl_rails'
   gem 'quiet_assets'
