@@ -18,6 +18,15 @@ table {
     color: #333;
   }
 
+  .remove {
+    @include transition(color 400ms, text-shadow 400ms);
+
+    &:hover {
+      text-shadow: 0px 0px 3px rgba(255, 0, 0, 0.6);
+      color: red;
+    }
+  }
+
   th[data-sort] {
     cursor: pointer;
   }
