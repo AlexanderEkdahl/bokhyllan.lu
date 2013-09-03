@@ -55,9 +55,9 @@
       <% end %>
     <% else %>
       <% if @item.orders(true).any? %>
-        <%= link_to t(:must_be_signed_in_to_sell_or_buy, item: @item.name), sign_in_user_path(@item) %>
+        <%= link_to t(:must_be_signed_in_to_sell_or_buy, item: @item.name), sign_in_user_path %>
       <% else %>
-        <%= link_to t(:must_be_signed_in_to_sell, item: @item.name), sign_in_user_path(@item) %>
+        <%= link_to t(:must_be_signed_in_to_sell, item: @item.name), sign_in_user_path %>
       <% end %>
     <% end %>
   </div>

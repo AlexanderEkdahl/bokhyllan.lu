@@ -61,6 +61,11 @@
   .qr {
     text-align: center;
     @include column(1, 4);
+
+
+    @include mobile {
+      display: none;
+    }
   }
 
   .related {
