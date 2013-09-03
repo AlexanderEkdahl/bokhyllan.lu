@@ -35,6 +35,6 @@ module UsersHelper
     row(link_to(order.item.name, link),
         link_to("#{order.price}kr", link, data: { :'sort-value' => order.price }),
         link_to(stars(order.quality), link, data: { :'sort-value' => order.quality }, class: 'quality'),
-        button_to("&#xE002;".html_safe, [order.item, order].compact, method: :delete, class: 'remove'))
+        button_to("&#xE002;".html_safe, [order.item, order].compact, method: :delete, class: 'remove', data: { confirm: t(:are_you_sure, item: order.item.name) }))
   end
 end

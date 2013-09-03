@@ -19,6 +19,7 @@
 * "Hittar ingen stans, alla böcker som är inne" - Lars
 * Automatically fetch name and phonenumber
 * Propose prices
+* Tydligare hur man lägger in böcker - Catta
 
 ##Getting started
 

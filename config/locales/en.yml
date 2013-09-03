@@ -78,6 +78,7 @@ en:
   authors_help: 'Ex. Jonas Månsson; Patrik Nordbeck'
   courses_help: 'Ex. FMAA01; FMAA05'
   program_help: 'Ex. C; D; F'
+  are_you_sure: 'Are you sure you remove %{item}?'
 
   slogan: Buy or sell course literature at best possible price.
 
