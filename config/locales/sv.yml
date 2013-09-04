@@ -1,13 +1,12 @@
 sv:
   search_placeholder: 'Sök titel, författare, kurs, osv.'
-  sign_in: Logga in/Registrera
+  sign_in: Logga in
   sign_out: Logga ut
   settings: Inställningar
   contact_information: Kontaktinformation
   home: Hem
   change_password: Ändra lösenord
   update_contact_information: Uppdatera kontaktinformation
-  first_time_login_info: För att registrera anger du ditt student-ID (ex. abc10def) och valfritt lösenord, så skickas bekräfte till mailadress (@student.lu.se).
   sign_in_success: Inloggning lyckades.
   sign_in_unsuccessfull: Inloggningsuppgifter matchar ej.
   sign_out_success: Du är nu utloggad.

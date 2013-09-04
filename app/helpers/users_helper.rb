@@ -37,4 +37,8 @@ module UsersHelper
         link_to(stars(order.quality), link, data: { :'sort-value' => order.quality }, class: 'quality'),
         button_to("&#xE002;".html_safe, [order.item, order].compact, method: :delete, class: 'remove', data: { confirm: t(:are_you_sure, item: order.item.name) }))
   end
+
+  def incomplete_profile?(user = current_user)
+    user.name.blank? or user.phone.blank?
+  end
 end

@@ -16,7 +16,7 @@ module NavigationHelper
   end
 
   def user
-    link_to(current_user.email, user_path) if signed_in? and not controller?('users')
+    link_to(current_user.login, user_path) if signed_in? and not controller?('users')
   end
 
   def support
