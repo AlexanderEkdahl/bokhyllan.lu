@@ -47,7 +47,7 @@ en:
   not_found: '%{query} not found.'
   cannot_buy_from_self: You cannot buy your own item. Would you like to cancel your sale?'
   already_buying: 'You are already attempting to purchase %{name}. Would you like to cancel your purchase?'
-  no_one_is_selling: No one is selling this %{name}.
+  no_one_is_selling: 'No one is selling %{name}.'
   no_one_is_selling_with_alternative_html: 'No one is selling this %{name}. You can purchase a new copy on %{alternative}'
   add_item: Click here to add it to our database
   default_tags:
