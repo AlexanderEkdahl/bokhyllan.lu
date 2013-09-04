@@ -20,6 +20,7 @@
 * Automatically fetch name and phonenumber
 * Propose prices
 * Tydligare hur man lägger in böcker - Catta
+* Complete your profile - When adding an item. 2 additional fields are added. When creating an order you get redirected to that page.
 
 ##Getting started
 
