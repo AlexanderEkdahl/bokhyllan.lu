@@ -51,7 +51,7 @@ sv:
   already_buying: 'Du köper redan %{name} från någon annan. Vill du avbryta det tidigare köpet?'
   no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
   no_one_is_selling_with_alternative_html: 'Ingen säljer för närvarande %{name}. Du kan köpa en ny upplaga på %{alternative}'
-  add_item: Klicka här för att lägga till den i vårt register.
+  add_item: Klicka här för att lägga till den i vår databas.
   default_tags:
     - köp
     - sälj
@@ -78,6 +78,8 @@ sv:
     - Kontakta säljaren
   authors_help: Separera flera författare med semikolon ex. Jonas Månsson; Patrik Nordbeck
   courses_help: 'Ex. FMAA01; FMAA05'
+  edition_help: 'Utgåva eller utgivningsår'
+  program_help: 'Ex. C; D; F'
   are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
 
   slogan: Köp och sälj kurslitteratur till bästa möjliga pris!

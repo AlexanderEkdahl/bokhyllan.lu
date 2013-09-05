@@ -11,6 +11,7 @@
 
   <%= f.fields_for(:orders, @order) do |o| %>
     <%= o.price %>
+    <%= o.text_field :edition %>
     <%= o.quality %>
   <% end %>
 
