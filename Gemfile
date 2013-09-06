@@ -21,8 +21,13 @@ gem 'rack-cas'
 group :development, :test do
   gem 'foreman', require: false
   gem 'debugger'
-  gem 'factory_girl_rails'
   gem 'quiet_assets'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 group :staging, :production do

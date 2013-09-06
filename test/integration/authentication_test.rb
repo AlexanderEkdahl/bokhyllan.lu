@@ -1,44 +1,28 @@
-# require 'test_helper'
+require 'test_helper'
 
-# class AuthenticationTest < ActionDispatch::IntegrationTest
-#   def test_sign_up
-#     get(sign_in_user_path)
-#     assert_response(:success)
+class AuthenticationTest < ActionDispatch::IntegrationTest
+  def test_sign_in
+    visit('/')
+    click_on('Sign in')
+    fill_in('username', with: 'dat12sek')
+    fill_in('password', with: '')
+    click_button('Login')
+    page.has_content?('dat12sek')
+  end
 
-#     user_attributes = attributes_for(:user)
-#     assert_difference(-> { ActionMailer::Base.deliveries.size }, +1) do
-#       assert_difference(-> { User.count }, +1) do
-#         post_via_redirect('/user', user: { login: user_attributes[:login], password: user_attributes[:password] })
-#         assert_equal('/', path)
-#       end
-#     end
+  def test_signin_out
+    sign_in
+    click_on('Sign out')
+    page.has_content?('Sign in') #Fake cas does not emulate the true behavior of CAS
+  end
 
-#     user = User.last
-#     assert(!user.verified?, 'User email should not be verified by default')
-#     email = ActionMailer::Base.deliveries.last
-#     verification_link = (email.text_part || email.html_part || email).body
-#                           .decoded.match(/#{verify_user_path}\?key=.*/)[0]
-#     get_via_redirect(verification_link)
-#     assert_equal('/', path)
-#     user.reload
-#     assert(user.verified?, 'User email should be verified')
-
-#     get_via_redirect(sign_out_user_path)
-#     assert_equal('/', path)
-
-#     assert_difference(-> { ActionMailer::Base.deliveries.size }, 0) do
-#       assert_difference(-> { User.count }, 0) do
-#         post_via_redirect('/user', user: { login: user_attributes[:login], password: user_attributes[:password] })
-#         assert_equal('/', path)
-#       end
-#     end
-#   end
-
-#   def test_sign_in_incorrect
-#     user = create(:user)
-#     post_via_redirect('/user', user: { login: user.login, password: user.password })
-#     assert_equal('/', path)
-#     post_via_redirect('/user', user: { login: user.login, password: 'wrong' })
-#     assert_equal('/user', path)
-#   end
-# end
+  def sign_in
+    if page.has_content?('Sign in')
+      click_on('Sign in')
+      fill_in('username', with: 'dat12sek')
+      fill_in('password', with: '')
+      click_button('Login')
+    end
+  rescue Capybara::ElementNotFound
+  end
+end
