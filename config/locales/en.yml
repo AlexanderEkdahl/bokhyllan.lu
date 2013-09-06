@@ -25,6 +25,7 @@ en:
   cancel: Cancel
   remove: Remove
   buy: Buy
+  isbn: ISBN
   authors:
     one: Author
     other: Authors

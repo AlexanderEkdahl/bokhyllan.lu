@@ -9,6 +9,7 @@ module ItemsHelper
       key   = t(key, count: value.length)
       yield(key, value.to_sentence)
     end
+    yield(t(:isbn), item.isbn)
   end
 
   def alternative_link(item)
