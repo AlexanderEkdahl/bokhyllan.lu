@@ -47,4 +47,4 @@ Don't even bother.
     rake environment tire:import CLASS='Item' FORCE=true NEWRELIC_ENABLE=false
 
     User.all.map { |u| u.email }.join("; ")
-    CSV.foreach("../lth/lth.csv") { |row| Item.create(isbn: row[0], name: row[1], authors: row[2], courses: row[3]) }
+    CSV.parse(csv) { |row| Item.create(isbn: row[0], name: row[1], authors: row[2], courses: row[3]) }
