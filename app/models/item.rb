@@ -37,7 +37,5 @@ class Item < ActiveRecord::Base
       order.item_id = to_id
       order.save
     end
-
-    from.destroy
   end
 end
