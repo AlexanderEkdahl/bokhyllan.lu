@@ -77,9 +77,7 @@ sv:
     - Välj annons efter önskat pris och kvalitet
     - Kontakta säljaren
   authors_help: Separera flera författare med semikolon ex. Jonas Månsson; Patrik Nordbeck
-  courses_help: 'Ex. FMAA01; FMAA05'
   edition_help: 'Utgåva eller utgivningsår'
-  program_help: 'Ex. C; D; F'
   are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
 
   slogan: Köp och sälj kurslitteratur till bästa möjliga pris!

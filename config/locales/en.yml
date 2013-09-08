@@ -77,8 +77,8 @@ en:
     - Choose the order you desire
     - Contact the seller
   authors_help: 'Ex. Jonas Månsson; Patrik Nordbeck'
-  courses_help: 'Ex. FMAA01; FMAA05'
-  program_help: 'Ex. C; D; F'
+  courses_help: 'Ex. EDA016 - Programmeringsteknik; EDAA20 - Programmering och databaser'
+  program_help: 'Ex. C1; D1; Pi2'
   edition_help: 'Edition or year of publication'
   are_you_sure: 'Are you sure you remove %{item}?'
 

@@ -20,6 +20,7 @@ Your privacy is honored and information won't be shared with those who do not ne
 * Complete your profile - When adding an item. 2 additional fields are added. When creating an order you get redirected to that page. - pilar
 * OBS finns billigare(om boken finns i samma kvalitet billigare)
 * Upplaga i order
+* Boost title search score
 
 ##Getting started
 
