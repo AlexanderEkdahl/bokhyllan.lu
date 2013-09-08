@@ -29,4 +29,15 @@ class Item < ActiveRecord::Base
       :courses => properties['courses']
     }.to_json
   end
+
+  def self.merge(from_id, to_id)
+    from = Item.find(from_id)
+
+    from.orders.each do |order|
+      order.item_id = to_id
+      order.save
+    end
+
+    from.destroy
+  end
 end
