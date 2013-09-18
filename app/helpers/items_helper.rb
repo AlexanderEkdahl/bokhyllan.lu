@@ -21,6 +21,7 @@ module ItemsHelper
     link = [order.item, order]
     row(link_to("#{order.price}kr", link, data: { :'sort-value' => order.price }),
         link_to(stars(order.quality), link, data: { :'sort-value' => order.quality }, class: 'quality'),
+        link_to("#{order.edition}", link),
         link_to("&#xE001;".html_safe, link, class: 'arrow'))
   end
 end
