@@ -13,7 +13,6 @@ Your privacy is honored and information won't be shared with those who do not ne
 * Write detailed tests for the navigation
 * Capybara
 * Font should be required in the header of the html to decrease the critical path
-* "Hittar ingen stans, alla böcker som är inne" - Lars
 * Automatically fetch name and phonenumber
 * Propose prices/Nypris
 * Tydligare hur man lägger in böcker - Catta
@@ -21,6 +20,7 @@ Your privacy is honored and information won't be shared with those who do not ne
 * OBS finns billigare(om boken finns i samma kvalitet billigare)
 * Upplaga i order
 * Boost title search score
+* Recent orders
 
 ##Getting started
 
@@ -30,8 +30,11 @@ Your privacy is honored and information won't be shared with those who do not ne
 
 Postgres, bundler
 
+To install pg gem 'ARCHFLAGS="-arch x86_64" gem install pg'
+
     bundle install
     pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+    postgres -D /usr/local/var/postgres
     elasticsearch -f -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
     rake environment tire:import CLASS='Item' FORCE=true NEWRELIC_ENABLE=false
     rails s
