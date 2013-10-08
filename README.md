@@ -6,8 +6,7 @@ Your privacy is honored and information won't be shared with those who do not ne
 
 * Sitemap generation(https://github.com/kjvarga/sitemap_generator)
 * Format phone numbers
-* Merge item data when duplicates are found. Also move orders
-* Cancel order direct link
+* Cancel order direct link from email
 * Advanced queries
 * Sliten/Få anteckningar, mindre slitage/Nyskick
 * Write detailed tests for the navigation
@@ -21,6 +20,7 @@ Your privacy is honored and information won't be shared with those who do not ne
 * Upplaga i order
 * Boost title search score
 * Recent orders
+* Add courses, course list(with unbuyable items).
 
 ##Getting started
 
