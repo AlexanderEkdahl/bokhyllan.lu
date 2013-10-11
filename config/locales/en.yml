@@ -81,6 +81,7 @@ en:
   program_help: 'Ex. C1; D1; Pi2'
   edition_help: 'Edition or year of publication'
   are_you_sure: 'Are you sure you remove %{item}?'
+  did_you_mean_html: 'Did you mean %{suggestion}?'
 
   slogan: Buy or sell course literature at best possible price.
 

@@ -79,6 +79,7 @@ sv:
   authors_help: Separera flera författare med semikolon ex. Jonas Månsson; Patrik Nordbeck
   edition_help: 'Utgåva eller utgivningsår'
   are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
+  did_you_mean_html: 'Menade du %{suggestion}?'
 
   slogan: Köp och sälj kurslitteratur till bästa möjliga pris!
 

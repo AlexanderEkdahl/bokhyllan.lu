@@ -1,13 +1,13 @@
-require 'test_helper'
+# require 'test_helper'
 
-class AuthenticationTest < ActionDispatch::IntegrationTest
-  def setup
-    Capybara.current_driver = :poltergeist
-  end
+# class AuthenticationTest < ActionDispatch::IntegrationTest
+#   def setup
+#     Capybara.current_driver = :poltergeist
+#   end
 
-  def test_autocomplete
-    visit('/')
-    fill_in 'search', with: 'Endim'
-    page.has_content?('Endimensionell Analys')
-  end
-end
+#   def test_autocomplete
+#     visit('/')
+#     fill_in 'search', with: 'Endim'
+#     page.has_content?('Endimensionell Analys')
+#   end
+# end
