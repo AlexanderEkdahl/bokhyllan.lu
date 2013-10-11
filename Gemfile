@@ -31,7 +31,6 @@ group :test do
 end
 
 group :staging, :production do
-  gem 'newrelic_rpm'
   gem 'puma'
   gem 'rails_12factor'
 end

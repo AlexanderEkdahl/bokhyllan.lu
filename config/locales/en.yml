@@ -5,12 +5,9 @@ en:
   settings: Settings
   contact_information: Contact information
   home: Home
-  change_password: Change password
   update_contact_information: Update contact information
   sign_in_success: Successfully signed in.
   settings_updated_successful: Settings was successfully updated.
-  user_verified: '%{email} verified.'
-  must_be_verified: 'You must verify your account to perform this action. A verification email have been sent to %{email}.'
   place_sell_order: Place sell order
   must_be_signed_in: You have to be signed in
   has_your_copy: '%{user} has your copy of %{item}.'
@@ -19,7 +16,6 @@ en:
   must_be_signed_in_to_sell_or_buy: 'You must be signed in to sell or buy %{item}.'
   sign_in_required_to_view_info: You need to signed in to view the contact information of the seller.
   other_items: '%{name} also sells'
-  contact_immediately: Please contact the seller immediatly
   email_not_verified: '%{email}(Not verified)'
   show: Show
   cancel: Cancel
@@ -40,13 +36,8 @@ en:
   active_buy_order:
     one: Active buy order
     other: Active buy orders
-  view_contact_info: View contact information
-  contact_immediately_with_qr: 'Please contact him/her immediately. Scan the QR code to instantly call %{name}.'
-  contact_next_morning: Please contact him/her first thing in the morning.
   show: Show
-  purchase_confirmation: When you click this button you will be given exclusive rights to contact the seller. Continue?
   not_found: '%{query} not found.'
-  cannot_buy_from_self: You cannot buy your own item. Would you like to cancel your sale?'
   already_buying: 'You are already attempting to purchase %{name}. Would you like to cancel your purchase?'
   no_one_is_selling: 'No one is selling %{name}.'
   no_one_is_selling_with_alternative_html: 'No one is selling this %{name}. You can purchase a new copy on %{alternative}'
@@ -57,7 +48,6 @@ en:
     - lund
     - Course literature
   sign_in_required_to_view_info: You need to sign in to view the contact information of the seller.
-  send_confirmation_email: 'Reset password for %{email}?'
   your_sell_order: 'Your sell order'
   sign_in_unsuccessful: 'Login failed'
   order_destroyed: 'Order removed'
@@ -83,15 +73,11 @@ en:
   are_you_sure: 'Are you sure you remove %{item}?'
   did_you_mean_html: 'Did you mean %{suggestion}?'
 
-  slogan: Buy or sell course literature at best possible price.
-
   activerecord:
     attributes:
       user:
         name: Name
         phone: Phone number
-        current_password: Current password
-        password: Password
         login: 'STIL-id'
       order:
         price: Price

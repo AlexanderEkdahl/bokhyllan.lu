@@ -21,8 +21,9 @@ class Item < ActiveRecord::Base
     from = Item.find(from_id)
 
     from.orders.each do |order|
-      order.item_id = to_id
-      order.save
+      order.update(item_id: to_id)
     end
+
+    from.destroy
   end
 end

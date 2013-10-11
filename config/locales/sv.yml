@@ -5,14 +5,10 @@ sv:
   settings: Inställningar
   contact_information: Kontaktinformation
   home: Hem
-  change_password: Ändra lösenord
   update_contact_information: Uppdatera kontaktinformation
   sign_in_success: Inloggning lyckades.
-  sign_in_unsuccessfull: Inloggningsuppgifter matchar ej.
   sign_out_success: Du är nu utloggad.
   settings_updated_successful: Inställningarna sparades.
-  user_verified: '%{email} verifierat.'
-  must_be_verified: 'Du måste verifiera ditt konto innan du kan göra detta. En verifieringslänk har skickats till %{email}.'
   place_sell_order: Ny säljorder
   must_be_signed_in: Du måste vara inloggad
   has_your_copy: '%{user} har din kopia av %{item}.'
@@ -21,8 +17,6 @@ sv:
   must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
   sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation.
   other_items: '%{name} säljer även'
-  contact_immediately: Var god kontakta honom/henne omgående.
-  email_not_verified: '%{email}(Ej verifierat)'
   show: Visa
   cancel: Avbryt
   remove: Ta bort
@@ -41,13 +35,8 @@ sv:
   active_buy_order:
     one: Aktiv köporder
     other: Aktiva körorder
-  view_contact_info: Visa kontaktinformation
-  contact_immediately_with_qr: 'Vänligen kontakta säljaren så fort som möjligt, skanna QR koden för att kontakta %{name} direkt.'
-  contact_next_morning: Vänligen kontakta säljaren imorgonbitti.
   show: Visa
-  purchase_confirmation: När du klickar på denna knappen får du exklusiva rättigheter att kontakta säljaren. Vill du gå vidare?
   not_found: '%{query} hittades ej.'
-  cannot_buy_from_self: 'Du kan inte köpa din egen bok, vill du avsluta säljordern?'
   already_buying: 'Du köper redan %{name} från någon annan. Vill du avbryta det tidigare köpet?'
   no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
   no_one_is_selling_with_alternative_html: 'Ingen säljer för närvarande %{name}. Du kan köpa en ny upplaga på %{alternative}'
@@ -81,15 +70,11 @@ sv:
   are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
   did_you_mean_html: 'Menade du %{suggestion}?'
 
-  slogan: Köp och sälj kurslitteratur till bästa möjliga pris!
-
   activerecord:
     attributes:
       user:
         name: Namn
         phone: Telefonnummer
-        current_password: Nuvarande lösenord
-        password: Lösenord
         login: 'STIL-id'
       order:
         price: Pris

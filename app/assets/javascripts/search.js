@@ -19,8 +19,3 @@ var search = function() {
 
 $(document).ready(search);
 $(window).on('page:change', search);
-
-      // // prefetch: {
-      // //   url: $typeahead.data('prefetch'),
-      // //   ttl: 500
-      // // },

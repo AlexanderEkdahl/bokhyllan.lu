@@ -20,6 +20,7 @@ Your privacy is honored and information won't be shared with those who do not ne
 * Boost title search score
 * Recent orders
 * Add courses, course list(with unbuyable items).
+* Custom email, separate from login
 
 ##Getting started
 
