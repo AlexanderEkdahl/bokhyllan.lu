@@ -18,10 +18,9 @@ gem 'rack-cas'
 gem 'searchkick'
 
 group :development, :test do
-  gem 'foreman', require: false
   gem 'debugger'
   gem 'quiet_assets'
-  # gem 'bullet'
+  gem 'bullet'
 end
 
 group :test do
