@@ -10,7 +10,6 @@ Your privacy is honored and information won't be shared with those who do not ne
 * Advanced queries
 * Sliten/Få anteckningar, mindre slitage/Nyskick
 * Write detailed tests for the navigation
-* Capybara
 * Font should be required in the header of the html to decrease the critical path
 * Automatically fetch name and phonenumber
 * Propose prices/Nypris
