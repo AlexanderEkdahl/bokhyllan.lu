@@ -6,9 +6,8 @@ sv:
   home: Hem
   update_contact_information: Uppdatera kontaktinformation
   sign_in_success: Inloggning lyckades.
-  sign_out_success: Du är nu utloggad.
   settings_updated_successful: Kontaktinformationen sparades.
-  place_sell_order: Ny säljorder
+  place_sell_order: Ny annons
   must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
   must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
   other_items: '%{name} säljer även'
@@ -25,8 +24,8 @@ sv:
   buyer: Köpare
   seller: Säljare
   active_sell_order:
-    one: Aktiva säljorder
-    other: Aktiva säljorder
+    one: Aktiva annonser
+    other: Aktiva annonser
   show: Visa
   not_found: '%{query} hittades ej.'
   no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
@@ -37,9 +36,9 @@ sv:
     - sälj
     - lund
     - kurslitteratur
-  your_sell_order: 'Din säljorder'
+  your_sell_order: 'Din annons'
   sign_in_unsuccessful: 'Inloggningen misslyckades'
-  order_destroyed: 'Annonsen borttagen'
+  order_destroyed: 'Annons borttagen'
   no_hit: Hittar du inte vad du söker?
   new_item: Ny bok
   description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.

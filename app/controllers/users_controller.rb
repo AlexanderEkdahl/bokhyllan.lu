@@ -14,8 +14,7 @@ class UsersController < ApplicationController
   end
 
   def sign_out
-    reset_session
-    redirect_to(root_path, notice: t(:sign_out_success))
+    # Required by rack-cas
   end
 
   def update

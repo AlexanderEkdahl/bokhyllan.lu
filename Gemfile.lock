@@ -68,7 +68,6 @@ GEM
     hike (1.2.3)
     hipchat (0.12.0)
       httparty
-    http_accept_language (2.0.0)
     httparty (0.11.0)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
@@ -189,7 +188,6 @@ DEPENDENCIES
   debugger
   factory_girl_rails
   hipchat
-  http_accept_language
   jquery-rails
   meta-tags
   pg
