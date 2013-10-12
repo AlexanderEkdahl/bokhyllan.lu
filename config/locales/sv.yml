@@ -9,12 +9,8 @@ sv:
   sign_out_success: Du är nu utloggad.
   settings_updated_successful: Kontaktinformationen sparades.
   place_sell_order: Ny säljorder
-  must_be_signed_in: Du måste vara inloggad
-  has_your_copy: '%{user} har din kopia av %{item}.'
-  sign_in_required: Du måste vara inloggad för att se säljarens kontaktinformation.
   must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
   must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
-  sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation.
   other_items: '%{name} säljer även'
   show: Visa
   cancel: Avbryt
@@ -31,12 +27,8 @@ sv:
   active_sell_order:
     one: Aktiva säljorder
     other: Aktiva säljorder
-  active_buy_order:
-    one: Aktiv köporder
-    other: Aktiva körorder
   show: Visa
   not_found: '%{query} hittades ej.'
-  already_buying: 'Du köper redan %{name} från någon annan. Vill du avbryta det tidigare köpet?'
   no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
   no_one_is_selling_with_alternative_html: 'Ingen säljer för närvarande %{name}. Du kan köpa en ny upplaga på %{alternative}'
   add_item: Klicka här för att lägga till den i vår databas.
@@ -45,8 +37,6 @@ sv:
     - sälj
     - lund
     - kurslitteratur
-  sign_in_required_to_view_info: Du måste vara inloggad för att se säljarens kontaktinformation
-  send_confirmation_email: 'Återställ lösenordet för %{email}?'
   your_sell_order: 'Din säljorder'
   sign_in_unsuccessful: 'Inloggningen misslyckades'
   order_destroyed: 'Annonsen borttagen'
@@ -68,6 +58,7 @@ sv:
   edition_help: 'Utgåva eller utgivningsår'
   are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
   did_you_mean_html: 'Menade du %{suggestion}?'
+  sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
 
   activerecord:
     attributes:

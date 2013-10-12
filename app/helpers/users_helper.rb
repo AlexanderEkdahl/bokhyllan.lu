@@ -21,12 +21,12 @@ module UsersHelper
     contact_information(user).values.join(" ").html_safe unless user.nil?
   end
 
-  def qr(user, size = 100)
+  def qr(user, item, size = 100)
     return if user.try(:phone).blank?
 
-    qr_call = "TEL:#{user.phone}"
-    qr_url  = "http://api.qrserver.com/v1/create-qr-code/?data=#{CGI::escape(qr_call)}&size=#{size}x#{size}"
-    image_tag(qr_url, alt: qr_call, size: size.to_s)
+    qr_code = "SMS:#{user.phone}:#{t(:sms_buy, name: item.name)}"
+    qr_url  = "http://api.qrserver.com/v1/create-qr-code/?data=#{CGI::escape(qr_code)}&size=#{size}x#{size}"
+    image_tag(qr_url, alt: qr_code, size: size.to_s)
   end
 
   def user_order_row(order)

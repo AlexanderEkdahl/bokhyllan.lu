@@ -1,5 +1,5 @@
 en:
-  search_placeholder: Search title, author, course, etc.
+  search_placeholder: "Search title, author, course, etc."
   sign_in: 'Sign in'
   sign_out: Sign out
   contact_information: Contact information
@@ -8,14 +8,10 @@ en:
   sign_in_success: Successfully signed in.
   settings_updated_successful: Contact information was successfully updated.
   place_sell_order: Place sell order
-  must_be_signed_in: You have to be signed in
   has_your_copy: '%{user} has your copy of %{item}.'
-  sign_in_required: You need to signed in to view the contact information of the seller.
   must_be_signed_in_to_sell: 'You must be signed in to sell %{item}.'
   must_be_signed_in_to_sell_or_buy: 'You must be signed in to sell or buy %{item}.'
-  sign_in_required_to_view_info: You need to signed in to view the contact information of the seller.
   other_items: '%{name} also sells'
-  email_not_verified: '%{email}(Not verified)'
   show: Show
   cancel: Cancel
   remove: Remove
@@ -32,12 +28,8 @@ en:
   active_sell_order:
     one: Active sell order
     other: Active sell orders
-  active_buy_order:
-    one: Active buy order
-    other: Active buy orders
   show: Show
   not_found: '%{query} not found.'
-  already_buying: 'You are already attempting to purchase %{name}. Would you like to cancel your purchase?'
   no_one_is_selling: 'No one is selling %{name}.'
   no_one_is_selling_with_alternative_html: 'No one is selling this %{name}. You can purchase a new copy on %{alternative}'
   add_item: Click here to add it to our database
@@ -46,7 +38,6 @@ en:
     - sell
     - lund
     - Course literature
-  sign_in_required_to_view_info: You need to sign in to view the contact information of the seller.
   your_sell_order: 'Your sell order'
   sign_in_unsuccessful: 'Login failed'
   order_destroyed: 'Order removed'
@@ -71,6 +62,7 @@ en:
   edition_help: 'Edition or year of publication'
   are_you_sure: 'Are you sure you remove %{item}?'
   did_you_mean_html: 'Did you mean %{suggestion}?'
+  sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
 
   activerecord:
     attributes:

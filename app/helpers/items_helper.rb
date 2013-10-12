@@ -3,7 +3,7 @@ module ItemsHelper
 
   def item_properties(item)
     Item::PROPERTIES_KEYS.each do |key|
-      value = item.send(key) # Compatible with ElasticSearch
+      value = item.send(key) # Compatible with ElasticSearch - Is it really required not that we use searchkick?
       next if value.blank?
       value = value.split(/;\s?/)
       key   = t(key, count: value.length)

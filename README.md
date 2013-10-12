@@ -7,19 +7,16 @@ Your privacy is honored and information won't be shared with those who do not ne
 * Sitemap generation(https://github.com/kjvarga/sitemap_generator)
 * Format phone numbers
 * Cancel order direct link from email
-* Advanced queries
 * Sliten/Få anteckningar, mindre slitage/Nyskick
 * Write detailed tests for the navigation
 * Font should be required in the header of the html to decrease the critical path
-* Automatically fetch name and phonenumber
+* Automatically fetch name and phonenumber(Using gmail)
 * Propose prices/Nypris
-* Tydligare hur man lägger in böcker - Catta
-* Complete your profile - When adding an item. 2 additional fields are added. When creating an order you get redirected to that page. - pilar
+* Complete your profile - When adding an item. 2 additional fields are added. When creating an order you get redirected to that page.
 * OBS finns billigare(om boken finns i samma kvalitet billigare)
-* Boost title search score
-* Recent orders
-* Add courses, course list(with unbuyable items).
-* Custom email, separate from login
+* Add courses, course list(with unbuyable items) / more advanced queries
+* Factor out authors/courses separation. What is different about them?
+* Convert to using swedish only
 
 ##Getting started
 
