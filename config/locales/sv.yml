@@ -2,13 +2,12 @@ sv:
   search_placeholder: 'Sök titel, författare, kurs, osv.'
   sign_in: Logga in
   sign_out: Logga ut
-  settings: Inställningar
   contact_information: Kontaktinformation
   home: Hem
   update_contact_information: Uppdatera kontaktinformation
   sign_in_success: Inloggning lyckades.
   sign_out_success: Du är nu utloggad.
-  settings_updated_successful: Inställningarna sparades.
+  settings_updated_successful: Kontaktinformationen sparades.
   place_sell_order: Ny säljorder
   must_be_signed_in: Du måste vara inloggad
   has_your_copy: '%{user} har din kopia av %{item}.'

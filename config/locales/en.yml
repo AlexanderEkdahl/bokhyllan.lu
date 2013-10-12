@@ -2,12 +2,11 @@ en:
   search_placeholder: Search title, author, course, etc.
   sign_in: 'Sign in'
   sign_out: Sign out
-  settings: Settings
   contact_information: Contact information
   home: Home
   update_contact_information: Update contact information
   sign_in_success: Successfully signed in.
-  settings_updated_successful: Settings was successfully updated.
+  settings_updated_successful: Contact information was successfully updated.
   place_sell_order: Place sell order
   must_be_signed_in: You have to be signed in
   has_your_copy: '%{user} has your copy of %{item}.'

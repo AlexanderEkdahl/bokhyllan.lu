@@ -21,10 +21,9 @@
   </table>
 <% end %>
 
-<h1><%= t(:settings) %></h1>
+<h1><%= t(:update_contact_information) %></h1>
 
 <%= standard_form_for(current_user) do |f| %>
-  <h2><%= t(:update_contact_information) %></h2>
   <%= f.text_field :email, value: current_user.email %>
   <%= f.text_field :name %>
   <%= f.phone_field :phone %>
