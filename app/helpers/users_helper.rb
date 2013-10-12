@@ -5,7 +5,7 @@ module UsersHelper
 
   def contact_information(user)
     hash         = {}
-    hash[:name]  = user.name unless user.name.blank?
+    hash[:name]  = user.name unless user[:name].blank?
     hash[:phone] = tel_to(user.phone) unless user.phone.blank?
     hash[:email] = mail_to(user.email)
     hash
@@ -39,6 +39,6 @@ module UsersHelper
   end
 
   def incomplete_profile?(user = current_user)
-    user.name.blank? or user.phone.blank?
+    user[:name].blank? or user.phone.blank?
   end
 end

@@ -2,11 +2,12 @@ class User < ActiveRecord::Base
   has_many :orders, dependent: :destroy
 
   def email
-    "#{login}@student.lu.se"
+    self[:email].blank? ? "#{login}@student.lu.se" : self[:email]
   end
 
-  def to_s
-    return name unless name.blank?
-    return email
+  def name
+    self[:name].blank? ? email : self[:name]
   end
+
+  alias_method :to_s, :name
 end

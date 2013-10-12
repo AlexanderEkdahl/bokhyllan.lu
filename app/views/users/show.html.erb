@@ -24,11 +24,9 @@
 <h1><%= t(:settings) %></h1>
 
 <%= standard_form_for(current_user) do |f| %>
-  <%= f.text_field :email, disabled: true %>
-
   <h2><%= t(:update_contact_information) %></h2>
+  <%= f.text_field :email, value: current_user.email %>
   <%= f.text_field :name %>
   <%= f.phone_field :phone %>
-
   <%= f.submit %>
 <% end %>
