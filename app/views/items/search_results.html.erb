@@ -3,9 +3,14 @@
 <% @items.each do |item| %>
   <%= link_to(item, class: 'result') do %>
     <h2><%= item.name %></h2>
-    <% item_properties(item) do |_, value| %>
-      <span><%= value %></span>
-    <% end %>
+    <table class="properties">
+      <% item_properties(item) do |key, value| %>
+        <tr>
+          <td><%= key %>:</td>
+          <td><%= value %></td>
+        </tr>
+      <% end %>
+    </table>
   <% end %>
 <% end %>
 

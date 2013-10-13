@@ -58,6 +58,7 @@ sv:
   are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
   did_you_mean_html: 'Menade du %{suggestion}?'
   sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
+  isbn: ISBN
 
   activerecord:
     attributes:

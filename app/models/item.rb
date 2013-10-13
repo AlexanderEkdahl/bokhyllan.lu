@@ -6,14 +6,20 @@ class Item < ActiveRecord::Base
 
   validates :name, presence: true, length: { minimum: 3, maximum: 100 }
 
-  PROPERTIES_KEYS = [:courses, :authors, :program]
-  store_accessor :properties, PROPERTIES_KEYS
+  PROPERTIES = [:courses, :authors, :program]
+  store_accessor :properties, PROPERTIES
+
+  PROPERTIES.each do |property|
+    define_method(property) do
+      self.properties[property.to_s].try(:split, /;\s?/)
+    end
+  end
 
   def search_data
     {
       name: name,
-      authors: authors.try(:split, /[\s;]\s?/),
-      courses: courses.try(:split, /[\s;]\s?/)
+      authors: authors.try(:map, &:split),
+      courses: courses.try(:map, &:split)
     }
   end
 

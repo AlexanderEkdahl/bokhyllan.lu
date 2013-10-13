@@ -2,14 +2,13 @@ module ItemsHelper
   require 'uri'
 
   def item_properties(item)
-    Item::PROPERTIES_KEYS.each do |key|
-      value = item.send(key) # Compatible with ElasticSearch - Is it really required not that we use searchkick?
+    Item::PROPERTIES.each do |key|
+      value = item.send(key)
       next if value.blank?
-      value = value.split(/;\s?/)
-      key   = t(key, count: value.length)
+      key = t(key, count: value.length)
       yield(key, value.to_sentence)
     end
-    yield(t(:isbn), item.isbn)
+    yield(t(:isbn), item.isbn) unless item.isbn.blank?
   end
 
   def alternative_link(item)
