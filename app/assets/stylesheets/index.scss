@@ -1,8 +1,9 @@
 .items.index {
-  // .slogan {
-  //   margin-top: 0;
-  //   text-align: center;
-  // }
+  @include mobile {
+    .info {
+      display: none
+    }
+  }
 
   .suggestion {
     text-decoration: underline;

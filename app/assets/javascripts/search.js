@@ -14,6 +14,11 @@ var search = function() {
     $typeahead.on('typeahead:selected', function(e, datum) {
       Turbolinks.visit(datum.url);
     });
+
+    $typeahead.on('input', function(e) {
+      console.log("'input'")
+      window.scrollTo(0, $typeahead.offset().top - 10);
+    })
   }
 }
 
