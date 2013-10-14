@@ -16,8 +16,9 @@ var search = function() {
     });
 
     $typeahead.on('input', function(e) {
-      console.log("'input'")
-      window.scrollTo(0, $typeahead.offset().top - 10);
+      if ($(window).width() < 600) {
+        window.scrollTo(0, $typeahead.offset().top - 10);
+      };
     })
   }
 }
