@@ -17,7 +17,7 @@ class Item < ActiveRecord::Base
 
   def search_data
     {
-      name: name,
+      name: name.split,
       authors: authors.try(:map, &:split),
       courses: courses.try(:map, &:split)
     }
