@@ -59,6 +59,7 @@ sv:
   did_you_mean_html: 'Menade du %{suggestion}?'
   sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
   isbn: ISBN
+  order_created: 'Annons inlagd'
 
   activerecord:
     attributes:
