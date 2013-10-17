@@ -36,3 +36,13 @@ Dependencies: PostgreSQL, Ruby 2.0, Bundler, ElasticSearch
 ###Windows
 
 Don't even bother. Use Nitrous.io instead
+
+##Production
+
+###Pulling the database from Heroku
+
+    heroku pgbackups:capture --expire --app bokhyllan &&
+    curl -o heroku.dump `heroku pgbackups:url --app bokhyllan` &&
+    pg_restore --clean --no-acl --no-owner -h localhost -U `whoami` -d bokhyllan_development heroku.dump &&
+    rm heroku.dump &&
+    rake searchkick:reindex CLASS='Item'
