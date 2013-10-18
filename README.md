@@ -17,6 +17,7 @@ Your privacy is honored and information won't be shared with those who do not ne
 * Add courses, course list(with unbuyable items) / more advanced queries
 * Factor out authors/courses separation. What is different about them?
 * Boost items with more orders
+* Items as PDF
 
 ##Getting started
 
