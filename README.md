@@ -18,6 +18,8 @@ Your privacy is honored and information won't be shared with those who do not ne
 * Factor out authors/courses separation. What is different about them?
 * Boost items with more orders
 * Items as PDF
+* Favicon - Apple Icon
+* Tel links
 
 ##Getting started
 
