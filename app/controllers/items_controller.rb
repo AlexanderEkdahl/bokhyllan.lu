@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item = Item.new(params[:name] ? { name: params[:name] } : nil)
+    @item  = Item.new(name: params[:name] || nil)
     @order = @item.orders.build
   end
 
@@ -55,7 +55,7 @@ class ItemsController < ApplicationController
 
   private
 
-    def item_params
-      params.require(:item).permit(:name, *Item::PROPERTIES, orders_attributes: [:price, :quality])
-    end
+  def item_params
+    params.require(:item).permit(:name, *Item::PROPERTIES, orders_attributes: [:price, :quality, :edition])
+  end
 end

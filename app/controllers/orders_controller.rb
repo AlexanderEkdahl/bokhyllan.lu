@@ -29,7 +29,7 @@ class OrdersController < ApplicationController
 
   private
 
-    def order_params
-      params.require(:order).permit(:price, :quality, :edition)
-    end
+  def order_params
+    params.require(:order).permit(:price, :quality, :edition)
+  end
 end
