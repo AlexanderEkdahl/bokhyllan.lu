@@ -14,7 +14,6 @@ sv:
   show: Visa
   cancel: Avbryt
   remove: Ta bort
-  buy: Köp
   authors:
     one: Författare
     other: Författare
@@ -42,7 +41,6 @@ sv:
   new_item: Ny bok
   description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.
   support_feedback: Support/Feedback
-  sell: Sälj
   sell_info:
     - Sök efter boken du vill sälja
     - Logga in med ditt STIL-id
