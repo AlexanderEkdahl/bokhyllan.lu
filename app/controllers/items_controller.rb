@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate, only: [:new, :create]
 
-  include Metatags
   include Moderator
 
   def index
