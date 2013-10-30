@@ -15,6 +15,10 @@
       max-width: 100%;
       box-shadow: 2px 2px 2px #888;
     }
+
+    @include mobile {
+      @include column(1);
+    }
   }
 
   .list {
@@ -32,6 +36,12 @@
       @include column(1);
       padding: 0;
       text-align: center;
+    }
+  }
+
+  .new-order {
+    @include mobile {
+      margin-top: 1rem;
     }
   }
 
