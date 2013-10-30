@@ -23,9 +23,7 @@ module NavigationHelper
     link_to(t(:support_feedback), 'https://www.hipchat.com/grR40Vhv6')
   end
 
-  private
-
-    def controller?(*controllers)
-      controllers.include?(params[:controller])
-    end
+  def controller?(*controllers)
+    controllers.include?(params[:controller])
+  end
 end

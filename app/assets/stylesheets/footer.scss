@@ -1,14 +1,14 @@
-body > footer {
+footer {
   margin-bottom: 1rem;
   text-align: center;
   font-size: 0.8em;
 
   a {
-    color: #aaa !important;
+    color: #aaa;
     @include transition(400ms color);
   }
 
   &:hover a {
-    color: black !important;
+    color: black;
   }
 }

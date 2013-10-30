@@ -27,10 +27,6 @@ table {
     }
   }
 
-  th[data-sort] {
-    cursor: pointer;
-  }
-
   &.hover tbody {
     tr {
       @include transition(400ms background-color);

@@ -37,12 +37,12 @@
   <div class="related">
     <h3><%= t(:other_items, name: @order.user.to_s) %></h3>
 
-    <table data-sort class="hover">
+    <table class="hover">
       <thead>
         <tr>
           <th><%= t("activerecord.attributes.item.name") %></th>
-          <th data-sort><%= t("activerecord.attributes.order.price") %></th>
-          <th data-sort data-sort-desc><%= t("activerecord.attributes.order.quality") %></th>
+          <th><%= t("activerecord.attributes.order.price") %></th>
+          <th><%= t("activerecord.attributes.order.quality") %></th>
           <th></th>
         </tr>
       </thead>

@@ -13,8 +13,8 @@ module ItemsHelper
 
   def item_order_row(order)
     link = [order.item, order]
-    row(link_to("#{order.price}kr", link, data: { :'sort-value' => order.price }),
-        link_to(stars(order.quality), link, data: { :'sort-value' => order.quality }, class: 'quality'),
+    row(link_to("#{order.price}kr", link),
+        link_to(stars(order.quality), link, class: 'quality'),
         link_to("#{order.edition}", link),
         link_to("&#xE001;".html_safe, link, class: 'arrow'))
   end

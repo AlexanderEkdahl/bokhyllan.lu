@@ -20,11 +20,11 @@
 <section>
   <div class="list">
     <% if @item.orders(true).any? %>
-      <table data-sort class="hover">
+      <table class="hover">
         <thead>
           <tr>
-            <th data-sort><%= t("activerecord.attributes.order.price") %></th>
-            <th data-sort data-sort-desc><%= t("activerecord.attributes.order.quality") %></th>
+            <th><%= t("activerecord.attributes.order.price") %></th>
+            <th><%= t("activerecord.attributes.order.quality") %></th>
             <th><%= t(:edition) %></th>
             <th></th>
           </tr>
