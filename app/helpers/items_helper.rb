@@ -11,11 +11,6 @@ module ItemsHelper
     yield(t(:isbn), item.isbn) unless item.isbn.blank?
   end
 
-  def alternative_link(item)
-    site = URI(item.alternative).host.split('.')[-2].humanize
-    link_to(site, item.alternative, title: item.name)
-  end
-
   def item_order_row(order)
     link = [order.item, order]
     row(link_to("#{order.price}kr", link, data: { :'sort-value' => order.price }),

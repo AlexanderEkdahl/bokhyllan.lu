@@ -36,11 +36,7 @@
         </tbody>
       </table>
     <% else %>
-      <% if @item.alternative.blank? %>
-        <%= t(:no_one_is_selling, name: @item.name) %>
-      <% else %>
-        <%= t(:no_one_is_selling_with_alternative_html, name: @item.name, alternative: alternative_link(@item)) %>
-      <% end %>
+      <%= t(:no_one_is_selling, name: @item.name) %>
     <% end %>
   </div>
 

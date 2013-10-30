@@ -29,7 +29,6 @@ sv:
   show: Visa
   not_found: '%{query} hittades ej.'
   no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
-  no_one_is_selling_with_alternative_html: 'Ingen säljer för närvarande %{name}. Du kan köpa en ny upplaga på %{alternative}'
   add_item: Klicka här för att lägga till den i vår databas.
   default_tags:
     - köp
