@@ -12,6 +12,7 @@ input {
     font-size: 0.9em;
     display: block;
     margin-top: 32px;
+    text-align: left;
   }
 
   label:first-of-type {
@@ -45,6 +46,8 @@ input {
   }
 
   .suffix {
+    text-align: left;
+    display: block;
     font-size: 0.8em;
   }
 

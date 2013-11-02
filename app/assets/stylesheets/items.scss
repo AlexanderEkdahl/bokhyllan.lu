@@ -5,6 +5,10 @@
 
   div ~ .properties {
     @include column(2, 3);
+
+    @include mobile {
+      @include column(1);
+    }
   }
 
   .image {

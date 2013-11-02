@@ -44,4 +44,12 @@ table {
       width: 25%;
     }
   }
+
+  @include mobile {
+    font-size: 0.95em;
+
+    th, td {
+      padding: 0.15em;
+    }
+  }
 }

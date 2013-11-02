@@ -22,3 +22,9 @@ main > section {
     margin-top: 0;
   }
 }
+
+@include mobile {
+  main > section {
+    margin-top: 0.5rem;
+  }
+}

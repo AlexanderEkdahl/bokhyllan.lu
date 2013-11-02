@@ -6,3 +6,4 @@
 /public/assets/
 /public/sitemap*
 *.txt
+Procfile.dev
