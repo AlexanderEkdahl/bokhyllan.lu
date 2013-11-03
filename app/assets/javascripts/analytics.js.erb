@@ -40,7 +40,10 @@ analytics.load = function(apiKey) {
   firstScript.parentNode.insertBefore(script, firstScript);
 };
 
+$(window).on('page:change', analytics.pageview);
+
 // Load analytics.js with your API key, which will automatically load all of the
 // analytics integrations you've turned on for your account. Boosh!
-analytics.load(<%= ENV['SEGMENTIO'] %>);
-$(window).on('page:change', analytics.pageview);
+<% unless ENV['SEGMENTIO'].nil? %>
+  analytics.load(<%= ENV['SEGMENTIO'] %>);
+<% end %>
