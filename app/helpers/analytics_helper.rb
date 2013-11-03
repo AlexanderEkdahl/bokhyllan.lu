@@ -23,12 +23,13 @@ module AnalyticsHelper
     @track.nil? ? "" : "analytics.track('#{@track[:event]}', #{@track[:properties].to_json});"
   end
 
-  def load
-    ENV['SEGMENTIO'].nil? ? "" : "analytics.load('#{ENV['SEGMENTIO']}');"
+  def analytics_load
+    unless ENV['SEGMENTIO'].nil?
+      javascript_tag "analytics.load('#{ENV['SEGMENTIO']}');"
+    end
   end
 
   def analytics
-    javascript_tag(load, data: { 'data-turbolinks-eval' => false }) +
     javascript_tag(alias_user + identify + track)
   end
 end
