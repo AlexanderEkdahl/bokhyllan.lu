@@ -11,9 +11,9 @@ var search = function() {
       footer: $typeahead.data('footer')
     });
 
-    $typeahead.on('typeahead:selected', function(e, datum) {
-      Turbolinks.visit(datum.url);
-    });
+    // $typeahead.on('typeahead:selected', function(e, datum) {
+    //   Turbolinks.visit(datum.url);
+    // });
 
     $typeahead.on('input', function(e) {
       if ($(window).width() < 600) {

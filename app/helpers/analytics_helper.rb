@@ -28,6 +28,7 @@ module AnalyticsHelper
   end
 
   def analytics
-    javascript_tag alias_user + identify + track + load
+    javascript_tag(load, data: { 'data-turbolinks-eval' => false }) +
+    javascript_tag(alias_user + identify + track)
   end
 end

@@ -29,7 +29,5 @@ class Item < ActiveRecord::Base
     from.orders.each do |order|
       order.update(item_id: to_id)
     end
-
-    from.destroy
   end
 end
