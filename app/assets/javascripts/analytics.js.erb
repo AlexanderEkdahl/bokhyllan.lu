@@ -41,9 +41,3 @@ analytics.load = function(apiKey) {
 };
 
 $(window).on('page:change', analytics.pageview);
-
-// Load analytics.js with your API key, which will automatically load all of the
-// analytics integrations you've turned on for your account. Boosh!
-<% unless ENV['SEGMENTIO'].nil? %>
-  analytics.load(<%= ENV['SEGMENTIO'] %>);
-<% end %>

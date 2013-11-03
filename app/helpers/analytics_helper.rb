@@ -23,7 +23,11 @@ module AnalyticsHelper
     @track.nil? ? "" : "analytics.track('#{@track[:event]}', #{@track[:properties].to_json});"
   end
 
+  def load
+    ENV['SEGMENTIO'].nil? ? "" : "analytics.load('#{ENV['SEGMENTIO']}');"
+  end
+
   def analytics
-    javascript_tag alias_user + identify + track
+    javascript_tag alias_user + identify + track + load
   end
 end
