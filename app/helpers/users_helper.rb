@@ -17,10 +17,6 @@ module UsersHelper
     end
   end
 
-  def contact_information_without_keys(user)
-    contact_information(user).values.join(" ").html_safe unless user.nil?
-  end
-
   def qr(user, item, size = 100)
     return if user.try(:phone).blank?
 

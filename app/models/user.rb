@@ -8,6 +8,5 @@ class User < ActiveRecord::Base
   def name
     self[:name].blank? ? email : self[:name]
   end
-
   alias_method :to_s, :name
 end
