@@ -50,7 +50,6 @@ sv:
     - Sök efter boken du vill köpa
     - Välj annons efter önskat pris och kvalitet
     - Kontakta säljaren
-  name_help: 'Ex. Linjär algebra'
   authors_help: Separera flera författare med semikolon ex. Jonas Månsson; Patrik Nordbeck
   edition_help: 'Utgåva eller utgivningsår'
   are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
