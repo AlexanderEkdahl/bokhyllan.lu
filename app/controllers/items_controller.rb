@@ -6,7 +6,6 @@ class ItemsController < ApplicationController
   def index
     unless params[:search].blank?
       @items = Item.search(params[:search], autocomplete: true, suggest: true, limit: 10)
-      track("Searched", query: params[:search], results: @items.length)
 
       case @items.length
       when 0
@@ -32,6 +31,7 @@ class ItemsController < ApplicationController
 
     if @item.save
       moderator("Created #{@item.name}")
+      track("Created item", item: @item.name)
       redirect_to(@item)
     else
       render 'new'
@@ -41,6 +41,7 @@ class ItemsController < ApplicationController
   def show
     @item  = Item.find(params[:id])
     @order = @item.orders.build
+    track("Browsed item", item: @item.name)
   end
 
   def autocomplete

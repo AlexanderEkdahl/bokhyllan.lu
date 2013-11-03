@@ -40,4 +40,4 @@ analytics.load = function(apiKey) {
   firstScript.parentNode.insertBefore(script, firstScript);
 };
 
-$(window).on('page:change', analytics.pageview);
+$(window).on('page:change', function() { analytics.pageview });
