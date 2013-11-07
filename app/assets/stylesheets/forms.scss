@@ -13,10 +13,10 @@ input {
     display: block;
     margin-top: 32px;
     text-align: left;
-  }
 
-  label:first-of-type {
-    margin-top: 0;
+    &:first-of-type {
+      margin-top: 0;
+    }
   }
 
   input {
