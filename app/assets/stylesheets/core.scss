@@ -34,7 +34,7 @@ th, input, body, h1, h2, h3 {
 }
 
 @mixin mobile() {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 550px) {
     @content;
   }
 }

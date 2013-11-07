@@ -3,7 +3,7 @@
 <section>
   <% unless @item.image.blank? %>
     <div class="image">
-      <%= image_tag(@item.image) %>
+      <%= image_tag(@item.image, width: "128", height: "170") %>
     </div>
   <% end %>
 
