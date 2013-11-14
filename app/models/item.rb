@@ -1,5 +1,5 @@
 class Item < ActiveRecord::Base
-  searchkick autocomplete: [:name, :courses, :authors], suggest: [:name]
+  searchkick autocomplete: [:name, :courses, :authors], suggest: [:name], special_characters: false
 
   has_many :orders, dependent: :destroy
   accepts_nested_attributes_for :orders, reject_if: proc { |attributes| attributes['price'].blank? }
