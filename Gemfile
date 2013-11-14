@@ -19,7 +19,6 @@ gem 'searchkick'
 group :development, :test do
   gem 'debugger'
   gem 'quiet_assets'
-  gem 'bullet'
 end
 
 group :test do
