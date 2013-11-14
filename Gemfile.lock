@@ -95,8 +95,6 @@ GEM
     polyglot (0.3.3)
     puma (2.6.0)
       rack (>= 1.1, < 2.0)
-    quiet_assets (1.0.2)
-      railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-cas (0.8.1)
       addressable (>= 2.3)
@@ -133,8 +131,6 @@ GEM
     searchkick (0.3.3)
       tire
       tire-contrib
-    sitemap_generator (4.2.0)
-      builder
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -190,13 +186,11 @@ DEPENDENCIES
   pg
   poltergeist
   puma
-  quiet_assets
   rack-cas
   rails (= 4.0)
   rails_12factor
   sass-rails
   searchkick
-  sitemap_generator
   turbolinks
   twitter-typeahead-rails
   uglifier

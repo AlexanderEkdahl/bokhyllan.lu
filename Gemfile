@@ -12,13 +12,11 @@ gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'meta-tags', require: 'meta_tags'
 gem 'uglifier'
 gem 'hipchat'
-gem 'sitemap_generator'
 gem 'rack-cas'
 gem 'searchkick'
 
 group :development, :test do
   gem 'debugger'
-  gem 'quiet_assets'
 end
 
 group :test do
