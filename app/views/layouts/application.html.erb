@@ -4,8 +4,10 @@
     <meta charset=utf-8>
     <%= display_meta_tags(site: 'Bokhyllan.lu', separator: '&middot;'.html_safe, reverse: true, keywords: t(:default_tags), :description => t(:description)) %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application" %>
+    <%= favicon_link_tag 'favicon.ico' %>
+    <%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png' %>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
     <%= analytics_load %>
   </head>
   <body>
