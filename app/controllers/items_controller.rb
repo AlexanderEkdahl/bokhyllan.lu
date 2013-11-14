@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     unless params[:search].blank?
-      @items = Item.search(params[:search], autocomplete: true, suggest: true, limit: 10)
+      @items = Item.search(params[:search], suggest: true, limit: 10)
 
       case @items.length
       when 0

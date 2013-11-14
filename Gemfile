@@ -17,6 +17,7 @@ gem 'searchkick'
 
 group :development, :test do
   gem 'debugger'
+  gem 'i18n_yaml_sorter'
 end
 
 group :test do

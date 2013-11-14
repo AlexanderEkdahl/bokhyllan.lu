@@ -1,84 +1,104 @@
 sv:
-  search_placeholder: 'Sök titel, författare eller kurs'
-  sign_in: Logga in
-  sign_out: Logga ut
-  contact_information: Kontaktinformation
-  home: Hem
-  update_contact_information: Uppdatera kontaktinformation
-  sign_in_success: Inloggning lyckades.
-  settings_updated_successful: Kontaktinformationen sparades.
-  place_sell_order: Ny annons
-  must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
-  must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
-  other_items: '%{name} säljer även'
-  show: Visa
-  cancel: Avbryt
-  remove: Ta bort
-  authors:
-    one: Författare
-    other: Författare
-  courses:
-    one: Kurs
-    other: Kurser
-  buyer: Köpare
-  seller: Säljare
   active_sell_order:
     one: Aktiva annonser
     other: Aktiva annonser
-  show: Visa
-  not_found: '%{query} hittades ej.'
-  no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
+  activerecord:
+    attributes:
+      item:
+        authors: Författare
+        courses: Kurser
+        name: Namn
+      order:
+        price: Pris
+        quality: Kvalitet
+      user:
+        login: 'STIL-id'
+        name: Namn
+        phone: Telefonnummer
+    errors:
+      models:
+        item:
+          attributes:
+            name:
+              blank: Var vänlig fyll i ett namn på boken
+        order:
+          attributes:
+            price:
+              greater_than: 'Måste vara större än %{count}'
+              less_than: 'Måste vara mindre än %{count}'
+              not_a_number: Var vänlig fyll i ett pris
   add_item: Klicka här för att lägga till den i vår databas.
-  default_tags:
-    - köp
-    - sälj
-    - lund
-    - kurslitteratur
-  your_sell_order: 'Din annons'
-  sign_in_unsuccessful: 'Inloggningen misslyckades'
-  order_destroyed: 'Annons borttagen'
-  no_hit: Hittar du inte vad du söker?
-  new_item: Ny bok
-  description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.
-  support_feedback: Support/Feedback
-  sell_info:
-    - Sök efter boken du vill sälja
-    - Logga in med ditt STIL-id
-    - Ange ditt pris och kvaliteten på boken
+  are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
+  authors:
+    one: Författare
+    other: Författare
+  authors_help: Separera flera författare med semikolon ex. Jonas Månsson; Patrik Nordbeck
   buy: Köp
   buy_info:
     - Sök efter boken du vill köpa
     - Välj annons efter önskat pris och kvalitet
     - Kontakta säljaren
-  authors_help: Separera flera författare med semikolon ex. Jonas Månsson; Patrik Nordbeck
-  edition_help: 'Utgåva eller utgivningsår'
-  are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
+  buyer: Köpare
+  cancel: Avbryt
+  contact_information: Kontaktinformation
+  courses:
+    one: Kurs
+    other: Kurser
+  courses_help: Ex. ESS040 - Digital signalbehandling
+  default_tags:
+    - köp
+    - sälj
+    - lund
+    - kurslitteratur
+  description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.
   did_you_mean_html: 'Menade du %{suggestion}?'
-  sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
-  isbn: ISBN
-  order_created: 'Annons inlagd'
-
-  activerecord:
-    attributes:
+  edition_help: 'Utgåva eller utgivningsår'
+  helpers:
+    submit:
+      create: Skapa
+      update: Spara
       user:
-        name: Namn
-        phone: Telefonnummer
-        login: 'STIL-id'
-      order:
-        price: Pris
-        quality: Kvalitet
-      item:
-        name: Namn
-        courses: Kurser
-        authors: Författare
+        create: Gå vidare
+  home: Hem
+  isbn: ISBN
+  must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
+  must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
+  new_item: Ny bok
+  no_hit: Hittar du inte vad du söker?
+  no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
+  not_found: '%{query} hittades ej.'
+  order_created: 'Annons inlagd'
+  order_destroyed: 'Annons borttagen'
+  other_items: '%{name} säljer även'
+  place_sell_order: Ny annons
+  program_help: Ex. F1; E1; W3
+  remove: Ta bort
+  search_placeholder: 'Sök titel, författare eller kurs'
+  sell_info:
+    - Sök efter boken du vill sälja
+    - Logga in med ditt STIL-id
+    - Ange ditt pris och kvaliteten på boken
+  seller: Säljare
+  settings_updated_successful: Kontaktinformationen sparades.
+  show: Visa
+  show: Visa
+  sign_in: Logga in
+  sign_in_success: Inloggning lyckades.
+  sign_in_unsuccessful: 'Inloggningen misslyckades'
+  sign_out: Logga ut
+  sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
   support:
     array:
       last_word_connector: ' och '
       two_words_connector: ' och '
       words_connector: ', '
-  helpers:
-    submit:
-      user:
-        create: Gå vidare
-      create: Skapa
-      update: Spara
+  support_feedback: Support/Feedback
+  synonyms:
+    -
+      - endim
+      - endimensionell
+    -
+      - flerdim
+      - flerdimensionell
+  update_contact_information: Uppdatera kontaktinformation
+  your_sell_order: 'Din annons'

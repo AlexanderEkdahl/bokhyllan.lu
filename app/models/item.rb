@@ -1,12 +1,14 @@
 class Item < ActiveRecord::Base
-  searchkick autocomplete: [:name, :courses, :authors], suggest: [:name], special_characters: false
+  searchkick autocomplete: [:name],
+             suggest: [:name], special_characters: false,
+             synonyms: I18n.t(:synonyms)
 
   has_many :orders, dependent: :destroy
   accepts_nested_attributes_for :orders, reject_if: proc { |attributes| attributes['price'].blank? }
 
-  validates :name, presence: true, length: { minimum: 3, maximum: 100 }
+  validates :name, presence: true, length: { maximum: 100 }
 
-  PROPERTIES = [:courses, :authors, :program]
+  PROPERTIES = [:authors, :courses, :program]
   store_accessor :properties, PROPERTIES
 
   PROPERTIES.each do |property|
@@ -18,8 +20,8 @@ class Item < ActiveRecord::Base
   def search_data
     {
       name: name,
-      authors: authors.try(:map, &:split),
-      courses: courses.try(:map, &:split)
+      authors: authors,
+      courses: courses
     }
   end
 

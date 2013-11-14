@@ -1,7 +1,7 @@
 <%= render 'search' %>
 
-<% if @items.suggestions.any? %>
-  <%= t(:did_you_mean_html, suggestion: link_to(@items.suggestions.first, root_path(search: @items.suggestions.first), class: 'suggestion')) %>
-<% end %>
+<%# if @items.suggestions.any? %>
+  <%#= t(:did_you_mean_html, suggestion: link_to(@items.suggestions.first, root_path(search: @items.suggestions.first), class: 'suggestion')) %>
+<%# end %>
 
 <h1><%= t(:not_found, query: params[:search]) %> <%= link_to(t(:add_item), new_item_path(name: params[:search])) %></h1>
