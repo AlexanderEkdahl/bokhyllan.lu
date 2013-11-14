@@ -23,6 +23,10 @@ class Item < ActiveRecord::Base
     }
   end
 
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
+
   def self.merge(from_id, to_id)
     from = Item.find(from_id)
 
