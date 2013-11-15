@@ -63,6 +63,8 @@ GEM
       factory_girl (~> 4.3.0)
       railties (>= 3.0.0)
     hashr (0.0.22)
+    heroku-deflater (0.5.2)
+      rack (>= 1.4.5)
     hike (1.2.3)
     hipchat (0.12.0)
       httparty
@@ -181,6 +183,7 @@ DEPENDENCIES
   capybara
   debugger
   factory_girl_rails
+  heroku-deflater
   hipchat
   i18n_yaml_sorter
   jquery-rails
