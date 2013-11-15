@@ -31,7 +31,6 @@ class ItemsController < ApplicationController
 
     if @item.save
       moderator("Created #{@item.name}")
-      track("Created item", item: @item.name)
       redirect_to(@item)
     else
       render 'new'
@@ -41,7 +40,6 @@ class ItemsController < ApplicationController
   def show
     @item  = Item.find(params[:id])
     @order = @item.orders.build
-    track("Browsed item", item: @item.name)
   end
 
   def autocomplete

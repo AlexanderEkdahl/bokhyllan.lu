@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   include Authentication
-  include Analytics
 
   protect_from_forgery with: :exception
 
