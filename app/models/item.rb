@@ -21,7 +21,8 @@ class Item < ActiveRecord::Base
     {
       name: name,
       authors: authors,
-      courses: courses
+      courses: courses,
+      tags: tags
     }
   end
 

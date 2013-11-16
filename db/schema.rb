@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131030152055) do
+ActiveRecord::Schema.define(version: 20131116125712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,11 +19,12 @@ ActiveRecord::Schema.define(version: 20131030152055) do
 
   create_table "items", force: true do |t|
     t.string   "name"
-    t.hstore   "properties", default: ''
+    t.hstore   "properties", default: {}
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
     t.string   "isbn"
+    t.string   "tags",       default: [], array: true
   end
 
   add_index "items", ["isbn"], name: "index_items_on_isbn", unique: true, using: :btree

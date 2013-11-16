@@ -100,5 +100,9 @@ sv:
     -
       - flerdim
       - flerdimensionell
+    -
+      - linalg
+      - linjär algebra
+  tags: Taggar
   update_contact_information: Uppdatera kontaktinformation
   your_sell_order: 'Din annons'

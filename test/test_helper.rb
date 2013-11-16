@@ -8,6 +8,8 @@ Capybara.javascript_driver = :poltergeist
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
   include FactoryGirl::Syntax::Methods
+
+  fixtures :all
 end
 
 class ActionDispatch::IntegrationTest

@@ -1,2 +1,7 @@
 endim:
   name: Endimensionell Analys
+
+pvg:
+  name: Extreme Programming Pocket Guide
+  tags:
+    - pvg
