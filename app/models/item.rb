@@ -17,6 +17,14 @@ class Item < ActiveRecord::Base
     end
   end
 
+  def tag_list
+    self.tags.map { |tag| "##{tag}" }.join(' ')
+  end
+
+  def tag_list=(new_value)
+    self.tags = new_value.scan(/#?(\w+)/).flatten
+  end
+
   def search_data
     {
       name: name,
