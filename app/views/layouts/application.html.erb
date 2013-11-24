@@ -7,7 +7,6 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png' %>
     <%= stylesheet_link_tag 'application' %>
-    <%= javascript_include_tag 'application' %>
   </head>
   <body>
     <header>
@@ -33,5 +32,7 @@
     <footer>
       <%= nav(support) %>
     </footer>
+
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>

@@ -1,62 +1,65 @@
+$search-height: 45px;
+$search-padding: 8px;
+
 .search {
+  @include clearfix();
+  padding-top: $search-padding;
+  padding-bottom: $search-padding;
+  width: 100%;
+  border: 1px solid #ccc;
+  position: relative;
+  height: $search-height + $search-padding * 2;
   font-size: 1.5em;
-  padding: 9px;
-  width: 100%;
-  margin-bottom: 0;
-}
 
-.twitter-typeahead {
-  width: 100%;
+  label, input[type="text"], input[type="submit"] {
+    position: absolute;
+  }
 
-  input {
-    font-size: 1.5em;
-    padding: 9px 0 9px 9px;
-    // padding-left: 1.2em;
+  label {
+    color: #ccc;
+    padding-left: $search-padding;
+  }
+
+  input[type="text"] {
     width: 100%;
-    margin-bottom: 0;
-
-    @include mobile {
-      font-size: 1.05em;
-    }
+    padding: 0 0 0 $search-padding;
   }
 
-  .tt-hint {
-    color: #bbbbbb;
+  input[type="submit"] {
+    height: $search-height;
+    float: right;
+    color: #ccc;
+    right: 0;
+    padding: 0;
+    padding-right: $search-padding;
+    @include transition(400ms color);
   }
 
-  .tt-dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.95);
+  &:hover input[type="submit"] {
+    color: black;
+  }
+
+  & + div {
+    position: relative;
     width: 100%;
-  }
 
-  .tt-suggestion {
-    padding: 9px;
-    border-bottom: 1px solid #eeeeee;
+    div {
+      position: absolute;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
 
-    p {
-      font-size: 1.25em;
-      margin-top: 0.1em;
-      margin-bottom: 0.1em;
-    }
+      a {
+        display: block;
+        padding: 9px;
+        border-bottom: 1px solid #eeeeee;
 
-    @include mobile {
-      padding: 1px;
+        margin-top: 0.1em;
+        margin-bottom: 0.1em;
 
-      p {
-        font-size: 1em;
+        &:last-of-type {
+          border-bottom: none;
+        }
       }
-    }
-  }
-
-  .footer {
-    color: #999999;
-    font-size: 0.83em;
-    padding: 9px;
-
-    a {
-      color: inherit;
-      color: #777777;
-      text-decoration: underline;
     }
   }
 }

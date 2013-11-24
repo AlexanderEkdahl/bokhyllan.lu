@@ -93,16 +93,6 @@ sv:
       two_words_connector: ' och '
       words_connector: ', '
   support_feedback: Support/Feedback
-  synonyms:
-    -
-      - endim
-      - endimensionell
-    -
-      - flerdim
-      - flerdimensionell
-    -
-      - linalg
-      - linjär algebra
   tags: Taggar
   update_contact_information: Uppdatera kontaktinformation
   your_sell_order: 'Din annons'

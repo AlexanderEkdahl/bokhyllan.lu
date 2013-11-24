@@ -1,10 +1,4 @@
 module ItemsHelper
-  require 'uri'
-
-  def item_tags(item)
-    item.tags.map { |tag| tag.prepend('#') }.to_sentence
-  end
-
   def item_properties(item)
     Item::PROPERTIES.each do |key|
       value = item.send(key)
@@ -13,7 +7,7 @@ module ItemsHelper
       yield(key, value.to_sentence)
     end
     yield(t(:isbn), item.isbn) unless item.isbn.blank?
-    yield(t(:tags), item_tags(item)) unless item.tags.empty?
+    yield(t(:tags), item.tag_list) unless item.tag_list.blank?
   end
 
   def item_order_row(order)

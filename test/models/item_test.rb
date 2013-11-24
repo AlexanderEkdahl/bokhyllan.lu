@@ -20,5 +20,7 @@ class ItemTest < ActiveSupport::TestCase
     @item.tag_list = "pvg"
     assert %w{pvg}, @item.tags
     assert "#pvg", @item.tag_list
+    @item.tag_list = "pvg; funken, catta"
+    assert %w{pvg funken catta}, @item.tags
   end
 end
