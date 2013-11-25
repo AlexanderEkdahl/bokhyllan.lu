@@ -13,7 +13,7 @@ module ItemsHelper
       yield(key, value.to_sentence)
     end
     yield(t(:isbn), item.isbn) unless item.isbn.blank?
-    yield(t(:tags), item_tags(item)) unless item.tags.empty?
+    yield(t("activerecord.attributes.item.tags"), item_tags(item)) unless item.tags.empty?
   end
 
   def item_order_row(order)

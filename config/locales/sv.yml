@@ -8,6 +8,8 @@ sv:
         authors: Författare
         courses: Kurser
         name: Namn
+        tags: Taggar
+        tag_list: Taggar
       order:
         price: Pris
         quality: Kvalitet
@@ -87,6 +89,7 @@ sv:
   sign_in_unsuccessful: 'Inloggningen misslyckades'
   sign_out: Logga ut
   sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
+  tag_list_help: 'Ex. #endim #omd'
   support:
     array:
       last_word_connector: ' och '
@@ -103,6 +106,5 @@ sv:
     -
       - linalg
       - linjär algebra
-  tags: Taggar
   update_contact_information: Uppdatera kontaktinformation
   your_sell_order: 'Din annons'
