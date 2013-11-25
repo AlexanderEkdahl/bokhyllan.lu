@@ -11,5 +11,7 @@ Bokhyllan::Application.routes.draw do
     resources :orders, only: [:show, :create, :destroy]
   end
 
+  get 'sitemap', to: 'application#sitemap', format: :xml
+
   root 'items#index'
 end
