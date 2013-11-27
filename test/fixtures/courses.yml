@@ -1,0 +1,22 @@
+endim:
+  name: Endimensionell analys
+  code: FMAA01
+  programs:
+    - B1
+    - BME1
+    - C1
+    - D1
+    - K1
+    - M1
+    - MD1
+    - N1
+
+pvg:
+  name: Programvaruutveckling i grupp – projek
+  code: EDA260
+  programs:
+    - D2
+    - C4
+    - E4
+    - F4
+    - Pi4

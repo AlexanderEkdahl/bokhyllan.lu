@@ -23,6 +23,14 @@ module NavigationHelper
     link_to(t(:support_feedback), 'https://www.hipchat.com/grR40Vhv6')
   end
 
+  def edit
+    item = @item || (@order ? @order.item : nil)
+
+    if item && !current_page?(new_item_path) && !current_page?(edit_item_path(item))
+      link_to(t(:edit_item), edit_item_path(item))
+    end
+  end
+
   def controller?(*controllers)
     controllers.include?(params[:controller])
   end

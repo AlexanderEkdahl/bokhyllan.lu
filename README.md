@@ -30,3 +30,9 @@ Don't even bother. Use Nitrous.io instead
     pg_restore --clean --no-acl --no-owner -h localhost -U `whoami` -d bokhyllan_development heroku.dump &&
     rm heroku.dump &&
     rake searchkick:reindex CLASS='Item'
+
+###Generating UML Diagram
+
+Dependencies: Railroady
+
+    railroady -M | dot -Tpng > models.png
