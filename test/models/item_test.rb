@@ -19,15 +19,17 @@ class ItemTest < ActiveSupport::TestCase
     @item.tag_list = "pvg"
     assert_equal %w{pvg}, @item.tags
     assert_equal "#pvg", @item.tag_list
+    @item.tag_list = "dålig bok"
+    assert_equal %w{dålig bok}, @item.tags
   end
 
   def test_item_author_list
     @item.author_list = "Alexander Ekdahl; Keff;;"
     assert_equal ["Alexander Ekdahl", "Keff"], @item.authors
     assert_equal "Alexander Ekdahl; Keff", @item.author_list
-    @item.author_list = "Keff ; Författare;"
-    assert_equal ["Keff", "Författare"], @item.authors
-    assert_equal "Keff; Författare", @item.author_list
+    @item.author_list = "Käffö ; Författare;"
+    assert_equal ["Käffö", "Författare"], @item.authors
+    assert_equal "Käffö; Författare", @item.author_list
   end
 
   def test_item_course_list

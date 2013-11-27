@@ -15,7 +15,7 @@ class Item < ActiveRecord::Base
   end
 
   def course_list=(new_value)
-    self.courses = new_value.scan(/\w+/).map { |code| Course.find_by(code: code) }.compact
+    self.courses = new_value.scan(/[\wåäö]+/).map { |code| Course.find_by(code: code) }.compact
   end
 
   def tag_list
@@ -23,7 +23,7 @@ class Item < ActiveRecord::Base
   end
 
   def tag_list=(new_value)
-    self.tags = new_value.scan(/\w+/)
+    self.tags = new_value.scan(/[\wåäö]+/)
   end
 
   def author_list

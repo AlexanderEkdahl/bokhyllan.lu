@@ -9,6 +9,7 @@ sv:
         course_list: Kurser
         isbn: ISBN
         name: Namn
+        program_list: Program
         tag_list: Taggar
       order:
         price: Pris
