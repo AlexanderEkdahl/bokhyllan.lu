@@ -1,3 +1,10 @@
 # robotstxt.org/
 
+Sitemap: /sitemap.xml
+
 User-agent: *
+Disallow: /user
+Disallow: /logout
+Disallow: /items/autocomplete
+Disallow: /*search=
+Allow: /
