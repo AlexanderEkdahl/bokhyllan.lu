@@ -3,5 +3,7 @@ endim:
 
 pvg:
   name: Extreme Programming Pocket Guide
+  authors:
+    - Chromatic
   tags:
     - pvg

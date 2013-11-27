@@ -5,10 +5,10 @@ sv:
   activerecord:
     attributes:
       item:
-        authors: Författare
-        courses: Kurser
+        author_list: Författare
+        course_list: Kurser
+        isbn: ISBN
         name: Namn
-        tags: Taggar
         tag_list: Taggar
       order:
         price: Pris
@@ -31,22 +31,13 @@ sv:
               not_a_number: Var vänlig fyll i ett pris
   add_item: Klicka här för att lägga till den i vår databas.
   are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
-  authors:
-    one: Författare
-    other: Författare
-  authors_help: Separera flera författare med semikolon ex. Jonas Månsson; Patrik Nordbeck
-  buy: Köp
+  author_list_help: Ex. Jonas Månsson; Patrik Nordbeck
   buy_info:
     - Sök efter boken du vill köpa
     - Välj annons efter önskat pris och kvalitet
     - Kontakta säljaren
-  buyer: Köpare
-  cancel: Avbryt
   contact_information: Kontaktinformation
-  courses:
-    one: Kurs
-    other: Kurser
-  courses_help: Ex. ESS040 - Digital signalbehandling
+  course_list_help: Ex. FMA645; FMAA01; FMAA05
   default_tags:
     - köp
     - sälj
@@ -54,17 +45,15 @@ sv:
     - kurslitteratur
   description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.
   did_you_mean_html: 'Menade du %{suggestion}?'
+  edit_item: Redigera bok
   edition_help: 'Utgåva eller utgivningsår'
   helpers:
     submit:
-      create: Skapa
+      create: Spara
       update: Spara
-      user:
-        create: Gå vidare
   home: Hem
-  isbn: ISBN
+  item_update_successful: Redigeringen lyckades!
   must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
-  must_be_signed_in_to_sell_or_buy: 'Du måste vara inloggad för att sälja/köpa %{item}.'
   new_item: Ny bok
   no_hit: Hittar du inte vad du söker?
   no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
@@ -73,23 +62,16 @@ sv:
   order_destroyed: 'Annons borttagen'
   other_items: '%{name} säljer även'
   place_sell_order: Ny annons
-  program_help: Ex. F1; E1; W3
-  remove: Ta bort
   search_placeholder: 'Sök titel, författare eller kurs'
   sell_info:
     - Sök efter boken du vill sälja
     - Logga in med ditt STIL-id
     - Ange ditt pris och kvaliteten på boken
-  seller: Säljare
   settings_updated_successful: Kontaktinformationen sparades.
   show: Visa
-  show: Visa
   sign_in: Logga in
-  sign_in_success: Inloggning lyckades.
-  sign_in_unsuccessful: 'Inloggningen misslyckades'
   sign_out: Logga ut
   sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
-  tag_list_help: 'Ex. #endim #omd'
   support:
     array:
       last_word_connector: ' och '
@@ -106,5 +88,6 @@ sv:
     -
       - linalg
       - linjär algebra
+  tag_list_help: 'Ex. #endim #omd'
   update_contact_information: Uppdatera kontaktinformation
   your_sell_order: 'Din annons'

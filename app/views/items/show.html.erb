@@ -30,7 +30,7 @@
           </tr>
         </thead>
         <tbody>
-          <% @item.orders(true).each do |order| %>
+          <% @item.orders.each do |order| %>
             <%= item_order_row(order) %>
           <% end %>
         </tbody>
@@ -52,11 +52,7 @@
         </fieldset>
       <% end %>
     <% else %>
-      <% if @item.orders(true).any? %>
-        <%= link_to t(:must_be_signed_in_to_sell_or_buy, item: @item.name), sign_in_user_path %>
-      <% else %>
-        <%= link_to t(:must_be_signed_in_to_sell, item: @item.name), sign_in_user_path %>
-      <% end %>
+      <%= link_to t(:must_be_signed_in_to_sell, item: @item.name), sign_in_user_path %>
     <% end %>
   </div>
 </section>

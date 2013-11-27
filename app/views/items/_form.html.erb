@@ -1,18 +1,18 @@
 <%= standard_form_for(@item) do |f| %>
   <%= f.text_field :name %>
 
-  <% Item::PROPERTIES.each do |key| %>
-    <%= f.text_field key %>
-  <% end %>
-
+  <%= f.text_field :author_list %>
+  <%= f.text_field :course_list %>
   <%= f.text_field :tag_list %>
 
-  <h2><%= t(:your_sell_order) %></h2>
+  <% unless @order.nil? %>
+    <h2><%= t(:your_sell_order) %></h2>
 
-  <%= f.fields_for(:orders, @order) do |o| %>
-    <%= o.price %>
-    <%= o.text_field :edition %>
-    <%= o.quality %>
+    <%= f.fields_for(:orders, @order) do |o| %>
+      <%= o.price %>
+      <%= o.text_field :edition %>
+      <%= o.quality %>
+    <% end %>
   <% end %>
 
   <%= f.submit %>

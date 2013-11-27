@@ -20,6 +20,7 @@ class OrdersController < ApplicationController
   def destroy
     @order = Order.find(params[:id])
 
+    # unauthenticate unless @order.user == current_user for prettier errors and less code
     if @order.user == current_user
       @order.destroy
 
