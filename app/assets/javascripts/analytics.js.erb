@@ -1,0 +1,10 @@
+<% if Rails.env.production? %>
+  window.onload = function() {
+    var img = document.createElement("img");
+    img.width = "1";
+    img.height = "1";
+    img.style = "display:none;";
+    img.src = "http://api.stathat.com/c?ukey=NDQ4NSBW7QWqavgjKeFxuVQycGWZ&key=6o8B6U-GWff6cf9RMmR7ySBJYnRm&count=1";
+    document.body.appendChild(img);
+  }
+<% end %>
