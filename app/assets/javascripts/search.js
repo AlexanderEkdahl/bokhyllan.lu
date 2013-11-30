@@ -11,7 +11,7 @@ var search = function() {
   if ($typeahead.length > 0) {
     $typeahead.typeahead({
       name: 'items',
-      remote: algolia_client.initIndex('<%= Item.index_name %>').getTypeaheadTransport(),
+      remote: algolia_client.initIndex($typeahead.data('index')).getTypeaheadTransport(),
       valueKey: 'name',
       footer: $typeahead.data('footer'),
       template: suggestion
