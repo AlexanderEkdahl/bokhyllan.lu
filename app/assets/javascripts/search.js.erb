@@ -6,13 +6,12 @@ suggestion = function (result) {
 }
 
 var search = function() {
-  var client = new AlgoliaSearch('<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>', '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>');
   var $typeahead = $('#search');
 
   if ($typeahead.length > 0) {
     $typeahead.typeahead({
       name: 'items',
-      remote: client.initIndex('<%= Item.index_name %>').getTypeaheadTransport(),
+      remote: algolia_client.initIndex('<%= Item.index_name %>').getTypeaheadTransport(),
       valueKey: 'name',
       footer: $typeahead.data('footer'),
       template: suggestion
