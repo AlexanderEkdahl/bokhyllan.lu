@@ -7,14 +7,7 @@
     </div>
   <% end %>
 
-  <table class="properties">
-    <% item_properties(@item) do |key, value| %>
-      <tr>
-        <td><%= key %>:</td>
-        <td><%= value %></td>
-      </tr>
-    <% end %>
-  </table>
+  <%= render @item %>
 </section>
 
 <section>
@@ -25,7 +18,7 @@
           <tr>
             <th><%= t("activerecord.attributes.order.price") %></th>
             <th><%= t("activerecord.attributes.order.quality") %></th>
-            <th><%= t(:edition) %></th>
+            <th><%= t("activerecord.attributes.order.edition") %></th>
             <th></th>
           </tr>
         </thead>

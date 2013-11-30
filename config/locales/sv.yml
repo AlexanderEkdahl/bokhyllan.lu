@@ -12,6 +12,7 @@ sv:
         program_list: Program
         tag_list: Taggar
       order:
+        edition: Utgåva
         price: Pris
         quality: Kvalitet
       user:

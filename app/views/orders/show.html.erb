@@ -6,14 +6,7 @@
     <span class="stars"><%= stars(@order.quality) %></span>
   </div>
 
-  <table class="properties">
-    <% item_properties(@order.item) do |key, value| %>
-      <tr>
-        <td><%= key %>:</td>
-        <td><%= value %></td>
-      </tr>
-    <% end %>
-  </table>
+  <%= render @order.item %>
 </section>
 
 <section>
