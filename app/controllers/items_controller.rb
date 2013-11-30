@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
         render 'search_results'
       end
     end
-  rescue Errno::ECONNREFUSED
+  rescue Algolia
     render 'not_found'
   end
 
