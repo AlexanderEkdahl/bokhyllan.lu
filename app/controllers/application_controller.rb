@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   add_flash_types :success
 
   def sitemap
-    @items = Item.all.includes(:orders)
+    @items = Item.all
   end
 end
