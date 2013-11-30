@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     unless params[:search].blank?
-      @items = Item.search(params[:search], suggest: true, limit: 10)
+      @items = Item.search(params[:search], hitsPerPage: 20)
 
       case @items.length
       when 0
@@ -58,17 +58,6 @@ class ItemsController < ApplicationController
   def show
     @item  = Item.find(params[:id])
     @order = @item.orders.build
-  end
-
-  def autocomplete
-    @items = Item.search(params[:search], autocomplete: true, limit: 5).map do |item|
-      {
-        value: item.name,
-        url: item_path(item)
-      }
-    end
-
-    render json: @items
   end
 
   private

@@ -45,7 +45,6 @@ sv:
     - lund
     - kurslitteratur
   description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.
-  did_you_mean_html: 'Menade du %{suggestion}?'
   edit_item: Redigera bok
   edition_help: 'Utgåva eller utgivningsår'
   helpers:
@@ -79,16 +78,6 @@ sv:
       two_words_connector: ' och '
       words_connector: ', '
   support_feedback: Support/Feedback
-  synonyms:
-    -
-      - endim
-      - endimensionell
-    -
-      - flerdim
-      - flerdimensionell
-    -
-      - linalg
-      - linjär algebra
   tag_list_help: 'Ex. #endim #omd'
   update_contact_information: Uppdatera kontaktinformation
   your_sell_order: 'Din annons'

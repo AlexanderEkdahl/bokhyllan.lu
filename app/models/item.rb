@@ -1,7 +1,17 @@
 class Item < ActiveRecord::Base
-  searchkick autocomplete: [:name],
-             suggest: [:name], special_characters: false,
-             synonyms: I18n.t(:synonyms)
+  include AlgoliaSearch
+
+  algoliasearch per_environment: true do
+    attribute :name, :tags, :authors
+    attribute :courses do
+      courses.map { |course| "#{course.code} - #{course.name}" }
+    end
+    attribute :url do
+      Rails.application.routes.url_helpers.item_path(self)
+    end
+    hitsPerPage 5
+    attributesToIndex [:name, :tags, :authors, :courses]
+  end
 
   has_many :orders, dependent: :destroy
   accepts_nested_attributes_for :orders, reject_if: proc { |attributes| attributes['price'].blank? }
@@ -32,15 +42,6 @@ class Item < ActiveRecord::Base
 
   def author_list=(new_value)
     self.authors = new_value.split(';').map(&:strip).reject(&:empty?)
-  end
-
-  def search_data
-    {
-      name: name,
-      authors: authors,
-      courses: courses,
-      tags: tags
-    }
   end
 
   def to_param

@@ -3,8 +3,7 @@
                      class: 'search',
                      placeholder: t(:search_placeholder),
                      value: (title(item.name) if defined?(item)),
-                     data: { remote: autocomplete_items_path(search: 'QUERY', format: :json),
-                             footer: "<span class='footer'>#{t(:no_hit)} <a href='#{new_item_path}'>#{t(:add_item)}</a></span>" },
+                     data: { footer: "<span class='footer'>#{t(:no_hit)} <a href='#{new_item_path}'>#{t(:add_item)}</a></span>" },
                      autofocus: true) %>
   <%= submit_tag("", style: "position: absolute; left: -9999px; width: 1px; height: 1px;", name: nil ) %>
 </form>

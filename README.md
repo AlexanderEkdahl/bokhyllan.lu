@@ -29,7 +29,7 @@ Don't even bother. Use Nitrous.io instead
     curl -o heroku.dump `heroku pgbackups:url --app bokhyllan` &&
     pg_restore --clean --no-acl --no-owner -h localhost -U `whoami` -d bokhyllan_development heroku.dump &&
     rm heroku.dump &&
-    rake searchkick:reindex CLASS='Item'
+    foreman run rake algoliasearch:reindex
 
 ###Generating UML Diagram
 

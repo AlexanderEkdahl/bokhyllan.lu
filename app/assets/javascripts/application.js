@@ -1,5 +1,5 @@
 //= require jquery
-//= require twitter/typeahead
+//= require algolia/algoliasearch.min
+//= require algolia/typeahead.min
 //= require jquery_ujs
-//= require turbolinks
 //= require_directory

@@ -1,0 +1,32 @@
+var client = new AlgoliaSearch('<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>', '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>');
+
+var search = function() {
+  var $typeahead = $('#search');
+
+  if ($typeahead.length > 0) {
+    $typeahead.typeahead({
+      name: 'items',
+      remote: client.initIndex('<%= Item.index_name %>').getTypeaheadTransport(),
+      valueKey: 'name',
+      footer: $typeahead.data('footer'),
+      template: function (result) {
+        var element = document.createElement("a");
+        element.setAttribute("href", result.url);
+        element.innerHTML = result._highlightResult.name.value;
+        return element.outerHTML;
+      }
+    });
+
+    $typeahead.on('typeahead:selected', function(e, datum) {
+      window.location.href = datum.url;
+    });
+
+    $typeahead.on('input', function(e) {
+      if ($(window).width() < 600) {
+        window.scrollTo(0, $typeahead.offset().top - 10);
+      };
+    })
+  }
+}
+
+$(document).ready(search);

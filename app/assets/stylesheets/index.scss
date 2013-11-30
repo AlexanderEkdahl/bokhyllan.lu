@@ -5,10 +5,6 @@
     }
   }
 
-  .suggestion {
-    text-decoration: underline;
-  }
-
   .result {
     @include clearfix;
     display: block;

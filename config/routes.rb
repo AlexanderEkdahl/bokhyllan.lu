@@ -6,8 +6,6 @@ Bokhyllan::Application.routes.draw do
   end
 
   resources :items, only: [:show, :new, :create, :edit, :update] do
-    get 'autocomplete', on: :collection
-
     resources :orders, only: [:show, :create, :destroy]
   end
 
