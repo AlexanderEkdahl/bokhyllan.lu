@@ -1,6 +1,12 @@
-var client = new AlgoliaSearch('<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>', '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>');
+suggestion = function (result) {
+  var element = document.createElement("a");
+  element.setAttribute("href", result.url);
+  element.innerHTML = result._highlightResult.name.value;
+  return element.outerHTML;
+}
 
 var search = function() {
+  var client = new AlgoliaSearch('<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>', '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>');
   var $typeahead = $('#search');
 
   if ($typeahead.length > 0) {
@@ -9,12 +15,7 @@ var search = function() {
       remote: client.initIndex('<%= Item.index_name %>').getTypeaheadTransport(),
       valueKey: 'name',
       footer: $typeahead.data('footer'),
-      template: function (result) {
-        var element = document.createElement("a");
-        element.setAttribute("href", result.url);
-        element.innerHTML = result._highlightResult.name.value;
-        return element.outerHTML;
-      }
+      template: suggestion
     });
 
     $typeahead.on('typeahead:selected', function(e, datum) {

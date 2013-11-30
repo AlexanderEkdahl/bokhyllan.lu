@@ -8,13 +8,11 @@ Your privacy is honored and information won't be shared with those who do not ne
 
 ###OSX/Linux
 
-Dependencies: PostgreSQL, Ruby 2.0, Bundler, ElasticSearch
+Dependencies: PostgreSQL, Ruby 2.0, Bundler,
 
     ARCHFLAGS="-arch x86_64" gem install pg
     bundle install
     postgres -D /usr/local/var/postgres
-    elasticsearch -f
-    rake searchkick:reindex CLASS='Item'
     rails s
 
 ###Windows
