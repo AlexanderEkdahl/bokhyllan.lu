@@ -57,13 +57,13 @@ Autocomplete.prototype = {
   },
 
   show: function() {
-    this.label.innerHTML = this.renderLabel()
+    // this.label.innerHTML = this.renderLabel()
     this.menu.innerHTML  = this.render()
     this.shown           = true
   },
 
   hide: function() {
-    this.clearLabel()
+    // this.clearLabel()
     this.menu.innerHTML  = ""
     this.shown           = false
   },
@@ -114,7 +114,7 @@ Autocomplete.prototype = {
       this.element.value = this.results[this.active].name
     }
 
-    this.clearLabel()
+    // this.clearLabel()
   },
 
   next: function() {
