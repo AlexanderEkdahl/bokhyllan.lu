@@ -15,6 +15,8 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to root_path(search: Item.from_param(params[:item_id]))
   end
 
   def destroy

@@ -48,6 +48,11 @@ class Item < ActiveRecord::Base
     "#{id}-#{name.parameterize}"
   end
 
+  # should try to inverse the result of to_param
+  def self.from_param(x)
+    x.scan(/\w+/)[1..-1].join(' ')
+  end
+
   def self.merge(from_id, to_id)
     from = Item.find(from_id)
 

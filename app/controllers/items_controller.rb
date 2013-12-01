@@ -58,6 +58,8 @@ class ItemsController < ApplicationController
   def show
     @item  = Item.find(params[:id])
     @order = @item.orders.build
+  rescue ActiveRecord::RecordNotFound
+    redirect_to root_path(search: Item.from_param(params[:id]))
   end
 
   private
