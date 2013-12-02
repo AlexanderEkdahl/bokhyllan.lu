@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ItemsHelperTest < ActionView::TestCase
   def setup
-    @pvg   = items(:pvg)
+    @pvg = items(:pvg)
   end
 
   def test_item_tags

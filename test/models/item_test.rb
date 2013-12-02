@@ -13,7 +13,7 @@ class ItemTest < ActiveSupport::TestCase
   end
 
   def test_item_tag_list
-    @item.tag_list = "#funken #linalg ##"
+    @item.tag_list = "#funken#linalg##"
     assert_equal %w{funken linalg}, @item.tags
     assert_equal "#funken #linalg", @item.tag_list
     @item.tag_list = "pvg"

@@ -9,9 +9,17 @@ class Item < ActiveRecord::Base
     attribute :url do
       Rails.application.routes.url_helpers.item_path(self)
     end
+    attribute :orders_count do
+      self.orders.count
+    end
+
     hitsPerPage 5
+    queryType :prefixAll
+    customRanking ['desc(orders_count)']
     attributesToIndex [:name, :tags, :authors, :courses]
   end
+
+  after_touch :index!
 
   has_many :orders, dependent: :destroy
   accepts_nested_attributes_for :orders, reject_if: proc { |attributes| attributes['price'].blank? }
@@ -25,7 +33,7 @@ class Item < ActiveRecord::Base
   end
 
   def course_list=(new_value)
-    self.courses = new_value.scan(/[\wåäö]+/).map { |code| Course.find_by(code: code.upcase) }.compact
+    self.courses = new_value.scan(/[[:alnum:]]+/).map { |code| Course.find_by(code: code.upcase) }.compact
   end
 
   def tag_list
@@ -33,7 +41,7 @@ class Item < ActiveRecord::Base
   end
 
   def tag_list=(new_value)
-    self.tags = new_value.scan(/[\wåäö]+/)
+    self.tags = new_value.scan(/[[:alnum:]]+/)
   end
 
   def author_list
