@@ -2,7 +2,7 @@ require 'test_helper'
 
 class CourseTest < ActiveSupport::TestCase
   def setup
-    @course = courses(:endim)
+    @course = courses(:FMAA01)
   end
 
   def test_should_require_name

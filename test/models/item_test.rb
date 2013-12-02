@@ -33,13 +33,19 @@ class ItemTest < ActiveSupport::TestCase
   end
 
   def test_item_course_list
-    assert_equal [], @item.courses
     @item.course_list = "EDA260; FMAA01"
-    assert @item.courses.include?(courses(:pvg))
-    assert @item.courses.include?(courses(:endim))
+    assert @item.courses.include?(courses(:EDA260))
+    assert @item.courses.include?(courses(:FMAA01))
     @item.course_list = ""
     assert_equal [], @item.courses
     @item.course_list = "EDA260; EDA260;Keff;"
-    assert_equal [courses(:pvg)], @item.courses
+    assert_equal [courses(:EDA260)], @item.courses
+    assert_equal "EDA260", @item.course_list
+  end
+
+  def test_item_should_find_by_lowercase_courses
+    @item.course_list = "fmaa01"
+    assert @item.courses.include?(courses(:FMAA01))
+    assert_equal "FMAA01", @item.course_list
   end
 end

@@ -25,7 +25,7 @@ class Item < ActiveRecord::Base
   end
 
   def course_list=(new_value)
-    self.courses = new_value.scan(/[\wåäö]+/).map { |code| Course.find_by(code: code) }.compact
+    self.courses = new_value.scan(/[\wåäö]+/).map { |code| Course.find_by(code: code.upcase) }.compact
   end
 
   def tag_list

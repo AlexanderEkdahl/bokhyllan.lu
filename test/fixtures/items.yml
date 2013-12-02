@@ -1,9 +1,14 @@
 endim:
   name: Endimensionell Analys
+  courses: FMAA01
 
 pvg:
   name: Extreme Programming Pocket Guide
+  courses: EDA260
   authors:
     - Chromatic
   tags:
     - pvg
+
+linux:
+  name: Linux Kernel Development
