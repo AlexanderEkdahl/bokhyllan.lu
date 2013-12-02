@@ -1,0 +1,13 @@
+<form method="get" class="search">
+  <%= text_field_tag('search', value,
+                      id: 'search',
+                      autofocus: value.blank?,
+                      placeholder: t(:search_placeholder),
+                      autocomplete: :off,
+                      spellcheck: false) %>
+  <%= submit_tag("&#xE006;".html_safe) %>
+</form>
+
+<div>
+  <div id="autocomplete"></div>
+</div>

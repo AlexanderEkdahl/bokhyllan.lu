@@ -10,4 +10,10 @@ module ApplicationHelper
 
     form_for(name, *(args << options.merge(builder: StandardForm, html: { class: 'form' })), &block)
   end
+
+  def search_bar
+    value = @item.nil? ? params[:search] : @item.name
+
+    render('search', value: value)
+  end
 end

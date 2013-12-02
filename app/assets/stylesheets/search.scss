@@ -11,13 +11,8 @@ $search-padding: 9px;
   height: $search-height + $search-padding * 2;
   font-size: 1.5em;
 
-  label, input[type="text"], input[type="submit"] {
+  input[type="text"], input[type="submit"] {
     position: absolute;
-  }
-
-  label {
-    color: #ccc;
-    padding-left: $search-padding;
   }
 
   input[type="text"] {

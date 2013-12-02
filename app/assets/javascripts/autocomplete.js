@@ -2,9 +2,8 @@
 // rate limiting
 // label should be unselectable
 
-var Autocomplete = function(element, label, menu, index) {
+var Autocomplete = function(element, menu, index) {
   this.element  = element
-  this.label    = label
   this.menu     = menu
   this.index    = algolia_index;
   this.shown    = false
@@ -52,18 +51,12 @@ Autocomplete.prototype = {
     this.index.search(query, this.process.bind(this))
   },
 
-  clearLabel: function() {
-    this.label.innerHTML = ''
-  },
-
   show: function() {
-    // this.label.innerHTML = this.renderLabel()
     this.menu.innerHTML  = this.render()
     this.shown           = true
   },
 
   hide: function() {
-    // this.clearLabel()
     this.menu.innerHTML  = ""
     this.shown           = false
   },
@@ -213,7 +206,6 @@ Autocomplete.prototype = {
 
 window.onload = function() {
   new Autocomplete(document.getElementById('search'),
-                   document.getElementById('autocomplete_label'),
                    document.getElementById('autocomplete'),
                    algolia_index)
 }

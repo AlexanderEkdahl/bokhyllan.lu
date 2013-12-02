@@ -32,7 +32,6 @@ sv:
               less_than: 'Måste vara mindre än %{count}'
               not_a_number: Var vänlig fyll i ett pris
   add_item: Klicka här för att lägga till den i vår databas.
-  are_you_sure: 'Är du säker på att du vill ta bort %{item}?'
   author_list_help: Ex. Jonas Månsson; Patrik Nordbeck
   buy_info:
     - Sök efter boken du vill köpa

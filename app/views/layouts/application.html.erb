@@ -25,7 +25,7 @@
       <% end %>
     </div>
 
-    <main class="<%= "#{params[:controller]} #{params[:action]}" %>">
+    <main class="<%= params[:controller] %> <%= params[:action] %>">
       <%= yield %>
     </main>
 
@@ -34,6 +34,6 @@
     </footer>
 
     <%= javascript_include_tag 'application' %>
-    <%= javascript_tag render(partial: 'script.js') %>
+    <%= javascript_tag render('script.js') %>
   </body>
 </html>
