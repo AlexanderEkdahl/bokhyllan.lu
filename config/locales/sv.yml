@@ -18,7 +18,7 @@ sv:
       user:
         login: 'STIL-id'
         name: Namn
-        phone: Telefonnummer
+        phone: Nummer
     errors:
       models:
         item:
