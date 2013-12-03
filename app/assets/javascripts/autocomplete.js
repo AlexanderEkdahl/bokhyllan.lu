@@ -1,6 +1,5 @@
 // memoize
 // rate limiting
-// label should be unselectable
 
 var Autocomplete = function(element, menu, index) {
   this.element  = element
@@ -62,29 +61,37 @@ Autocomplete.prototype = {
   },
 
   process: function(_, content) {
-    this.results = content.hits
-    this.show()
+    if (content.query == this.element.value) {
+      this.results = content.hits
+      this.show()
+    }
   },
 
   render: function() {
-    return this.results.map(this.single).join('')
+    return this.results.map(this.single.bind(this)).join('')
   },
 
-  renderLabel: function() {
-    if (this.active == -1 && this.results.length > 0) {
-      name = this.results[0]._highlightResult.name.value
-      if (name.indexOf('<em>') == 0) {
-        return name.replace(/<em>.*<\/em>/g, this.element.value)
+  span: function(item) {
+    span = []
+    list = [item._highlightResult.authors, item._highlightResult.courses]
+
+    for (var i in list) {
+      for (var j in list[i]) {
+        if (list[i][j].matchLevel != 'none') {
+          span.push(list[i][j].value)
+        }
       }
     }
 
-    return ''
+    var element = document.createElement("span")
+    element.innerHTML = span.join(' ')
+    return element.outerHTML
   },
 
   single: function(item) {
     var element = document.createElement("a")
     element.setAttribute("href", item.url)
-    element.innerHTML = item._highlightResult.name.value
+    element.innerHTML = item._highlightResult.name.value + this.span(item)
     return element.outerHTML
   },
 

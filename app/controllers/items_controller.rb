@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
         render 'search_results'
       end
     end
-  rescue Exception
+  rescue Exception #should only catch algolia relevant searches
     render 'not_found'
   end
 

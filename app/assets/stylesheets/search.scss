@@ -52,6 +52,12 @@ $search-padding: 9px;
         margin-top: 0.1em;
         margin-bottom: 0.1em;
 
+        span {
+          display: block;
+          font-size: 0.8em;
+          color: #333;
+        }
+
         em {
           font-style: normal;
           font-weight: bold;

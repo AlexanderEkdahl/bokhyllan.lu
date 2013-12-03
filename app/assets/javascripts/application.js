@@ -1,2 +1,2 @@
-//= require algolia/algoliasearch.min
+//= require algolia/algoliasearch
 //= require_directory
