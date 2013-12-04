@@ -210,9 +210,3 @@ Autocomplete.prototype = {
     this.mousedover = false
   }
 }
-
-window.onload = function() {
-  new Autocomplete(document.getElementById('search'),
-                   document.getElementById('autocomplete'),
-                   algolia_index)
-}
