@@ -62,11 +62,6 @@ GEM
     debugger-ruby_core_source (1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
-    factory_girl (4.3.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.3.0)
-      factory_girl (~> 4.3.0)
-      railties (>= 3.0.0)
     heroku-deflater (0.5.2)
       rack (>= 1.4.5)
     hike (1.2.3)
@@ -168,7 +163,6 @@ DEPENDENCIES
   bourbon
   capybara
   debugger
-  factory_girl_rails
   heroku-deflater
   hipchat
   i18n_yaml_sorter

@@ -17,14 +17,6 @@ module UsersHelper
     end
   end
 
-  def qr(user, item, size = 100)
-    return if user.try(:phone).blank?
-
-    qr_code = "SMS:#{user.phone}:#{t(:sms_buy, name: item.name)}"
-    qr_url  = "http://api.qrserver.com/v1/create-qr-code/?data=#{CGI::escape(qr_code)}&size=#{size}x#{size}"
-    image_tag(qr_url, alt: qr_code, size: size.to_s)
-  end
-
   def user_order_row(order)
     link = [order.item, order]
 

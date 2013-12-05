@@ -21,10 +21,6 @@
       </tr>
     <% end %>
   </table>
-
-  <div class="qr">
-    <%= qr(@order.user, @order.item, 140) %>
-  </div>
 </section>
 
 <% if other_items(@order).any? %>

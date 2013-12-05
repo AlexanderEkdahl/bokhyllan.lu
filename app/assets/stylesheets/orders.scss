@@ -28,25 +28,7 @@
     }
   }
 
-  .contact-information {
-    @include column(3, 4);
-
-    &:last-child {
-      @include column(1);
-    }
-  }
-
-  .qr {
-    text-align: center;
-    @include column(1, 4);
-
-
-    @include mobile {
-      display: none;
-    }
-  }
-
-  .related {
+  .contact-information, .related {
     @include column(1);
   }
 }

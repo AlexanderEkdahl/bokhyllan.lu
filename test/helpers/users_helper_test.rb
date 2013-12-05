@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UsersHelperTest < ActionView::TestCase
   def setup
-    @user = build(:user)
+    @user = users(:dat12sek)
   end
 
   def test_contact_information
