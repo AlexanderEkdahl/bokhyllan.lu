@@ -25,7 +25,7 @@
 
 <% if other_items(@order).any? %>
   <div class="related">
-    <h3><%= t(:other_items, name: @order.user.to_s) %></h3>
+    <h3><%= t(:other_items, name: @order.user.name) %></h3>
 
     <table class="hover">
       <thead>
@@ -38,7 +38,12 @@
       </thead>
       <tbody>
         <% other_items(@order).each do |order| %>
-          <%= order_row(order) %>
+          <tr>
+            <td><%= link_to(order.item.name, [order.item, order]) %></td>
+            <td><%= order.price %>kr</td>
+            <td class="quality"><%= stars(order.quality) %></td>
+            <td><%= link_to("&#xE001;".html_safe, [order.item, order]) %></td>
+          </tr>
         <% end %>
       </tbody>
     </table>

@@ -21,7 +21,6 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'poltergeist'
 end
 
 group :staging, :production do

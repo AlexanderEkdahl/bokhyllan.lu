@@ -1,7 +1,5 @@
 sv:
-  active_sell_order:
-    one: Aktiva annonser
-    other: Aktiva annonser
+  active_sell_order: Aktiva annonser
   activerecord:
     attributes:
       item:

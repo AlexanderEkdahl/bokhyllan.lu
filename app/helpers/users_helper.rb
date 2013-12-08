@@ -16,13 +16,4 @@ module UsersHelper
       yield(t("activerecord.attributes.user.#{key}"), value)
     end
   end
-
-  def user_order_row(order)
-    link = [order.item, order]
-
-    row(link_to(order.item.name, link),
-        link_to("#{order.price}kr", link),
-        link_to(stars(order.quality), link, class: 'quality'),
-        button_to("&#xE002;".html_safe, [order.item, order].compact, method: :delete, class: 'remove'))
-  end
 end

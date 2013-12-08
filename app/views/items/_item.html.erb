@@ -6,7 +6,7 @@
     </tr>
   <% end %>
 
-  <% unless item.courses.empty? %>
+  <% unless item.courses.none? %>
     <tr>
       <td><%= t("activerecord.attributes.item.course_list") %>:</td>
       <td><%= item_courses(item) %></td>

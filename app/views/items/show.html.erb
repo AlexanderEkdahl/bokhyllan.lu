@@ -24,7 +24,12 @@
         </thead>
         <tbody>
           <% @item.orders.each do |order| %>
-            <%= item_order_row(order) %>
+            <tr>
+              <td><%= order.price %>kr</td>
+              <td class="quality"><%= stars(order.quality) %></td>
+              <td><%= order.edition %></td>
+              <td><%= link_to("&#xE001;".html_safe, [@item, order]) %></td>
+            </tr>
           <% end %>
         </tbody>
       </table>

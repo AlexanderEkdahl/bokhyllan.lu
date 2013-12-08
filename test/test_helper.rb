@@ -2,8 +2,6 @@ ENV["RAILS_ENV"] ||= "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 require 'capybara/rails'
-require 'capybara/poltergeist'
-Capybara.javascript_driver = :poltergeist
 
 class ActiveSupport::TestCase
   ActiveRecord::Migration.check_pending!
@@ -14,10 +12,23 @@ end
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
 
-  def set_current_user(user)
-    # Does not work
-    @response.session['cas'] = { 'user' => user.login }
+  fixtures :all
+
+  def visit_and_sign_in(link, login = users(:dat12sek).login)
+    visit(link)
+    fill_in('username', with: login)
+    fill_in('password', with: '')
+    click_button('Login')
   end
 
-  fixtures :all
+  def sign_in(login = users(:dat12sek).login)
+    click_on('Logga in')
+    fill_in('username', with: login)
+    fill_in('password', with: '')
+    click_button('Login')
+  end
+
+  def teardown
+    click_on('Logga ut') if page.has_content?('Logga ut')
+  end
 end

@@ -1,8 +1,8 @@
-<% title current_user.to_s %>
+<% title current_user.name %>
 <% noindex %>
 
-<% unless current_user.orders.empty? %>
-  <h1><%= t(:active_sell_order, count: current_user.orders.count) %></h1>
+<% unless current_user.orders.none? %>
+  <h1><%= t(:active_sell_order) %></h1>
 
   <table class="hover">
     <thead>
@@ -15,7 +15,12 @@
     </thead>
     <tbody>
       <% current_user.orders.each do |order| %>
-        <%= user_order_row(order) %>
+        <tr>
+          <td><%= link_to(order.item.name, [order.item, order]) %></td>
+          <td><%= order.price %>kr</td>
+          <td class="quality"><%= stars(order.quality) %></td>
+          <td><%= button_to("&#xE002;".html_safe, [order.item, order], method: :delete, class: 'remove') %></td>
+        </tr>
       <% end %>
     </tbody>
   </table>

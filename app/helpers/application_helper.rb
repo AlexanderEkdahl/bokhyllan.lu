@@ -1,10 +1,4 @@
 module ApplicationHelper
-  def row(*values)
-    content_tag(:tr) do
-      values.map { |x| content_tag(:td, x) }.join.html_safe
-    end
-  end
-
   def standard_form_for(name, *args, &block)
     options = args.extract_options!
 
