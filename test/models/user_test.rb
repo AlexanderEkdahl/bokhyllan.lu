@@ -15,7 +15,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal('login@student.lu.se', @user.email)
   end
 
-  def test_to_s
+  def test_name
     @user.name = ''
     assert_equal(@user.name, @user.email)
     @user.name = 'Einstein'
