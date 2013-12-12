@@ -113,8 +113,6 @@ Autocomplete.prototype = {
     } else {
       this.element.value = this.results[this.active].name
     }
-
-    // this.clearLabel()
   },
 
   next: function() {
@@ -137,8 +135,8 @@ Autocomplete.prototype = {
     this.element.onfocus   = this.focus.bind(this)
     this.element.onblur    = this.blur.bind(this)
 
-    this.menu.onmouseenter = this.mouseenter.bind(this)
-    this.menu.onmouseleave = this.mouseleave.bind(this)
+    this.menu.onmouseover = this.mouseenter.bind(this)
+    this.menu.onmouseout = this.mouseleave.bind(this)
   },
 
   keyup: function (e) {

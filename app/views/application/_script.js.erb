@@ -1,9 +1,10 @@
-var algolia_index = new AlgoliaSearch('<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>', '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>').initIndex('<%= Item.index_name %>');
+var algolia_index = new AlgoliaSearch('<%= ENV['ALGOLIASEARCH_APPLICATION_ID'] %>', '<%= ENV['ALGOLIASEARCH_API_KEY_SEARCH'] %>')
+  .initIndex('<%= Item.index_name %>');
 
 window.onload = function() {
   new Autocomplete(document.getElementById('search'),
                    document.getElementById('autocomplete'),
-                   algolia_index)
+                   algolia_index);
 
   <% if Rails.env.production? %>
     stathat("NDQ4NSBW7QWqavgjKeFxuVQycGWZ", "6o8B6U-GWff6cf9RMmR7ySBJYnRm");
