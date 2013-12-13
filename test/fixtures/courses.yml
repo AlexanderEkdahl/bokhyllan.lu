@@ -11,6 +11,10 @@ FMAA01:
     - MD1
     - N1
 
+FMA645:
+  name: Endimensionell analys
+  code: FMA645
+
 EDA260:
   name: Programvaruutveckling i grupp – projekt
   code: EDA260

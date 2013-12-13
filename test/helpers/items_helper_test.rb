@@ -3,6 +3,7 @@ require 'test_helper'
 class ItemsHelperTest < ActionView::TestCase
   def setup
     @pvg = items(:pvg)
+    @endim = items(:endim)
   end
 
   def test_item_tags
@@ -11,6 +12,7 @@ class ItemsHelperTest < ActionView::TestCase
 
   def test_item_courses
     assert_equal "EDA260 - Programvaruutveckling i grupp – projekt", item_courses(@pvg)
+    assert_equal "FMAA01 - Endimensionell analys<br>FMA645 - Endimensionell analys", item_courses(@endim)
   end
 
   def test_item_programs

@@ -1,6 +1,8 @@
 endim:
   name: Endimensionell Analys
-  courses: FMAA01
+  courses:
+    - FMAA01
+    - FMA645
 
 pvg:
   name: Extreme Programming Pocket Guide
