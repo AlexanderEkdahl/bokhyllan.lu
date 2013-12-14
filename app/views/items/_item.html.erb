@@ -2,7 +2,7 @@
   <% unless item.authors.empty? %>
     <tr>
       <td><%= t("activerecord.attributes.item.author_list") %>:</td>
-      <td><%= item.authors.to_sentence %></td>
+      <td><%= item_authors(item) %></td>
     </tr>
   <% end %>
 
@@ -17,13 +17,6 @@
     <tr>
       <td><%= t("activerecord.attributes.item.program_list") %>:</td>
       <td><%= item_programs(item) %></td>
-    </tr>
-  <% end %>
-
-  <% unless item.isbn.blank? %>
-    <tr>
-      <td><%= t("activerecord.attributes.item.isbn") %>:</td>
-      <td><%= item.isbn %></td>
     </tr>
   <% end %>
 

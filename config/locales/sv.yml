@@ -5,7 +5,6 @@ sv:
       item:
         author_list: Författare
         course_list: Kurser
-        isbn: ISBN
         name: Namn
         program_list: Program
         tag_list: Taggar

@@ -2,7 +2,7 @@
 
 <% @items.each do |item| %>
   <%= link_to(item, class: 'result') do %>
-    <h2><%= item.name %></h2>
+    <h2><%= item_name(item) %></h2>
     <%= render item %>
   <% end %>
 <% end %>

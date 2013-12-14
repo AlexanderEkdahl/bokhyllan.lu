@@ -4,7 +4,7 @@ class Item < ActiveRecord::Base
   algoliasearch per_environment: true do
     attribute :name, :tags, :authors
     attribute :courses do
-      courses.map { |course| "#{course.code} - #{course.name}" }
+      courses.map(&:to_s) #maybe not neccessary
     end
     attribute :url do
       Rails.application.routes.url_helpers.item_path(self)
