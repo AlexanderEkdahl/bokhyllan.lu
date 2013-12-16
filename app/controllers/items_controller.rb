@@ -11,7 +11,10 @@ class ItemsController < ApplicationController
       when 0
         render 'not_found'
       when 1
-        redirect_to(@items.first)
+        item = @items.first
+
+        session[:highlight_result] = item.highlight_result
+        redirect_to(item)
       else
         render 'search_results'
       end
@@ -56,7 +59,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item  = Item.find(params[:id])
+    @item = Item.find(params[:id])
+    @item.highlight_result = session.delete(:highlight_result)
     @order = @item.orders.build
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path(search: Item.from_param(params[:id]))
