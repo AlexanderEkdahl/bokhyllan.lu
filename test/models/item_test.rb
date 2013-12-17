@@ -48,4 +48,9 @@ class ItemTest < ActiveSupport::TestCase
     assert @item.courses.include?(courses(:FMAA01))
     assert_equal "FMAA01", @item.course_list
   end
+
+  def test_item_from_param
+    assert_equal "endimensionell analys", Item.from_param('223-endimensionell-analys')
+    assert_equal "", Item.from_param('32')
+  end
 end

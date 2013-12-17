@@ -2,21 +2,16 @@ class Item < ActiveRecord::Base
   include AlgoliaSearch
 
   algoliasearch per_environment: true do
-    attribute :name, :tags, :authors
+    attribute :name, :tags, :authors, :url, :orders_count
     attribute :courses do
-      courses.map(&:to_s) #maybe not neccessary
-    end
-    attribute :url do
-      Rails.application.routes.url_helpers.item_path(self)
-    end
-    attribute :orders_count do
-      self.orders.count
+      courses.map(&:to_s)
     end
 
     hitsPerPage 5
     queryType :prefixAll
     customRanking ['desc(orders_count)']
     attributesToIndex [:name, :tags, :authors, :courses]
+    separatorsToIndex '+'
   end
 
   after_touch :index!
@@ -59,6 +54,14 @@ class Item < ActiveRecord::Base
   # should try to inverse the result of to_param
   def self.from_param(x)
     x.scan(/\w+/)[1..-1].join(' ')
+  end
+
+  def url
+    Rails.application.routes.url_helpers.item_path(self)
+  end
+
+  def orders_count
+    orders.count
   end
 
   def self.merge(from_id, to_id)
