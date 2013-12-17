@@ -6,3 +6,4 @@
 /public/assets/
 *.txt
 Procfile.dev
+/coverage

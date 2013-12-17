@@ -21,6 +21,7 @@ end
 group :test do
   gem 'capybara'
   gem 'webmock'
+  gem 'simplecov', require: false
 end
 
 group :staging, :production do

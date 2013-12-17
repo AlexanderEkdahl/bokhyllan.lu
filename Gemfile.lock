@@ -54,6 +54,7 @@ GEM
       debugger-ruby_core_source (~> 1.2.4)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.4)
+    docile (1.1.1)
     erubis (2.7.0)
     execjs (2.0.2)
     heroku-deflater (0.5.2)
@@ -118,6 +119,11 @@ GEM
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
+    simplecov (0.8.2)
+      docile (~> 1.1.0)
+      multi_json
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -164,5 +170,6 @@ DEPENDENCIES
   rails (= 4.0)
   rails_12factor
   sass-rails
+  simplecov
   uglifier
   webmock
