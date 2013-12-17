@@ -1,17 +1,15 @@
 <%= search_bar(title @order.item.name) %>
 <% noindex %>
 
+<%= render @order.item %>
+
 <section>
+  <h2><%= t(:contact_information) %></h2>
+
   <div class="hero">
     <span class="price"><%= @order.price %></span>kr<br>
     <span class="stars"><%= stars(@order.quality) %></span>
   </div>
-
-  <%= render @order.item %>
-</section>
-
-<section>
-  <h2><%= t(:contact_information) %></h2>
 
   <table class="contact-information">
     <% contact_information_with_keys(@order.user) do |key, value| %>

@@ -1,4 +1,30 @@
 .items.show, .orders.create {
+  .list {
+    padding-right: 2rem;
+  }
+
+  .new-order {
+    padding-left: 2rem;
+  }
+
+  .list, .new-order {
+    @include column(1, 2);
+
+    @include mobile {
+      @include column(1);
+      padding: 0;
+      text-align: center;
+    }
+  }
+
+  .new-order {
+    @include mobile {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.item {
   .properties {
     @include column(1);
   }
@@ -22,30 +48,6 @@
 
     @include mobile {
       @include column(1);
-    }
-  }
-
-  .list {
-    padding-right: 2rem;
-  }
-
-  .new-order {
-    padding-left: 2rem;
-  }
-
-  .list, .new-order {
-    @include column(1, 2);
-
-    @include mobile {
-      @include column(1);
-      padding: 0;
-      text-align: center;
-    }
-  }
-
-  .new-order {
-    @include mobile {
-      margin-top: 0.5rem;
     }
   }
 }

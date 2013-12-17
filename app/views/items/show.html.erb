@@ -1,14 +1,6 @@
 <%= search_bar(title @item.name) %>
 
-<section>
-  <% unless @item.image.blank? %>
-    <div class="image">
-      <%= image_tag(@item.image, width: "128", height: "170") %>
-    </div>
-  <% end %>
-
-  <%= render @item %>
-</section>
+<%= render @item %>
 
 <section>
   <div class="list">

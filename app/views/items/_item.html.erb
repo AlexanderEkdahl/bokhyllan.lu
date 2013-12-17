@@ -1,29 +1,37 @@
-<table class="properties">
-  <% unless item.authors.empty? %>
-    <tr>
-      <td><%= t("activerecord.attributes.item.author_list") %>:</td>
-      <td><%= item_authors(item) %></td>
-    </tr>
+<section class="item">
+  <% unless item.image.blank? %>
+    <div class="image">
+      <%= image_tag(item.image, width: "128", height: "170") %>
+    </div>
   <% end %>
 
-  <% unless item.courses.none? %>
-    <tr>
-      <td><%= t("activerecord.attributes.item.course_list") %>:</td>
-      <td><%= item_courses(item) %></td>
-    </tr>
-  <% end %>
+  <table class="properties">
+    <% unless item.authors.empty? %>
+      <tr>
+        <td><%= t("activerecord.attributes.item.author_list") %>:</td>
+        <td><%= item_authors(item) %></td>
+      </tr>
+    <% end %>
 
-  <% unless item_programs(item).blank? %>
-    <tr>
-      <td><%= t("activerecord.attributes.item.program_list") %>:</td>
-      <td><%= item_programs(item) %></td>
-    </tr>
-  <% end %>
+    <% unless item.courses.none? %>
+      <tr>
+        <td><%= t("activerecord.attributes.item.course_list") %>:</td>
+        <td><%= item_courses(item) %></td>
+      </tr>
+    <% end %>
 
-  <% unless item.tags.empty? %>
-    <tr>
-      <td><%= t("activerecord.attributes.item.tag_list") %>:</td>
-      <td><%= item_tags(item) %></td>
-    </tr>
-  <% end %>
-</table>
+    <% unless item_programs(item).blank? %>
+      <tr>
+        <td><%= t("activerecord.attributes.item.program_list") %>:</td>
+        <td><%= item_programs(item) %></td>
+      </tr>
+    <% end %>
+
+    <% unless item.tags.empty? %>
+      <tr>
+        <td><%= t("activerecord.attributes.item.tag_list") %>:</td>
+        <td><%= item_tags(item) %></td>
+      </tr>
+    <% end %>
+  </table>
+</section>

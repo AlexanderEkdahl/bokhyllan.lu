@@ -28,7 +28,16 @@
     }
   }
 
-  .contact-information, .related {
+  .contact-information {
+    @extend .properties;
+    @include column(2, 3);
+
+    @include mobile {
+      @include column(1);
+    }
+  }
+
+  .related {
     @include column(1);
   }
 }
