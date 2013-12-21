@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
   rescue ActiveRecord::RecordNotFound
+    # should notify user that it has been removed
     redirect_to root_path(search: Item.from_param(params[:item_id]))
   end
 
@@ -24,7 +25,7 @@ class OrdersController < ApplicationController
 
     # unauthenticate unless @order.user == current_user for prettier errors and less code
     if @order.user == current_user
-      @order.destroy
+      @order.archive
 
       redirect_to(user_path, success: t(:order_destroyed))
     end

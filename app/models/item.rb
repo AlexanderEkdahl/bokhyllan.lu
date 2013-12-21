@@ -60,8 +60,9 @@ class Item < ActiveRecord::Base
     Rails.application.routes.url_helpers.item_path(self)
   end
 
+  # count number of orders, include archived orders for better algolia ranking
   def orders_count
-    orders.count
+    orders.unscoped.where(item: self).count
   end
 
   def self.merge(from_id, to_id)

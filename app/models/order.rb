@@ -7,5 +7,9 @@ class Order < ActiveRecord::Base
   validates :user_id, presence: true
   validates :edition, length: { maximum: 25 }
 
-  default_scope { order('price ASC, quality DESC') }
+  default_scope { where(archived: false).order('price ASC, quality DESC') }
+
+  def archive
+    self.update(archived: true)
+  end
 end

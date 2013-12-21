@@ -24,7 +24,7 @@ class StandardForm < ActionView::Helpers::FormBuilder
   end
 
   def price
-    telephone_field(:price)
+    telephone_field(:price, autocomplete: :off)
   end
 
   def quality
