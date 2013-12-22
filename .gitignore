@@ -2,7 +2,7 @@
 /.bundle
 /log
 /tmp
-.env
+.envrc
 /public/assets/
 *.txt
 Procfile.dev
