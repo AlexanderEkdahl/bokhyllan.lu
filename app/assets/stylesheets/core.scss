@@ -1,13 +1,6 @@
-@font-face {
-  font-family: 'Bokhyllan';
-  font-style: normal;
-  font-weight: 100;
-  src: font-url('Bokhyllan-ExtraLight.otf');
-}
-
 body {
   border-top: 3px solid $main_color;
-  font-family: Bokhyllan, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 a {
@@ -22,11 +15,11 @@ a {
 
 em {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 th, input, body, h1, h2, h3 {
-  font-weight: 100;
+  font-weight: 200;
 }
 
 * {

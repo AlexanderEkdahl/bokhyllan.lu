@@ -53,7 +53,7 @@ sv:
   must_be_signed_in_to_sell: 'Du måste vara inloggad för att sälja %{item}.'
   new_item: Ny bok
   no_hit: Hittar du inte vad du söker?
-  no_one_is_selling: 'Ingen säljer för närvarande %{name}.'
+  no_one_is_selling: 'Ingen säljer %{name}.'
   not_found: '%{query} hittades ej.'
   order_created: 'Annons inlagd'
   order_destroyed: 'Annons borttagen'

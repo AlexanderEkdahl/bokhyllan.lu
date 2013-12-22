@@ -21,18 +21,12 @@ $search-padding: 0.25em;
   }
 
   input[type="submit"] {
+    @include search;
     height: $search-height;
     float: right;
     color: #ccc;
-    right: 0;
-    padding: 0;
-    padding-right: $search-padding;
+    right: $search-padding;
     background-color: white;
-    @include transition(400ms color);
-
-    &:hover {
-      color: black;
-    }
   }
 
   & + div {

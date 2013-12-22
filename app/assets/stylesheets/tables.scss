@@ -27,20 +27,32 @@ table {
   }
 
   .remove {
-    @include transition(color 400ms, text-shadow 400ms);
+    @include thrash;
 
     &:hover {
-      text-shadow: 0px 0px 3px rgba(255, 0, 0, 0.6);
-      color: red;
+      @include thrash_red;
     }
+  }
+
+  .arrow {
+    @include arrow;
   }
 
   &.hover tbody {
     tr {
       @include transition(400ms background-color);
 
+      .arrow {
+        @include transition-property(transform);
+        @include transition-duration(400ms);
+      }
+
       &:hover {
         background-color: rgb(245, 245, 245);
+
+        .arrow {
+          @include transform(translateX(10px));
+        }
       }
     }
   }

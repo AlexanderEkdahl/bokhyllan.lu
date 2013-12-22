@@ -40,7 +40,7 @@
             <td><%= link_to(order.item.name, [order.item, order]) %></td>
             <td><%= order.price %>kr</td>
             <td class="quality"><%= stars(order.quality) %></td>
-            <td><%= link_to("&#xE001;".html_safe, [order.item, order]) %></td>
+            <td><%= link_to('', [order.item, order], class: 'arrow') %></td>
           </tr>
         <% end %>
       </tbody>
