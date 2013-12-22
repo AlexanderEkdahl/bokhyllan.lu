@@ -6,7 +6,7 @@ class NewOrderFlowTest < ActionDispatch::IntegrationTest
 
     visit(item_path(item))
 
-    assert(page.has_content?('Ingen säljer för närvarande Linux Kernel Development.'))
+    assert(page.has_content?('Ingen säljer Linux Kernel Development.'))
     assert(page.has_content?('Du måste vara inloggad för att sälja Linux Kernel Development.'))
 
     sign_in
@@ -21,5 +21,10 @@ class NewOrderFlowTest < ActionDispatch::IntegrationTest
 
     assert(page.has_content?('50kr'))
     assert(page.has_content?('Den röda'))
+
+    visit(user_path)
+    assert(page.has_content?('Aktiva annonser'))
+    assert(page.has_content?('Linux Kernel Development'))
+    assert(page.has_content?('50kr'))
   end
 end
