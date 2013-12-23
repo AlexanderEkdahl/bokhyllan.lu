@@ -65,10 +65,8 @@ sv:
     - Logga in med ditt STIL-id
     - Ange ditt pris och kvaliteten på boken
   settings_updated_successful: Kontaktinformationen sparades.
-  show: Visa
   sign_in: Logga in
   sign_out: Logga ut
-  sms_buy: "Hej!\nJag är intresserad av att köpa ditt exemplar av %{name}."
   support:
     array:
       last_word_connector: ' och '
