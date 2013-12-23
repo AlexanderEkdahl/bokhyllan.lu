@@ -17,7 +17,7 @@ $search-padding: 0.25em;
 
   input[type="text"] {
     width: 100%;
-    padding: 0 0 0 $search-padding;
+    padding: 0 $search-padding 0 $search-padding;
   }
 
   input[type="submit"] {
@@ -25,8 +25,14 @@ $search-padding: 0.25em;
     height: $search-height;
     float: right;
     color: #ccc;
-    right: $search-padding;
+    right: 0;
+    margin-right: $search-padding;
+    padding: 0;
     background-color: white;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   & + div {
@@ -36,7 +42,7 @@ $search-padding: 0.25em;
     div {
       position: absolute;
       width: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: white;
 
       a {
         display: block;
