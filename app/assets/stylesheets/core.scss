@@ -1,6 +1,7 @@
 body {
   border-top: 3px solid $main_color;
   font-family: 'Source Sans Pro', sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
 a {
