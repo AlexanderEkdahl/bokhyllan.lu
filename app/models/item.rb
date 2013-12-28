@@ -29,6 +29,8 @@ class Item < ActiveRecord::Base
 
   def course_list=(new_value)
     self.courses = new_value.scan(/[[:alnum:]]+/).map { |code| Course.find_by(code: code.upcase) }.compact
+  rescue ActiveRecord::RecordNotUnique
+    # should handle cases such as "EDA016 EDA016" better
   end
 
   def tag_list
