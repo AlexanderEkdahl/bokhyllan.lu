@@ -8,7 +8,7 @@ Your privacy is honored and information won't be shared with those who do not ne
 
 ###OSX/Linux
 
-Dependencies: PostgreSQL, Ruby 2.0, Bundler,
+Dependencies: PostgreSQL, Ruby 2.0, Bundler
 
     ARCHFLAGS="-arch x86_64" gem install pg
     bundle install
