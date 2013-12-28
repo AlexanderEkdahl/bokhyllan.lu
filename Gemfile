@@ -12,6 +12,7 @@ gem 'uglifier'
 gem 'hipchat'
 gem 'rack-cas'
 gem 'algoliasearch-rails'
+gem 'appsignal'
 
 group :development, :test do
   gem 'debugger'
