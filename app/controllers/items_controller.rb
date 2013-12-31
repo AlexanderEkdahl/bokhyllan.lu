@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @item  = Item.new(name: params[:name] || nil)
+    @item = Item.new(name: params[:name] || nil)
     @order = @item.orders.build
   end
 
@@ -42,12 +42,12 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    @item  = Item.find(params[:id])
+    @item = Item.find(params[:id])
     @order = @item.orders.find_by(user: current_user)
   end
 
   def update
-    @item  = Item.find(params[:id])
+    @item = Item.find(params[:id])
     @order = @item.orders.find_by(user: current_user)
 
     if @item.update(item_params)
