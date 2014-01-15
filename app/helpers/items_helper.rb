@@ -28,4 +28,8 @@ module ItemsHelper
   def item_name(item)
     item_highlight(item, :name)
   end
+
+  def item_keywords(item)
+    keywords(item.courses.pluck(:code, :name).flatten.uniq + t(:default_tags))
+  end
 end
