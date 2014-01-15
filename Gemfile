@@ -18,6 +18,7 @@ group :development, :test do
   gem 'debugger'
   gem 'i18n_yaml_sorter'
   gem 'spring'
+  gem 'quiet_assets'
 end
 
 group :test do
