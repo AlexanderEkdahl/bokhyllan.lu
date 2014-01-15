@@ -1,4 +1,6 @@
 module NavigationHelper
+  HIPCHAT = "https://www.hipchat.com/grR40Vhv6"
+
   def nav(*links)
     links.compact.join(' &middot; ').html_safe
   end
@@ -19,8 +21,12 @@ module NavigationHelper
     link_to(current_user.login, user_path) if signed_in? and not controller?('users')
   end
 
+  def about
+    link_to(t(:about), about_path)
+  end
+
   def support
-    link_to(t(:support_feedback), 'https://www.hipchat.com/grR40Vhv6')
+    link_to(t(:support_feedback), HIPCHAT)
   end
 
   def edit

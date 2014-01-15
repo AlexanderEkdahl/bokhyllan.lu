@@ -10,6 +10,7 @@ Bokhyllan::Application.routes.draw do
   end
 
   get 'sitemap', to: 'application#sitemap', format: :xml
+  get 'about', to: 'application#about'
 
   root 'items#index'
 end

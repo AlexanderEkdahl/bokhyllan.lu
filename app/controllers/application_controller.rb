@@ -8,4 +8,7 @@ class ApplicationController < ActionController::Base
   def sitemap
     @items = Item.all
   end
+
+  def about
+  end
 end

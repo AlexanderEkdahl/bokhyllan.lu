@@ -1,4 +1,5 @@
 sv:
+  about: Om oss
   active_sell_order: Aktiva annonser
   activerecord:
     attributes:
@@ -41,6 +42,7 @@ sv:
     - sälj
     - lund
     - kurslitteratur
+    - lth
   description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad studentlitteratur till bästa möjliga pris.
   edit_item: Redigera bok
   edition_help: 'Utgåva eller utgivningsår'
