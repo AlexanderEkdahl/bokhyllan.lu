@@ -11,7 +11,6 @@ gem 'uglifier'
 gem 'hipchat'
 gem 'rack-cas'
 gem 'algoliasearch-rails'
-gem 'appsignal'
 
 group :development, :test do
   gem 'debugger'
@@ -27,6 +26,7 @@ group :test do
 end
 
 group :staging, :production do
+  gem 'appsignal'
   gem 'puma'
   gem 'rails_12factor'
   gem 'heroku-deflater'

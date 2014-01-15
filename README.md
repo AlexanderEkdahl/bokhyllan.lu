@@ -9,7 +9,7 @@
 Dependencies: PostgreSQL, Ruby 2.0, Bundler
 
     ARCHFLAGS="-arch x86_64" gem install pg
-    bundle install
+    bundle install --without production staging
     postgres -D /usr/local/var/postgres
     rails s
 
