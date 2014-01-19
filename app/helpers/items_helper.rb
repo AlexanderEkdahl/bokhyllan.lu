@@ -34,7 +34,7 @@ module ItemsHelper
   end
 
   def generate_item_description(item)
-    val = "#{t("activerecord.attributes.item.author_list")}: #{item.authors.to_sentence}, " +
+    val = "#{t("activerecord.attributes.item.author_list")}: #{item.authors.join(' ')}, " +
           "#{t("activerecord.attributes.item.course_list")}: #{item.courses.map(&:to_s).join(' ')}"
     description(truncate(val, length: 150))
   end

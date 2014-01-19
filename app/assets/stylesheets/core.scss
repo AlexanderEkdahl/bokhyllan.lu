@@ -2,6 +2,7 @@ body {
   border-top: 3px solid $main_color;
   font-family: 'Source Sans Pro', sans-serif;
   text-rendering: optimizeLegibility;
+  @include prefixer(hyphens, auto, webkit moz ms spec);
 }
 
 a {

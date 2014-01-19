@@ -3,6 +3,7 @@ $search-padding: 0.25em;
 
 .search {
   @include clearfix();
+  @include prefixer(hyphens, none, webkit moz ms spec);
   padding-top: $search-padding;
   padding-bottom: $search-padding;
   width: 100%;
