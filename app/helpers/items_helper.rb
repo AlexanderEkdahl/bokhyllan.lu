@@ -29,7 +29,13 @@ module ItemsHelper
     item_highlight(item, :name)
   end
 
-  def item_keywords(item)
+  def generate_item_keywords(item)
     keywords(item.courses.pluck(:code, :name).flatten.uniq + t(:default_tags))
+  end
+
+  def generate_item_description(item)
+    val = "#{t("activerecord.attributes.item.author_list")}: #{item.authors.to_sentence}, " +
+          "#{t("activerecord.attributes.item.course_list")}: #{item.courses.map(&:to_s).join(' ')}"
+    description(truncate(val, length: 150))
   end
 end

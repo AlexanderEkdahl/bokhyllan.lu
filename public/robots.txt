@@ -1,6 +1,6 @@
 # robotstxt.org/
 
-Sitemap: /sitemap.xml
+Sitemap: http://bokhyllan.lu/sitemap.xml
 
 User-agent: *
 Disallow: /user

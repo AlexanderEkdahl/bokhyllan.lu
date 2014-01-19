@@ -1,5 +1,6 @@
 <%= search_bar(title @item.name) %>
-<% item_keywords(@item) %>
+<% generate_item_keywords(@item) %>
+<% generate_item_description(@item) %>
 
 <%= render @item %>
 

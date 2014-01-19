@@ -37,13 +37,14 @@ sv:
     - Kontakta säljaren
   contact_information: Kontaktinformation
   course_list_help: Ex. FMA645; FMAA01; FMAA05
+  default_description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad kurslitteratur till bästa möjliga pris.
   default_tags:
     - köp
     - sälj
     - lund
     - kurslitteratur
     - lth
-  description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad kurslitteratur till bästa möjliga pris.
+    - bokyhyllan
   edit_item: Redigera bok
   edition_help: 'Utgåva eller utgivningsår'
   helpers:
