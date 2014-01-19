@@ -92,6 +92,9 @@ GEM
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
+    rack-canonical-host (0.0.8)
+      addressable
+      rack (~> 1.0)
     rack-cas (0.8.1)
       addressable (>= 2.3)
       nokogiri
@@ -172,6 +175,7 @@ DEPENDENCIES
   pg
   puma
   quiet_assets
+  rack-canonical-host
   rack-cas
   rails (= 4.0)
   rails_12factor

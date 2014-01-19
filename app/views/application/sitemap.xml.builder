@@ -6,7 +6,6 @@ xml.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") do
       xml.loc item_url(item)
       xml.lastmod item.updated_at.strftime("%F")
       xml.changefreq("weekly")
-      xml.priority("0.8")
     end
   end
 end

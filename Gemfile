@@ -30,4 +30,5 @@ group :staging, :production do
   gem 'puma'
   gem 'rails_12factor'
   gem 'heroku-deflater'
+  gem 'rack-canonical-host'
 end
