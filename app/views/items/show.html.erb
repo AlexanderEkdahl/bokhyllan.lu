@@ -23,7 +23,7 @@
               <td class="quality"><%= stars(order.quality) %></td>
               <td><%= order.edition %></td>
               <td>
-                <% if order.user_id == current_user.id %>
+                <% if signed_in? and order.user_id == current_user.id %>
                   <%= order_remove_button(order) %>
                 <% else %>
                   <%= link_to('', [@item, order], class: 'arrow') %>
