@@ -22,7 +22,13 @@
               <td><%= order.price %>kr</td>
               <td class="quality"><%= stars(order.quality) %></td>
               <td><%= order.edition %></td>
-              <td><%= link_to('', [@item, order], class: 'arrow') %></td>
+              <td>
+                <% if order.user_id == current_user.id %>
+                  <%= button_to('', [order.item, order], method: :delete, class: 'remove') %>
+                <% else %>
+                  <%= link_to('', [@item, order], class: 'arrow') %>
+                <% end %>
+              </td>
             </tr>
           <% end %>
         </tbody>
