@@ -35,6 +35,7 @@ sv:
     - Sök efter boken du vill köpa
     - Välj annons efter önskat pris och kvalitet
     - Kontakta säljaren
+  confirm_order_removal: Är du säker på att du vill ta bort denna annons?
   contact_information: Kontaktinformation
   course_list_help: Ex. FMA645; FMAA01; FMAA05
   default_description: Bokyhyllan.lu gör det enkelt att köpa och sälja begagnad kurslitteratur till bästa möjliga pris.

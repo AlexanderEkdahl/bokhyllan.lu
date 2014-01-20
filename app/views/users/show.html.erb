@@ -19,7 +19,7 @@
           <td><%= link_to(order.item.name, order.item) %></td>
           <td><%= order.price %>kr</td>
           <td class="quality"><%= stars(order.quality) %></td>
-          <td><%= button_to('', [order.item, order], method: :delete, class: 'remove') %></td>
+          <td><%= order_remove_button(order) %></td>
         </tr>
       <% end %>
     </tbody>

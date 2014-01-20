@@ -24,7 +24,7 @@
               <td><%= order.edition %></td>
               <td>
                 <% if order.user_id == current_user.id %>
-                  <%= button_to('', [order.item, order], method: :delete, class: 'remove') %>
+                  <%= order_remove_button(order) %>
                 <% else %>
                   <%= link_to('', [@item, order], class: 'arrow') %>
                 <% end %>
