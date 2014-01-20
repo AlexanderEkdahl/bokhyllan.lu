@@ -51,7 +51,7 @@ table {
         background-color: rgb(245, 245, 245);
 
         .arrow {
-          @include transform(translateX(10px));
+          @include transform(translateX(6px));
         }
       }
     }
