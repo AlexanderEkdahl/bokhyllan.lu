@@ -22,7 +22,7 @@ module NavigationHelper
   end
 
   def about
-    link_to(t(:about), about_path)
+    link_to(t(:about), about_path) unless current_page?(about_path)
   end
 
   def support
