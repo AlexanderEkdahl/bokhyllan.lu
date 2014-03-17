@@ -1,6 +1,6 @@
 sv:
   about: Om oss
-  active_sell_order: Aktiva annonser
+  active_sell_order: Dina annonser
   activerecord:
     attributes:
       item:

@@ -23,12 +23,10 @@ class OrdersController < ApplicationController
   def destroy
     @order = Order.find(params[:id])
 
-    # unauthenticate unless @order.user == current_user for prettier errors and less code
-    if @order.user == current_user
-      @order.archive
+    unauthenticate unless @order.user == current_user
 
-      redirect_to(user_path, success: t(:order_destroyed))
-    end
+    @order.archive
+    redirect_to(user_path, success: t(:order_destroyed))
   end
 
   private

@@ -23,7 +23,7 @@ class NewOrderFlowTest < ActionDispatch::IntegrationTest
     assert(page.has_content?('Den röda'))
 
     visit(user_path)
-    assert(page.has_content?('Aktiva annonser'))
+    assert(page.has_content?('Dina annonser'))
     assert(page.has_content?('Linux Kernel Development'))
     assert(page.has_content?('50kr'))
   end

@@ -17,7 +17,11 @@ module Authentication
     @current_user ||= User.find_or_create_by(login: cas['user']) if signed_in?
   end
 
+  def unauthenticate
+    head status: :unauthorized
+  end
+
   def authenticate
-    head status: :unauthorized unless signed_in?
+    unauthenticate unless signed_in?
   end
 end
