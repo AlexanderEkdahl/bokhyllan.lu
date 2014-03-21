@@ -5,11 +5,10 @@ footer {
   color: #aaa;
 
   a {
-    color: #aaa !important;
     @include transition(400ms color);
 
     &:hover {
-      color: black !important;
+      color: black;
     }
   }
 }

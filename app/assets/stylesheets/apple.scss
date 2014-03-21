@@ -1,0 +1,17 @@
+html.apple {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+
+  @include mobile {
+    font-weight: 200;
+  }
+
+  em {
+    font-weight: 200;
+
+    @include mobile {
+      font-weight: 300;
+    }
+  }
+}

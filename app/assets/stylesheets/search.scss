@@ -1,5 +1,6 @@
 $search-height: 1.25em;
 $search-padding: 0.25em;
+$color: #ccc;
 
 .search {
   @include clearfix();
@@ -7,7 +8,7 @@ $search-padding: 0.25em;
   padding-top: $search-padding;
   padding-bottom: $search-padding;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid $color;
   position: relative;
   height: $search-height + $search-padding * 2;
   font-size: 1.5em;
@@ -25,7 +26,7 @@ $search-padding: 0.25em;
     @include search;
     height: $search-height;
     float: right;
-    color: #ccc;
+    color: $color;
     right: 0;
     margin-right: $search-padding;
     padding: 0;

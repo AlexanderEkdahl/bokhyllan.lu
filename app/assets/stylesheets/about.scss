@@ -1,11 +1,10 @@
 .application.about {
   & > div {
     text-align: justify;
-    font-size: 0.9em;
     @include prefixer(hyphens, none, webkit moz ms spec);
 
     a {
-      text-decoration: underline;
+      border-bottom: 1px solid black;
     }
   }
 }

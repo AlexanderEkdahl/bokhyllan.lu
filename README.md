@@ -1,8 +1,6 @@
 #Bokhyllan.lu
 
-##Getting started
-
-###Nitrous.io
+##Setup
 
 ###OSX/Linux
 
@@ -18,6 +16,11 @@ Dependencies: PostgreSQL, Ruby 2.0, Bundler
 Don't even bother. Use Nitrous.io instead
 
 ##Production
+
+###Updating remote
+
+    git push origin master # Codeship keeps origin master in sync with staging
+    heroku pipeline:promote --app bokhyllan-staging
 
 ###Pulling the database from Heroku
 

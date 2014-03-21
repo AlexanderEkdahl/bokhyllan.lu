@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<%= I18n.locale %>">
+<html lang="<%= I18n.locale %>" class="<%= user_agent %>">
   <head>
     <meta charset="utf-8">
     <%= display_meta_tags(site: 'Bokhyllan.lu', separator: '&middot;'.html_safe, reverse: true, keywords: t(:default_tags), description: t(:default_description)) %>
@@ -26,7 +26,7 @@
       <% end %>
     </div>
 
-    <main class="<%= params[:controller] %> <%= params[:action] %>">
+    <main class="<%= params[:controller] %> <%= params[:action] %> <%= root? %>">
       <%= yield %>
     </main>
 

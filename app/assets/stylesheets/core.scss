@@ -1,17 +1,22 @@
+html {
+  @include prefixer(hyphens, auto, webkit moz ms spec);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
 body {
   border-top: 3px solid $main_color;
-  font-family: 'Source Sans Pro', sans-serif;
-  text-rendering: optimizeLegibility;
-  @include prefixer(hyphens, auto, webkit moz ms spec);
+  font-size: 150%;
 }
 
 a {
-  color: black;
-  text-decoration: none;
+  color: inherit;
+  text-decoration: inherit;
 
   &:visited {
-    color: black;
-    text-decoration: none;
+    color: inherit;
+    text-decoration: inherit;
   }
 }
 
@@ -21,30 +26,19 @@ em {
 }
 
 th, input, body, h1, h2, h3 {
-  font-weight: 200;
+  font-weight: inherit;
 }
 
 * {
   @include prefixer(box-sizing, border-box, webkit moz spec);
 }
 
-@mixin column($numerator, $denominator: 1) {
-  width: $numerator / $denominator * 100%;
-  float: left;
-}
-
-@mixin mobile() {
-  @media screen and (max-width: 550px) {
-    @content;
-  }
-}
-
 @include mobile {
   html {
-    font-size: 14px;
+    font-size: 80%;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5em;
   }
 }

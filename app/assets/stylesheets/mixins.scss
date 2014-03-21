@@ -1,0 +1,16 @@
+@mixin column($numerator, $denominator: 1) {
+  width: $numerator / $denominator * 100%;
+  float: left;
+}
+
+@mixin mobile() {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin large() {
+  @media screen and (min-width: $large) {
+    @content;
+  }
+}

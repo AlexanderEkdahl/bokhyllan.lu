@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Authentication
+  include UserAgent
 
   protect_from_forgery with: :exception
 

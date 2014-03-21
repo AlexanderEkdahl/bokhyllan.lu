@@ -1,7 +1,3 @@
-body {
-  font-size: 1.5em;
-}
-
 main {
   @include clearfix;
   max-width: 45rem;
@@ -12,19 +8,19 @@ main {
   h1:first-child {
     margin-top: 0;
   }
-}
 
-main > section {
-  @include clearfix;
-  margin-top: 3rem;
+  & > section {
+    @include clearfix;
+    margin-top: 3rem;
 
-  h2:first-child {
-    margin-top: 0;
+    h2:first-child {
+      margin-top: 0;
+    }
   }
-}
 
-@include mobile {
-  main > section {
-    margin-top: 0.5rem;
+  @include mobile {
+    &:not(.root) {
+      margin-top: 0;
+    }
   }
 }

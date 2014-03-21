@@ -8,4 +8,8 @@ module ApplicationHelper
   def search_bar(value = params[:search])
     render('search', value: value)
   end
+
+  def root?
+    :root if current_page?(root_path) and params[:search].blank?
+  end
 end

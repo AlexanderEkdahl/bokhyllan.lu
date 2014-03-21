@@ -1,11 +1,17 @@
 $main_color: #210f7a;
 
+$mobile: 640px;
+$large: 1441px;
+
 @import "normalize";
 @import "bourbon";
+@import "mixins";
 
 @import "sprites";
 
 @import "core";
+@import "apple";
+
 @import "tables";
 @import "forms";
 @import "flash";
