@@ -14,4 +14,9 @@ html.apple {
       font-weight: 300;
     }
   }
+
+  // Reset letter-spacing for small text
+  .info, .application.about > div {
+    letter-spacing: normal;
+  }
 }

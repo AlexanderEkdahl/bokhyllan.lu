@@ -5,11 +5,10 @@ module UserAgent
     helper_method :user_agent
   end
 
-  def apple?
-    request.user_agent =~ /apple/i
-  end
-
   def user_agent
-    :apple if apple?
+    case request.user_agent
+    when /Macintosh/
+      :apple
+    end
   end
 end
