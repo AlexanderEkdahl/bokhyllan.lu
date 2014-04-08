@@ -2,9 +2,8 @@ class OrdersController < ApplicationController
   before_action :authenticate, except: :show
 
   def create
-    @item          = Item.find(params[:item_id])
-    @order         = @item.orders.build(order_params)
-    @order.user_id = current_user.id
+    @item  = Item.find(params[:item_id])
+    @order = @item.orders.build(order_params.merge(user_id: current_user.id))
 
     if @order.save
       redirect_to(@item, success: t(:order_created))
