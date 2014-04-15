@@ -130,6 +130,8 @@ GEM
       multi_json
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
+    skylight (0.3.11)
+      activesupport (>= 3.0.0)
     spring (1.1.2)
     sprockets (2.10.1)
       hike (~> 1.2)
@@ -179,6 +181,7 @@ DEPENDENCIES
   rails_12factor
   sass-rails
   simplecov
+  skylight
   spring
   uglifier
   webmock
