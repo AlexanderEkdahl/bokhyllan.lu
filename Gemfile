@@ -10,7 +10,6 @@ gem 'uglifier'
 gem 'hipchat'
 gem 'rack-cas'
 gem 'algoliasearch-rails'
-gem 'skylight'
 
 group :development, :test do
   gem 'debugger'
