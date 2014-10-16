@@ -1,5 +1,4 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
 gem 'rails', '4.0'
 gem 'sass-rails'
@@ -9,10 +8,9 @@ gem 'meta-tags', require: 'meta_tags'
 gem 'uglifier'
 gem 'hipchat'
 gem 'rack-cas'
-gem 'algoliasearch-rails'
+gem 'algoliasearch-rails', '1.11.6'
 
 group :development, :test do
-  gem 'debugger'
   gem 'i18n_yaml_sorter'
   gem 'spring'
   gem 'quiet_assets'
