@@ -1,6 +1,4 @@
 module NavigationHelper
-  HIPCHAT = "https://www.hipchat.com/grR40Vhv6"
-
   def nav(*links)
     links.compact.join(' &middot; ').html_safe
   end
@@ -23,10 +21,6 @@ module NavigationHelper
 
   def about
     link_to(t(:about), about_path) unless current_page?(about_path)
-  end
-
-  def support
-    link_to(t(:support_feedback), HIPCHAT)
   end
 
   def edit
