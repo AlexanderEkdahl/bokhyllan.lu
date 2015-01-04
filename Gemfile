@@ -6,7 +6,6 @@ gem 'bourbon'
 gem 'pg'
 gem 'meta-tags', require: 'meta_tags'
 gem 'uglifier'
-gem 'hipchat'
 gem 'rack-cas'
 gem 'algoliasearch-rails', '1.11.6'
 

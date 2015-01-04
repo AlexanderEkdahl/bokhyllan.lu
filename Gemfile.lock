@@ -56,11 +56,6 @@ GEM
     heroku-deflater (0.5.3)
       rack (>= 1.4.5)
     hike (1.2.3)
-    hipchat (1.0.1)
-      httparty
-    httparty (0.12.0)
-      json (~> 1.8)
-      multi_xml (>= 0.5.2)
     httpclient (2.5.0)
     i18n (0.6.9)
     i18n_yaml_sorter (0.2.0)
@@ -74,7 +69,6 @@ GEM
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.4)
-    multi_xml (0.5.5)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     pg (0.17.1)
@@ -159,7 +153,6 @@ DEPENDENCIES
   bourbon
   capybara
   heroku-deflater
-  hipchat
   i18n_yaml_sorter
   meta-tags
   pg

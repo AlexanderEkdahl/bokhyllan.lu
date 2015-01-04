@@ -1,8 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate, only: [:new, :create, :edit, :update]
 
-  include Moderator
-
   def index
     unless params[:search].blank?
       @items = Item.search(params[:search], hitsPerPage: 20)
@@ -50,7 +48,6 @@ class ItemsController < ApplicationController
     @order = @item.orders.find_by(user: current_user)
 
     if @item.update(item_params)
-      moderator("Updated #{@item.name}")
       redirect_to(item_path(@item), notice: t(:item_update_successful))
     else
       render action: 'edit'

@@ -8,7 +8,6 @@ require 'capybara/rails'
 require 'webmock/test_unit'
 require 'algolia/webmock'
 
-WebMock.stub_request(:post, /.*\.hipchat.com\/.*/)
 WebMock.enable!
 
 class ActiveSupport::TestCase
