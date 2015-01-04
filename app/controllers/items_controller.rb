@@ -34,7 +34,6 @@ class ItemsController < ApplicationController
     # create order separately for fined grained control. Same thing for upate?
 
     if @item.save
-      moderator("Created #{@item.name}")
       redirect_to(@item)
     else
       render 'new'
