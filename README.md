@@ -4,16 +4,12 @@
 
 ###OSX/Linux
 
-Dependencies: PostgreSQL, Ruby 2.0, Bundler
+Dependencies: PostgreSQL(running), Ruby 2.0, Bundler
 
     ARCHFLAGS="-arch x86_64" gem install pg
     bundle install --without production staging
-    postgres -D /usr/local/var/postgres
-    rails s
-
-###Windows
-
-Don't even bother. Use Nitrous.io instead
+    rake db:setup
+    bin/rails s
 
 ##Production
 
@@ -24,11 +20,11 @@ Don't even bother. Use Nitrous.io instead
 
 ###Pulling the database from Heroku
 
-    heroku pgbackups:capture --expire --app bokhyllan &&
-    curl -o heroku.dump `heroku pgbackups:url --app bokhyllan` &&
+    heroku pg:backups capture --app bokhyllan &&
+    curl -o heroku.dump `heroku pg:backups public-url --app bokhyllan` &&
     pg_restore --clean --no-acl --no-owner -h localhost -U `whoami` -d bokhyllan_development heroku.dump &&
     rm heroku.dump &&
-    foreman run rake algoliasearch:reindex
+    bin/rake algoliasearch:reindex
 
 ###Generating UML Diagram
 
