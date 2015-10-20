@@ -12,6 +12,6 @@ module Bokhyllan
 
     config.action_view.field_error_proc = Proc.new { |html_tag, _| html_tag }
 
-    config.rack_cas.server_url = 'https://cas.lu.se/'
+    config.rack_cas.server_url = 'https://cas.lu.se/cas'
   end
 end
