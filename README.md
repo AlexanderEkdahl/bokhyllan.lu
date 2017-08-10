@@ -1,8 +1,8 @@
-#Bokhyllan.lu
+# Bokhyllan.lu
 
-##Setup
+## Setup
 
-###OSX/Linux
+### OSX/Linux
 
 Dependencies: PostgreSQL(running), Ruby 2.0, Bundler
 
@@ -11,14 +11,14 @@ Dependencies: PostgreSQL(running), Ruby 2.0, Bundler
     rake db:setup
     bin/rails s
 
-##Production
+## Production
 
-###Updating remote
+### Updating remote
 
     git push origin master # Codeship keeps origin master in sync with staging
     heroku pipeline:promote --app bokhyllan-staging
 
-###Pulling the database from Heroku
+### Pulling the database from Heroku
 
     heroku pg:backups capture --app bokhyllan &&
     curl -o heroku.dump `heroku pg:backups public-url --app bokhyllan` &&
@@ -26,7 +26,7 @@ Dependencies: PostgreSQL(running), Ruby 2.0, Bundler
     rm heroku.dump &&
     bin/rake algoliasearch:reindex
 
-###Generating UML Diagram
+### Generating UML Diagram
 
 Dependencies: Railroady
 
